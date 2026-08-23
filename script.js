@@ -1,3 +1,4 @@
+const boot=document.querySelector('.boot');if(boot)boot.remove();
 const ADA_FAVICON='https://andreas-digital-agency.vercel.app/brand/ADA-favicon.png?v=4';let favicon=document.querySelector("link[rel~='icon']");if(!favicon){favicon=document.createElement('link');favicon.rel='icon';favicon.type='image/png';document.head.appendChild(favicon)}favicon.href=ADA_FAVICON;let touch=document.querySelector("link[rel='apple-touch-icon']");if(!touch){touch=document.createElement('link');touch.rel='apple-touch-icon';document.head.appendChild(touch)}touch.href=ADA_FAVICON;
 const path=location.pathname.replace(/\/$/,'')||'/';
 const isAdmin=path==='/tech-publisher';
@@ -7,5 +8,4 @@ if(!isAdmin){
   if(path.startsWith('/problems/')&&!document.querySelector('[data-problem-conversion]')){const f=document.querySelector('footer');if(f){const s=document.createElement('section');s.className='whatsappBand';s.dataset.problemConversion='1';s.innerHTML='<div class="wrap waGrid"><div><div class="eyebrow" style="color:#dbe9ff">Still happening?</div><h3>Stop guessing at the cause.</h3><p>Standard device diagnosis starts at N$120 and can be waived when approved repair/service of N$350+ follows.</p></div><a class="btn" href="/support">Request diagnostic →</a></div>';f.before(s)}}
   document.querySelectorAll('.mobileMenu').forEach(m=>m.addEventListener('click',()=>{const n=m.closest('nav');if(!n)return;n.classList.toggle('open');if(n.classList.contains('open')){n.querySelectorAll('a').forEach(a=>a.style.display='inline-flex')}else{n.querySelectorAll('a').forEach(a=>a.style.removeProperty('display')}}));
 }
-const boot=document.querySelector('.boot');if(boot){if(sessionStorage.getItem('adaTechBootV4'))boot.classList.add('hide');else{sessionStorage.setItem('adaTechBootV4','1');setTimeout(()=>boot.classList.add('hide'),900)}}
 const vids=[...document.querySelectorAll('video')];if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.play().catch(()=>{});else e.target.pause()}),{threshold:.12});vids.forEach(v=>io.observe(v))}
