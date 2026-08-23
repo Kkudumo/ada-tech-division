@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ada-tech-division.vercel.app/</loc></url><url><loc>https://ada-tech-division.vercel.app/services</loc></url><url><loc>https://ada-tech-division.vercel.app/pricing</loc></url><url><loc>https://ada-tech-division.vercel.app/first-aid</loc></url><url><loc>https://ada-tech-division.vercel.app/managed-it</loc></url><url><loc>https://ada-tech-division.vercel.app/support</loc></url><url><loc>https://ada-tech-division.vercel.app/about</loc></url><url><loc>https://ada-tech-division.vercel.app/contact</loc></url><url><loc>https://ada-tech-division.vercel.app/locations/rundu</loc></url><url><loc>https://ada-tech-division.vercel.app/services/windows-setup</loc></url><url><loc>https://ada-tech-division.vercel.app/services/computer-repair</loc></url><url><loc>https://ada-tech-division.vercel.app/services/bios-firmware</loc></url><url><loc>https://ada-tech-division.vercel.app/services/networking</loc></url><url><loc>https://ada-tech-division.vercel.app/services/remote-support</loc></url><url><loc>https://ada-tech-division.vercel.app/services/cctv</loc></url><url><loc>https://ada-tech-division.vercel.app/services/server-infrastructure</loc></url><url><loc>https://ada-tech-division.vercel.app/services/security</loc></url><url><loc>https://ada-tech-division.vercel.app/services/business-it</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://ada-tech-division.vercel.app/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/services</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/solutions</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/pricing</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/first-aid</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/managed-it</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/support</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/about</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/contact</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/work</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/reviews</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/client-desk</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/service-record</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/faq</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/windows-blue-screen</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/windows-black-screen</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/slow-laptop</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/laptop-overheating</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/windows-update-not-working</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/laptop-not-turning-on</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/wifi-keeps-disconnecting</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/problems/ssd-ram-upgrade</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://ada-tech-division.vercel.app/locations/rundu</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/windows-setup</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/computer-support</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/hardware-diagnostics</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/bios-firmware</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/networking</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/remote-support</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/cctv</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/it-infrastructure</loc></url>
+<url><loc>https://ada-tech-division.vercel.app/services/business-it-support</loc></url>
+</urlset>
