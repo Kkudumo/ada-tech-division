@@ -1,5 +1,8 @@
 const boot=document.querySelector('.boot');if(boot)boot.remove();
 
+/* ADA family visual theme */
+if(!document.querySelector('link[data-ada-brand-refresh]')){const theme=document.createElement('link');theme.rel='stylesheet';theme.href='/ada-brand-refresh.css?v=20260824-1';theme.dataset.adaBrandRefresh='1';document.head.appendChild(theme)}
+
 /* ADA Tech mobile-first compatibility layer.
    Kept here so every public page receives the same phone/tablet behaviour,
    including older pages that use site-header/main-nav class names. */
@@ -30,7 +33,7 @@ html,body{max-width:100%;overflow-x:hidden}img,video{max-width:100%;height:auto}
   .imageSplit .copy{padding:48px 18px!important}.imageSplit .media{min-height:300px!important}.whatsappBand{padding:46px 0!important}.waGrid h3{font-size:32px!important}.waGrid p{font-size:14px!important}
   .footer{padding:52px 0 24px!important}.footerTop{gap:28px 20px!important}.footerLogo{width:155px!important}.footer a,.footer p{font-size:13px!important}.footerBottom{margin-top:34px!important;gap:9px!important;font-size:11px!important}
   .floatingWA{right:14px!important;bottom:max(14px,env(safe-area-inset-bottom))!important;width:52px!important;height:52px!important;padding:0!important;justify-content:center!important;border-radius:50%!important}.floatingWA span{display:none!important}.floatingWA:before{font-size:14px!important}
-  input,select,textarea{font-size:16px!important} /* prevents iOS focus zoom */
+  input,select,textarea{font-size:16px!important}
   .support-form,.reviewCard,.case-card,.desk-card,.faqItem{max-width:100%!important}.form-grid{grid-template-columns:1fr!important}.support-form{padding:18px!important;border-radius:18px!important}.form-field input,.form-field select{min-height:52px!important}.form-field textarea{min-height:145px!important}.support-form .btn.full{min-height:56px!important}
   .reviewGrid,.case-grid,.desk-grid{grid-template-columns:1fr!important}.case-flow{grid-template-columns:1fr!important}.faqItem button{font-size:16px!important;padding:18px!important}.faqAnswer{padding:0 18px 18px!important}.faqSearch{font-size:16px!important;min-height:50px}.tableWrap{margin-left:0;margin-right:0;border-radius:14px!important}.tableWrap:after{content:'Swipe table →';display:block;padding:9px 12px;font-size:10px;color:#6c7884;background:#f5f7f9}
   h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}.footer a,.footer p,.card p{word-break:normal}.footerContact p{overflow-wrap:anywhere}
