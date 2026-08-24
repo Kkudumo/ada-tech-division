@@ -1,1 +1,32 @@
-{"cleanUrls":true,"trailingSlash":false,"headers":[{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]}]}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {"source":"/services/computer-support","destination":"/services/computer-repair","permanent":true},
+    {"source":"/services/hardware-diagnostics","destination":"/services/computer-repair","permanent":true},
+    {"source":"/services/it-infrastructure","destination":"/services/server-infrastructure","permanent":true},
+    {"source":"/services/business-it-support","destination":"/services/business-it","permanent":true},
+    {"source":"/services/windows","destination":"/services/windows-setup","permanent":true},
+    {"source":"/services/windows-support","destination":"/services/windows-setup","permanent":true},
+    {"source":"/services/bios","destination":"/services/bios-firmware","permanent":true},
+    {"source":"/services/server","destination":"/services/server-infrastructure","permanent":true},
+    {"source":"/problems/black-screen","destination":"/problems/windows-black-screen","permanent":true},
+    {"source":"/problems/windows-update-failing","destination":"/problems/windows-update-not-working","permanent":true},
+    {"source":"/problems/laptop-not-booting","destination":"/problems/laptop-not-turning-on","permanent":true},
+    {"source":"/problems/wifi-disconnecting","destination":"/problems/wifi-keeps-disconnecting","permanent":true},
+    {"source":"/problems/ssd-vs-ram-upgrade","destination":"/problems/ssd-ram-upgrade","permanent":true},
+    {"source":"/tech-standard","destination":"/about","permanent":true},
+    {"source":"/case-files","destination":"/work","permanent":true},
+    {"source":"/client-reviews","destination":"/reviews","permanent":true},
+    {"source":"/help","destination":"/problems","permanent":true}
+  ],
+  "headers": [
+    {
+      "source":"/(.*)",
+      "headers":[
+        {"key":"X-Content-Type-Options","value":"nosniff"},
+        {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}
+      ]
+    }
+  ]
+}
