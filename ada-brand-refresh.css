@@ -1,0 +1,250 @@
+/* ADA TECH — BRAND FAMILY REFRESH
+   Aligns Tech with ADA Main + ADA Web while preserving a technical identity. */
+
+:root{
+  --blue:#2563a9;
+  --blue2:#3978b8;
+  --ink:#0f1b2d;
+  --ink2:#13263e;
+  --paper:#ffffff;
+  --wash:#f6f8fb;
+  --line:#dbe4ee;
+  --muted:#5c6b7f;
+  --green:#1c9a6e;
+  --shadow:0 18px 55px rgba(24,49,80,.10);
+  --shadow-soft:0 10px 30px rgba(24,49,80,.07);
+  --navy:#0e1b2b;
+  --blue-soft:#eaf3ff;
+}
+
+html{background:#fff}
+body{
+  background:#fff;
+  color:var(--ink);
+  font-family:Inter,Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+}
+
+/* ADA family navigation language */
+.utility,.topbar{
+  background:#081b33!important;
+  color:#c8d4e2!important;
+}
+.header{
+  top:10px;
+  height:82px;
+  background:transparent!important;
+  border-bottom:0!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+.header .wrap{
+  height:64px;
+  width:min(1220px,calc(100% - 36px));
+  padding:0 18px;
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(168,184,201,.48);
+  border-radius:18px;
+  box-shadow:0 12px 36px rgba(20,44,72,.08);
+  backdrop-filter:blur(18px) saturate(1.15);
+  -webkit-backdrop-filter:blur(18px) saturate(1.15);
+}
+.identity img{width:150px}
+.division{color:#5f6f82;border-color:#d7e0e9}
+.nav{color:#4f5f73;font-weight:650}
+.nav a:not(.cta):hover{color:var(--ink)}
+.nav a:not(.cta):after{background:var(--blue)}
+.nav .cta{
+  background:var(--ink)!important;
+  color:#fff!important;
+  padding:11px 18px;
+  box-shadow:0 7px 18px rgba(15,27,45,.12);
+}
+.nav .cta:hover{background:var(--blue)!important}
+
+/* Typography: confident, not aggressive */
+.eyebrow{color:var(--blue)!important;letter-spacing:.15em}
+.kicker{color:#66778a}
+.hero h1,.pageHero h1{
+  font-size:clamp(54px,6.2vw,84px);
+  line-height:.96;
+  letter-spacing:-.06em;
+}
+.sectionHead h2{font-size:clamp(42px,4.6vw,68px);line-height:.98;letter-spacing:-.052em}
+.imageSplit .copy h2{font-size:clamp(44px,5.2vw,72px);line-height:.98;letter-spacing:-.052em}
+.lede,.sectionHead p,.serviceIntro .content{color:var(--muted)}
+
+/* Hero / page hero now share ADA Web's light editorial feel */
+.hero{
+  background:
+    radial-gradient(circle at 82% 10%,rgba(79,143,216,.14),transparent 25rem),
+    linear-gradient(180deg,#ffffff 0%,#f6f8fb 100%)!important;
+  min-height:650px;
+  padding-top:82px;
+}
+.hero:before{
+  width:auto;height:auto;inset:0;
+  border-radius:0;
+  right:auto;top:auto;
+  background-image:
+    linear-gradient(rgba(33,82,131,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(33,82,131,.03) 1px,transparent 1px);
+  background-size:36px 36px;
+  opacity:.7;
+  pointer-events:none;
+}
+.pageHero{
+  background:
+    radial-gradient(circle at 85% 12%,rgba(79,143,216,.13),transparent 24rem),
+    linear-gradient(180deg,#fff 0%,#f7f9fc 100%)!important;
+  border-bottom:1px solid #e5ebf1;
+}
+.visual,.pageHero .heroImage{
+  border:1px solid rgba(196,210,224,.72);
+  box-shadow:0 22px 65px rgba(24,49,80,.12);
+}
+.visual:after{background:linear-gradient(180deg,rgba(5,20,38,.04),rgba(8,27,51,.18) 46%,rgba(8,27,51,.78))}
+.scan{background:linear-gradient(90deg,transparent,#78b7ef,transparent);box-shadow:0 0 20px rgba(120,183,239,.75)}
+.label{background:rgba(8,27,51,.76);border-color:rgba(255,255,255,.2)}
+.label:before{background:#78b7ef;box-shadow:0 0 0 4px rgba(120,183,239,.16),0 0 16px rgba(120,183,239,.8)}
+
+/* Buttons */
+.btn{
+  letter-spacing:.055em;
+  font-size:10.5px;
+  border-radius:999px;
+  box-shadow:none;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.black{background:var(--ink);color:#fff}
+.btn.black:hover{background:#152a45;box-shadow:0 10px 26px rgba(15,27,45,.12)}
+.btn.blue{background:var(--blue);color:#fff}
+.btn.blue:hover{background:#174f8c;box-shadow:0 10px 26px rgba(37,99,169,.16)}
+.btn.white{background:#fff!important;color:var(--ink)!important;border-color:#ccd8e4!important}
+.btn.white:hover{border-color:#aebfd0!important;background:#f9fbfd!important}
+.btn.ghost{color:var(--ink);border-color:#cfd9e4}
+
+/* Routing cards */
+.routeStrip{
+  border:0!important;
+  padding:18px 0;
+  background:#fff;
+}
+.routeStrip .wrap{background:transparent!important;gap:12px}
+.route{
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:var(--shadow-soft);
+  min-height:145px;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.route:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#bed0e2}
+.route span{color:#718095}
+.route small{color:var(--blue)}
+
+/* Section rhythm */
+.section{background:#fff}
+.section.alt{background:var(--wash)!important}
+.section.dark{background:var(--navy)!important}
+.sectionHead p{color:var(--muted)}
+
+.cards{gap:14px}
+.card,.priceCard,.callout,.faq details,.reviewCard,.case-card,.desk-card,.faqItem{
+  border-color:var(--line)!important;
+}
+.card{
+  border-radius:20px;
+  box-shadow:var(--shadow-soft);
+  background:#fff;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bfd0e0!important}
+.card .code{color:#728196}
+.card h3{color:var(--ink)}
+.card p{color:var(--muted)}
+.card .link{color:var(--blue)}
+.dark .card{background:#13263e!important;border-color:rgba(255,255,255,.12)!important;box-shadow:none}
+.dark .card h3{color:#fff}.dark .card p{color:#b7c3d0}.dark .card .code{color:#8db9e7}
+
+/* Pricing */
+.priceCard{border-radius:20px;box-shadow:var(--shadow-soft)}
+.priceCard.featured{background:linear-gradient(180deg,#f2f7fd 0%,#fff 100%);border-color:#b8d3ef!important;box-shadow:0 16px 44px rgba(37,99,169,.10)}
+.badge{background:#e4f0ff;color:#245d9a}
+.price{color:var(--ink)}
+.priceCard li{color:#5c6b7f;border-color:#e2e9f0}
+.tableWrap{border-color:var(--line);box-shadow:var(--shadow-soft);background:#fff}
+th{background:#f5f8fb;color:#35516f}td{color:#53657a}
+
+/* Dark contrast should feel ADA-navy, not black/cyber */
+.darkcopy{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(37,99,169,.18),transparent 22rem),
+    linear-gradient(145deg,#0e1b2b,#10243a 72%)!important;
+}
+.darkcopy p{color:#b2c0ce}
+.imageSplit{background:#0e1b2b}
+.imageSplit .media:after{background:linear-gradient(0deg,rgba(8,27,51,.35),transparent 55%)}
+
+.whatsappBand{
+  background:linear-gradient(135deg,#174f8c 0%,#2563a9 100%)!important;
+}
+.waGrid p{color:#e5eff9}
+
+/* Forms */
+.form-field label{color:#41536a!important;font-weight:700}
+.form-field input,.form-field select,.form-field textarea{
+  color:var(--ink)!important;
+  background:#fff!important;
+  border-color:#cfd9e4!important;
+  box-shadow:none!important;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  border-color:var(--blue)!important;
+  box-shadow:0 0 0 4px rgba(37,99,169,.10)!important;
+}
+.callout{background:#f3f8ff!important;border-color:#bed4eb!important;box-shadow:var(--shadow-soft)}
+
+/* Older client-layer pages */
+.site-header,.main-header{background:rgba(255,255,255,.94)!important;border-color:rgba(168,184,201,.48)!important}
+.proof-hero,.reviewHero,.desk-hero,.feature-shell{
+  background:
+    radial-gradient(circle at 85% 10%,rgba(79,143,216,.12),transparent 24rem),
+    linear-gradient(180deg,#fff,#f6f8fb)!important;
+  color:var(--ink)!important;
+}
+.proof-hero h1,.reviewHero h1,.desk-hero h1{color:var(--ink)!important}
+.proof-hero p,.reviewHero p,.desk-hero p{color:var(--muted)!important}
+.reviewCard,.case-card,.desk-card,.faqItem,.panel{
+  background:#fff!important;
+  border:1px solid var(--line)!important;
+  box-shadow:var(--shadow-soft)!important;
+  border-radius:20px!important;
+}
+
+/* Footer */
+.footer{
+  background:#081b33!important;
+  color:#fff;
+}
+.footer a,.footer p{color:#b7c3d0}
+.footer h4{color:#fff}
+.footerBottom{color:#7f91a5;border-color:rgba(255,255,255,.12)}
+
+/* WhatsApp remains functional, but less visually dominant */
+.floatingWA{background:#1e9b63;box-shadow:0 14px 36px rgba(15,27,45,.22)}
+
+@media(max-width:1020px){
+  .header{top:0!important;background:rgba(255,255,255,.97)!important;border-bottom:1px solid rgba(8,27,51,.07)!important;height:76px!important}
+  .header .wrap{width:min(1220px,calc(100% - 28px))!important;height:100%!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;backdrop-filter:none!important}
+}
+
+@media(max-width:680px){
+  .hero{background:linear-gradient(180deg,#fff,#f7f9fc)!important}
+  .hero:before{opacity:.35}
+  .hero h1,.pageHero h1{font-size:clamp(40px,12vw,50px)!important}
+  .sectionHead h2,.imageSplit .copy h2{font-size:clamp(35px,10vw,43px)!important}
+  .route{box-shadow:none}
+  .card{box-shadow:0 8px 24px rgba(24,49,80,.06)}
+  .darkcopy{padding-top:50px!important;padding-bottom:50px!important}
+}
