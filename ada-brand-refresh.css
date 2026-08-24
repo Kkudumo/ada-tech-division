@@ -1,20 +1,34 @@
-/* ADA TECH — BRAND FAMILY REFRESH
-   Aligns Tech with ADA Main + ADA Web while preserving a technical identity. */
+/* ADA TECH — DIVISION BRAND SYSTEM
+   ADA family foundation + Tech Division identity.
+
+   ADA division reference colours
+   Web        #0754A6
+   Tech       #153F68
+   Marketing  #7A2743
+   Software   #264A5C
+   Academy    #6B721E
+   Consulting #4B4F58
+*/
 
 :root{
-  --blue:#2563a9;
-  --blue2:#3978b8;
+  --division:#153f68;
+  --division-2:#2f668f;
+  --division-dark:#0d2c49;
+  --division-soft:#eaf1f7;
+  --division-wash:#f4f7fa;
+  --blue:var(--division);
+  --blue2:var(--division-2);
   --ink:#0f1b2d;
   --ink2:#13263e;
   --paper:#ffffff;
   --wash:#f6f8fb;
-  --line:#dbe4ee;
+  --line:#d9e3ec;
   --muted:#5c6b7f;
   --green:#1c9a6e;
-  --shadow:0 18px 55px rgba(24,49,80,.10);
-  --shadow-soft:0 10px 30px rgba(24,49,80,.07);
+  --shadow:0 18px 55px rgba(21,63,104,.11);
+  --shadow-soft:0 10px 30px rgba(21,63,104,.075);
   --navy:#0e1b2b;
-  --blue-soft:#eaf3ff;
+  --blue-soft:var(--division-soft);
 }
 
 html{background:#fff}
@@ -27,8 +41,8 @@ body{
 
 /* ADA family navigation language */
 .utility,.topbar{
-  background:#081b33!important;
-  color:#c8d4e2!important;
+  background:var(--division-dark)!important;
+  color:#d4dfeb!important;
 }
 .header{
   top:10px;
@@ -42,43 +56,44 @@ body{
   height:64px;
   width:min(1220px,calc(100% - 36px));
   padding:0 18px;
-  background:rgba(255,255,255,.94);
-  border:1px solid rgba(168,184,201,.48);
+  background:rgba(255,255,255,.95);
+  border:1px solid rgba(166,183,198,.5);
   border-radius:18px;
-  box-shadow:0 12px 36px rgba(20,44,72,.08);
+  box-shadow:0 12px 36px rgba(21,63,104,.08);
   backdrop-filter:blur(18px) saturate(1.15);
   -webkit-backdrop-filter:blur(18px) saturate(1.15);
 }
 .identity img{width:150px}
-.division{color:#5f6f82;border-color:#d7e0e9}
+.division{color:var(--division);border-color:#d7e0e9}
 .nav{color:#4f5f73;font-weight:650}
-.nav a:not(.cta):hover{color:var(--ink)}
-.nav a:not(.cta):after{background:var(--blue)}
+.nav a:not(.cta):hover{color:var(--division)}
+.nav a:not(.cta):after{background:var(--division)}
 .nav .cta{
-  background:var(--ink)!important;
+  background:var(--division)!important;
   color:#fff!important;
   padding:11px 18px;
-  box-shadow:0 7px 18px rgba(15,27,45,.12);
+  box-shadow:0 7px 18px rgba(21,63,104,.16);
 }
-.nav .cta:hover{background:var(--blue)!important}
+.nav .cta:hover{background:var(--division-dark)!important}
 
-/* Typography: confident, not aggressive */
-.eyebrow{color:var(--blue)!important;letter-spacing:.15em}
+/* Typography: ADA clarity + division accent */
+.eyebrow{color:var(--division)!important;letter-spacing:.15em}
 .kicker{color:#66778a}
 .hero h1,.pageHero h1{
   font-size:clamp(54px,6.2vw,84px);
   line-height:.96;
   letter-spacing:-.06em;
 }
+.hero h1 span,.pageHero h1 span{color:var(--division)!important}
 .sectionHead h2{font-size:clamp(42px,4.6vw,68px);line-height:.98;letter-spacing:-.052em}
 .imageSplit .copy h2{font-size:clamp(44px,5.2vw,72px);line-height:.98;letter-spacing:-.052em}
 .lede,.sectionHead p,.serviceIntro .content{color:var(--muted)}
 
-/* Hero / page hero now share ADA Web's light editorial feel */
+/* Hero / page hero: light ADA surface with Tech tint */
 .hero{
   background:
-    radial-gradient(circle at 82% 10%,rgba(79,143,216,.14),transparent 25rem),
-    linear-gradient(180deg,#ffffff 0%,#f6f8fb 100%)!important;
+    radial-gradient(circle at 82% 10%,rgba(21,63,104,.12),transparent 25rem),
+    linear-gradient(180deg,#ffffff 0%,#f4f7fa 100%)!important;
   min-height:650px;
   padding-top:82px;
 }
@@ -87,26 +102,26 @@ body{
   border-radius:0;
   right:auto;top:auto;
   background-image:
-    linear-gradient(rgba(33,82,131,.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(33,82,131,.03) 1px,transparent 1px);
+    linear-gradient(rgba(21,63,104,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,63,104,.035) 1px,transparent 1px);
   background-size:36px 36px;
   opacity:.7;
   pointer-events:none;
 }
 .pageHero{
   background:
-    radial-gradient(circle at 85% 12%,rgba(79,143,216,.13),transparent 24rem),
-    linear-gradient(180deg,#fff 0%,#f7f9fc 100%)!important;
+    radial-gradient(circle at 85% 12%,rgba(21,63,104,.11),transparent 24rem),
+    linear-gradient(180deg,#fff 0%,#f5f8fb 100%)!important;
   border-bottom:1px solid #e5ebf1;
 }
 .visual,.pageHero .heroImage{
   border:1px solid rgba(196,210,224,.72);
-  box-shadow:0 22px 65px rgba(24,49,80,.12);
+  box-shadow:0 22px 65px rgba(21,63,104,.13);
 }
-.visual:after{background:linear-gradient(180deg,rgba(5,20,38,.04),rgba(8,27,51,.18) 46%,rgba(8,27,51,.78))}
-.scan{background:linear-gradient(90deg,transparent,#78b7ef,transparent);box-shadow:0 0 20px rgba(120,183,239,.75)}
-.label{background:rgba(8,27,51,.76);border-color:rgba(255,255,255,.2)}
-.label:before{background:#78b7ef;box-shadow:0 0 0 4px rgba(120,183,239,.16),0 0 16px rgba(120,183,239,.8)}
+.visual:after{background:linear-gradient(180deg,rgba(5,20,38,.04),rgba(13,44,73,.18) 46%,rgba(13,44,73,.78))}
+.scan{background:linear-gradient(90deg,transparent,#7fa9ca,transparent);box-shadow:0 0 20px rgba(127,169,202,.72)}
+.label{background:rgba(13,44,73,.8);border-color:rgba(255,255,255,.2)}
+.label:before{background:#8db6d4;box-shadow:0 0 0 4px rgba(141,182,212,.16),0 0 16px rgba(141,182,212,.75)}
 
 /* Buttons */
 .btn{
@@ -118,9 +133,9 @@ body{
 }
 .btn:hover{transform:translateY(-1px)}
 .btn.black{background:var(--ink);color:#fff}
-.btn.black:hover{background:#152a45;box-shadow:0 10px 26px rgba(15,27,45,.12)}
-.btn.blue{background:var(--blue);color:#fff}
-.btn.blue:hover{background:#174f8c;box-shadow:0 10px 26px rgba(37,99,169,.16)}
+.btn.black:hover{background:var(--division-dark);box-shadow:0 10px 26px rgba(21,63,104,.14)}
+.btn.blue{background:var(--division)!important;color:#fff}
+.btn.blue:hover{background:var(--division-dark)!important;box-shadow:0 10px 26px rgba(21,63,104,.18)}
 .btn.white{background:#fff!important;color:var(--ink)!important;border-color:#ccd8e4!important}
 .btn.white:hover{border-color:#aebfd0!important;background:#f9fbfd!important}
 .btn.ghost{color:var(--ink);border-color:#cfd9e4}
@@ -139,14 +154,14 @@ body{
   min-height:145px;
   transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
 }
-.route:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#bed0e2}
+.route:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#b6cadb}
 .route span{color:#718095}
-.route small{color:var(--blue)}
+.route small{color:var(--division)}
 
 /* Section rhythm */
 .section{background:#fff}
-.section.alt{background:var(--wash)!important}
-.section.dark{background:var(--navy)!important}
+.section.alt{background:var(--division-wash)!important}
+.section.dark{background:var(--division-dark)!important}
 .sectionHead p{color:var(--muted)}
 
 .cards{gap:14px}
@@ -159,37 +174,37 @@ body{
   background:#fff;
   transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
 }
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bfd0e0!important}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b9ccdc!important}
 .card .code{color:#728196}
 .card h3{color:var(--ink)}
 .card p{color:var(--muted)}
-.card .link{color:var(--blue)}
-.dark .card{background:#13263e!important;border-color:rgba(255,255,255,.12)!important;box-shadow:none}
-.dark .card h3{color:#fff}.dark .card p{color:#b7c3d0}.dark .card .code{color:#8db9e7}
+.card .link{color:var(--division)}
+.dark .card{background:#173b5c!important;border-color:rgba(255,255,255,.12)!important;box-shadow:none}
+.dark .card h3{color:#fff}.dark .card p{color:#c0ccd7}.dark .card .code{color:#9bbbd4}
 
 /* Pricing */
 .priceCard{border-radius:20px;box-shadow:var(--shadow-soft)}
-.priceCard.featured{background:linear-gradient(180deg,#f2f7fd 0%,#fff 100%);border-color:#b8d3ef!important;box-shadow:0 16px 44px rgba(37,99,169,.10)}
-.badge{background:#e4f0ff;color:#245d9a}
+.priceCard.featured{background:linear-gradient(180deg,#edf3f8 0%,#fff 100%);border-color:#b8cad9!important;box-shadow:0 16px 44px rgba(21,63,104,.11)}
+.badge{background:var(--division-soft);color:var(--division)}
 .price{color:var(--ink)}
 .priceCard li{color:#5c6b7f;border-color:#e2e9f0}
 .tableWrap{border-color:var(--line);box-shadow:var(--shadow-soft);background:#fff}
-th{background:#f5f8fb;color:#35516f}td{color:#53657a}
+th{background:#f3f6f9;color:var(--division)}td{color:#53657a}
 
-/* Dark contrast should feel ADA-navy, not black/cyber */
+/* Dark contrast = Tech Division blue, not generic black */
 .darkcopy{
   background:
-    radial-gradient(circle at 12% 8%,rgba(37,99,169,.18),transparent 22rem),
-    linear-gradient(145deg,#0e1b2b,#10243a 72%)!important;
+    radial-gradient(circle at 12% 8%,rgba(86,128,164,.2),transparent 22rem),
+    linear-gradient(145deg,#0d2c49,#153f68 78%)!important;
 }
-.darkcopy p{color:#b2c0ce}
-.imageSplit{background:#0e1b2b}
-.imageSplit .media:after{background:linear-gradient(0deg,rgba(8,27,51,.35),transparent 55%)}
+.darkcopy p{color:#c0cbd6}
+.imageSplit{background:var(--division-dark)}
+.imageSplit .media:after{background:linear-gradient(0deg,rgba(13,44,73,.35),transparent 55%)}
 
 .whatsappBand{
-  background:linear-gradient(135deg,#174f8c 0%,#2563a9 100%)!important;
+  background:linear-gradient(135deg,#0d2c49 0%,#153f68 100%)!important;
 }
-.waGrid p{color:#e5eff9}
+.waGrid p{color:#e7eef4}
 
 /* Forms */
 .form-field label{color:#41536a!important;font-weight:700}
@@ -200,17 +215,17 @@ th{background:#f5f8fb;color:#35516f}td{color:#53657a}
   box-shadow:none!important;
 }
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus{
-  border-color:var(--blue)!important;
-  box-shadow:0 0 0 4px rgba(37,99,169,.10)!important;
+  border-color:var(--division)!important;
+  box-shadow:0 0 0 4px rgba(21,63,104,.10)!important;
 }
-.callout{background:#f3f8ff!important;border-color:#bed4eb!important;box-shadow:var(--shadow-soft)}
+.callout{background:#f1f5f9!important;border-color:#c2d1de!important;box-shadow:var(--shadow-soft)}
 
 /* Older client-layer pages */
 .site-header,.main-header{background:rgba(255,255,255,.94)!important;border-color:rgba(168,184,201,.48)!important}
 .proof-hero,.reviewHero,.desk-hero,.feature-shell{
   background:
-    radial-gradient(circle at 85% 10%,rgba(79,143,216,.12),transparent 24rem),
-    linear-gradient(180deg,#fff,#f6f8fb)!important;
+    radial-gradient(circle at 85% 10%,rgba(21,63,104,.11),transparent 24rem),
+    linear-gradient(180deg,#fff,#f4f7fa)!important;
   color:var(--ink)!important;
 }
 .proof-hero h1,.reviewHero h1,.desk-hero h1{color:var(--ink)!important}
@@ -222,29 +237,56 @@ th{background:#f5f8fb;color:#35516f}td{color:#53657a}
   border-radius:20px!important;
 }
 
+/* Problem/help pages with older hard-coded generic blue */
+.problemHero h1 span[style],
+.directoryHero h1 span[style],
+.blue{color:var(--division)!important}
+.problemCard a,.case-flow b,.questionList a:hover{color:var(--division)!important}
+.trend{background:var(--division-soft)!important;color:var(--division)!important}
+
+/* Dynamic navigation is injected after this file; higher specificity keeps Tech colour authoritative. */
+body .nav .ada-nav-item.all,
+body .main-nav .ada-nav-item.all,
+body .nav .ada-current,
+body .main-nav .ada-current{
+  background:var(--division-soft)!important;
+  color:var(--division)!important;
+}
+body .nav .ada-nav-item.all strong,
+body .main-nav .ada-nav-item.all strong,
+body .nav .ada-current strong,
+body .main-nav .ada-current strong{color:var(--division)!important}
+body .nav .ada-nav-trigger:hover,
+body .nav .ada-nav-trigger:focus-visible,
+body .nav .ada-nav-direct:hover,
+body .nav .ada-nav-direct:focus-visible,
+body .main-nav .ada-nav-trigger:hover,
+body .main-nav .ada-nav-direct:hover{color:var(--division)!important}
+body .ada-footer-subhead{color:#9bbbd4!important}
+
 /* Footer */
-.footer{
-  background:#081b33!important;
+.footer,.ada-global-footer{
+  background:var(--division-dark)!important;
   color:#fff;
 }
-.footer a,.footer p{color:#b7c3d0}
-.footer h4{color:#fff}
-.footerBottom{color:#7f91a5;border-color:rgba(255,255,255,.12)}
+.footer a,.footer p,.ada-global-footer a,.ada-global-footer p{color:#bfccd8}
+.footer h4,.ada-global-footer h3{color:#fff}
+.footerBottom,.ada-footer-bottom{color:#879aad;border-color:rgba(255,255,255,.12)}
 
-/* WhatsApp remains functional, but less visually dominant */
+/* WhatsApp remains action-oriented, not the division colour */
 .floatingWA{background:#1e9b63;box-shadow:0 14px 36px rgba(15,27,45,.22)}
 
 @media(max-width:1020px){
-  .header{top:0!important;background:rgba(255,255,255,.97)!important;border-bottom:1px solid rgba(8,27,51,.07)!important;height:76px!important}
+  .header{top:0!important;background:rgba(255,255,255,.97)!important;border-bottom:1px solid rgba(21,63,104,.08)!important;height:76px!important}
   .header .wrap{width:min(1220px,calc(100% - 28px))!important;height:100%!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;backdrop-filter:none!important}
 }
 
 @media(max-width:680px){
-  .hero{background:linear-gradient(180deg,#fff,#f7f9fc)!important}
+  .hero{background:linear-gradient(180deg,#fff,#f5f8fb)!important}
   .hero:before{opacity:.35}
   .hero h1,.pageHero h1{font-size:clamp(40px,12vw,50px)!important}
   .sectionHead h2,.imageSplit .copy h2{font-size:clamp(35px,10vw,43px)!important}
   .route{box-shadow:none}
-  .card{box-shadow:0 8px 24px rgba(24,49,80,.06)}
+  .card{box-shadow:0 8px 24px rgba(21,63,104,.06)}
   .darkcopy{padding-top:50px!important;padding-bottom:50px!important}
 }
