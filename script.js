@@ -1,5 +1,84 @@
 const boot=document.querySelector('.boot');if(boot)boot.remove();
 
+/* ADA Tech safe loading state
+   Injected by JS, never blocks pointer input, and self-dismisses on a hard timeout. */
+(()=>{
+  if(document.getElementById('ada-tech-loader')) return;
+
+  const style=document.createElement('style');
+  style.id='ada-tech-loader-style';
+  style.textContent=`
+  .ada-load-state{
+    position:fixed;inset:0;z-index:9998;display:grid;place-items:center;
+    background:rgba(247,249,252,.97);color:#0f1b2d;
+    opacity:1;visibility:visible;pointer-events:none;
+    transition:opacity .32s ease,visibility .32s ease;
+  }
+  .ada-load-state.is-done{opacity:0;visibility:hidden}
+  .ada-load-card{width:min(420px,calc(100% - 40px));padding:24px 24px 20px}
+  .ada-load-brand{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}
+  .ada-load-brand strong{font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  .ada-load-brand span{font-size:9px;font-weight:850;letter-spacing:.15em;text-transform:uppercase;color:#153f68}
+  .ada-load-track{height:3px;overflow:hidden;border-radius:99px;background:#dce5ed}
+  .ada-load-bar{height:100%;width:36%;border-radius:inherit;background:#153f68;animation:adaLoadMove .72s ease-in-out infinite}
+  .ada-load-meta{display:flex;justify-content:space-between;gap:12px;margin-top:11px;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#738397}
+  .ada-load-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;background:#1c9a6e;box-shadow:0 0 0 4px rgba(28,154,110,.10)}
+  @keyframes adaLoadMove{0%{transform:translateX(-110%)}100%{transform:translateX(310%)}}
+  @media(max-width:480px){
+    .ada-load-card{width:calc(100% - 28px);padding:18px 16px}
+    .ada-load-brand{margin-bottom:18px}
+    .ada-load-brand strong{font-size:11px}
+    .ada-load-brand span,.ada-load-meta{font-size:8px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .ada-load-bar{animation:none;width:100%}
+    .ada-load-state{transition-duration:.01ms}
+  }`;
+  document.head.appendChild(style);
+
+  const el=document.createElement('div');
+  el.id='ada-tech-loader';
+  el.className='ada-load-state';
+  el.setAttribute('aria-hidden','true');
+  el.innerHTML='<div class="ada-load-card"><div class="ada-load-brand"><strong>ADA Tech Division</strong><span>Rundu · Namibia</span></div><div class="ada-load-track"><div class="ada-load-bar"></div></div><div class="ada-load-meta"><span><i class="ada-load-dot"></i><b id="ada-load-status">Preparing support</b></span><span>ADA / TECH</span></div></div>';
+  document.body.prepend(el);
+
+  let hidden=false;
+  const hide=()=>{
+    if(hidden) return;
+    hidden=true;
+    el.classList.add('is-done');
+    setTimeout(()=>el.remove(),420);
+  };
+  const started=performance.now();
+  const finish=()=>{
+    const remain=Math.max(0,520-(performance.now()-started));
+    setTimeout(hide,remain);
+  };
+  if(document.readyState==='complete') finish();
+  else window.addEventListener('load',finish,{once:true});
+  setTimeout(hide,1400);
+
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a[href]');
+    if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+    const href=a.getAttribute('href')||'';
+    if(!href||href.startsWith('#')||href.startsWith('mailto:')||href.startsWith('tel:')||a.target==='_blank'||a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href,location.href)}catch{return}
+    if(url.origin!==location.origin||url.pathname===location.pathname&&url.search===location.search) return;
+
+    const nav=document.createElement('div');
+    nav.className='ada-load-state';
+    nav.setAttribute('aria-hidden','true');
+    nav.innerHTML='<div class="ada-load-card"><div class="ada-load-brand"><strong>ADA Tech Division</strong><span>Rundu · Namibia</span></div><div class="ada-load-track"><div class="ada-load-bar"></div></div><div class="ada-load-meta"><span><i class="ada-load-dot"></i><b>Opening page</b></span><span>ADA / TECH</span></div></div>';
+    document.body.appendChild(nav);
+    setTimeout(()=>nav.classList.add('is-done'),1600);
+    setTimeout(()=>nav.remove(),2050);
+  },{capture:true});
+})();
+
+
 /* ADA family theme */
 if(!document.querySelector('link[data-ada-brand-refresh]')){
   const theme=document.createElement('link');
