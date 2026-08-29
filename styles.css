@@ -50,3 +50,74 @@
   .site-footer .footer-grid{grid-template-columns:1fr}
   .site-footer .footer-brand{grid-column:auto}
 }
+
+
+/* ADA Tech first-paint loading state — CSS-first to prevent flash-of-page */
+body::before{
+  content:"ADA TECH DIVISION\A Rundu · Namibia";
+  white-space:pre;
+  position:fixed;
+  inset:0;
+  z-index:9997;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding-bottom:46px;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(21,63,104,.08),transparent 24rem),
+    #f7f9fc;
+  color:#0f1b2d;
+  font-size:13px;
+  line-height:2.15;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  pointer-events:none;
+  opacity:1;
+  visibility:visible;
+  animation:adaIntroOut .34s ease .76s forwards;
+}
+body::after{
+  content:"";
+  position:fixed;
+  z-index:9998;
+  left:50%;
+  top:calc(50% + 34px);
+  width:min(250px,56vw);
+  height:3px;
+  border-radius:999px;
+  transform:translateX(-50%);
+  background:
+    linear-gradient(90deg,transparent 0 32%,#153f68 46% 54%,transparent 68% 100%),
+    #dce5ed;
+  background-size:230% 100%,100% 100%;
+  pointer-events:none;
+  opacity:1;
+  visibility:visible;
+  animation:adaLoaderSweep .62s linear infinite,adaIntroOut .34s ease .76s forwards;
+}
+html.ada-navigating body::before{
+  animation:none!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+html.ada-navigating body::after{
+  opacity:1!important;
+  visibility:visible!important;
+  animation:adaLoaderSweep .62s linear infinite!important;
+}
+@keyframes adaLoaderSweep{
+  from{background-position:110% 0,0 0}
+  to{background-position:-110% 0,0 0}
+}
+@keyframes adaIntroOut{
+  to{opacity:0;visibility:hidden}
+}
+@media(max-width:480px){
+  body::before{font-size:11px;line-height:2;padding-bottom:40px}
+  body::after{width:min(220px,62vw);top:calc(50% + 31px)}
+}
+@media(prefers-reduced-motion:reduce){
+  body::before{animation:adaIntroOut .01ms linear .2s forwards}
+  body::after{animation:adaIntroOut .01ms linear .2s forwards}
+}
