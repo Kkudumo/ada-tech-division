@@ -189,3 +189,42 @@ if(!isAdmin){
 /* Pause off-screen videos to save phone battery/data */
 const vids=[...document.querySelectorAll('video')];
 if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.play().catch(()=>{});else e.target.pause()}),{threshold:.12});vids.forEach(v=>io.observe(v))}
+
+
+/* ADA unified division path bridge */
+(() => {
+  const prefix = "/divisions/tech";
+  const onUnifiedPath =
+    window.location.pathname === prefix ||
+    window.location.pathname.startsWith(prefix + "/");
+
+  if (!onUnifiedPath) return;
+
+  const toUnifiedPath = (value) => {
+    if (!value || !value.startsWith("/") || value.startsWith("//")) return value;
+    if (value === prefix || value.startsWith(prefix + "/")) return value;
+    return prefix + value;
+  };
+
+  const rewriteLinks = (root = document) => {
+    root.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+      const next = toUnifiedPath(href);
+      if (next !== href) link.setAttribute("href", next);
+    });
+
+    root.querySelectorAll("form[action]").forEach((form) => {
+      const action = form.getAttribute("action");
+      const next = toUnifiedPath(action);
+      if (next !== action) form.setAttribute("action", next);
+    });
+  };
+
+  rewriteLinks();
+
+  const observer = new MutationObserver(() => rewriteLinks());
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+})();
