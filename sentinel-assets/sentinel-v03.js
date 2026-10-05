@@ -1,8 +1,8 @@
 const SITES=[
- {id:'ada-main',name:'ADA MAIN',url:'https://andreas-digital-agency.vercel.app'},
- {id:'ada-web',name:'ADA WEB',url:'https://ada-web-division.vercel.app'},
- {id:'ada-tech',name:'ADA TECH',url:'https://ada-tech-division.vercel.app'},
- {id:'portfolio',name:'PORTFOLIO',url:'https://kudumo-portfolio.vercel.app'}
+ {id:'ada-main',name:'ADA MAIN',url:'https://www.andreasdigitalagency.com'},
+ {id:'ada-web',name:'ADA WEB',url:'https://web.andreasdigitalagency.com'},
+ {id:'ada-tech',name:'ADA TECH',url:'https://tech.andreasdigitalagency.com'},
+ {id:'portfolio',name:'PORTFOLIO',url:'https://founder.andreasdigitalagency.com'}
 ];
 const $=id=>document.getElementById(id);let state={checks:[],summary:null,generatedAt:null};
 const histories=JSON.parse(localStorage.getItem('adaSentinelHistory')||'{}');SITES.forEach(s=>histories[s.id]=Array.isArray(histories[s.id])?histories[s.id].slice(-30):[]);

@@ -28,7 +28,7 @@ if(!document.querySelector('link[data-ada-brand-refresh]')){
 }
 
 /* Favicons */
-const ADA_FAVICON='https://andreas-digital-agency.vercel.app/brand/ADA-favicon.png?v=4';
+const ADA_FAVICON='https://www.andreasdigitalagency.com/brand/ADA-favicon.png?v=4';
 let favicon=document.querySelector("link[rel~='icon']");
 if(!favicon){favicon=document.createElement('link');favicon.rel='icon';favicon.type='image/png';document.head.appendChild(favicon)}
 favicon.href=ADA_FAVICON;
@@ -70,7 +70,7 @@ const isAdmin=path==='/tech-publisher';
 
 if(!isAdmin){
   /* Standard utility access */
-  const utilityMarkup='<div class="ada-utility-links"><a href="/reviews">Reviews</a><a href="/client-desk">Client Desk</a><a href="/service-record">Service Record</a><a href="/directory">All Tech Pages</a><a href="https://andreas-digital-agency.vercel.app/">ADA Main</a></div>';
+  const utilityMarkup='<div class="ada-utility-links"><a href="/reviews">Reviews</a><a href="/client-desk">Client Desk</a><a href="/service-record">Service Record</a><a href="/directory">All Tech Pages</a><a href="https://www.andreasdigitalagency.com/">ADA Main</a></div>';
   document.querySelectorAll('.utility .wrap,.topbar .wrap').forEach(w=>w.innerHTML=utilityMarkup);
 
   const services=`
@@ -134,7 +134,7 @@ if(!isAdmin){
         <a class="ada-nav-item" href="/locations/rundu"><strong>Rundu IT Support</strong><small>Local on-site support in Rundu.</small></a>
         <a class="ada-nav-item" href="/contact"><strong>Contact ADA Tech</strong><small>Route a technical, quote or business enquiry.</small></a>
         <a class="ada-nav-item" href="/directory"><strong>Site Directory</strong><small>Browse every public ADA Tech page.</small></a>
-        <a class="ada-nav-item" href="https://andreas-digital-agency.vercel.app/"><strong>ADA Main Website</strong><small>Company, divisions, projects, careers and news.</small></a>
+        <a class="ada-nav-item" href="https://www.andreasdigitalagency.com/"><strong>ADA Main Website</strong><small>Company, divisions, projects, careers and news.</small></a>
       </div></div>
     </div>`;
 
@@ -149,11 +149,11 @@ if(!isAdmin){
 
   /* Professional full site footer */
   const footerMarkup=`<footer class="ada-global-footer"><div class="wrap"><div class="ada-footer-grid">
-    <div class="ada-footer-brand"><img src="https://andreas-digital-agency.vercel.app/brand/logos/ada-primary-white.png" alt="Andreas Digital Agency"><p>Practical computer, network and business IT support from Rundu, with remote support across Namibia.</p><a href="/support">Get Support →</a><a href="https://wa.me/264818032641" target="_blank" rel="noopener">WhatsApp +264 81 803 2641 →</a></div>
+    <div class="ada-footer-brand"><img src="https://www.andreasdigitalagency.com/brand/logos/ada-primary-white.png" alt="Andreas Digital Agency"><p>Practical computer, network and business IT support from Rundu, with remote support across Namibia.</p><a href="/support">Get Support →</a><a href="https://wa.me/264818032641" target="_blank" rel="noopener">WhatsApp +264 81 803 2641 →</a></div>
     <div><h3>Services</h3><a href="/services">All Services</a><a href="/services/computer-repair">Computer Repair</a><a href="/services/windows-setup">Windows & Software</a><a href="/services/bios-firmware">BIOS & Firmware</a><a href="/services/networking">Networking & Wi-Fi</a><a href="/services/remote-support">Remote Support</a><a href="/services/cctv">CCTV</a><a href="/services/security">Security & Data</a><a href="/services/server-infrastructure">Server & Infrastructure</a><a href="/services/business-it">Business IT</a></div>
     <div><h3>Help & Problems</h3><a href="/problems">All Common Problems</a><a href="/problems/windows-blue-screen">Blue Screen</a><a href="/problems/windows-black-screen">Black Screen</a><a href="/problems/slow-laptop">Slow Laptop</a><a href="/problems/laptop-overheating">Overheating</a><a href="/problems/laptop-not-turning-on">Won't Turn On</a><a href="/problems/windows-update-not-working">Windows Update</a><a href="/problems/wifi-keeps-disconnecting">Wi-Fi Disconnecting</a><a href="/problems/ssd-ram-upgrade">RAM or SSD Upgrade</a><a href="/faq">FAQ</a></div>
     <div><h3>Plans & Proof</h3><a href="/first-aid">ADA First Aid</a><a href="/managed-it">Managed IT</a><a href="/work">Tech Case Files</a><a href="/reviews">Client Reviews</a><a href="/pricing">Pricing</a><span class="ada-footer-subhead">Existing Clients</span><a href="/client-desk">Client Desk</a><a href="/service-record">Service Record</a></div>
-    <div><h3>ADA Tech</h3><a href="/about">How ADA Tech Works</a><a href="/locations/rundu">Rundu IT Support</a><a href="/contact">Contact</a><a href="/support">Request Support</a><a href="/directory">Site Directory</a><span class="ada-footer-subhead">ADA Company</span><a href="https://andreas-digital-agency.vercel.app/">ADA Main</a><a href="https://ada-web-division.vercel.app/">ADA Web Division</a></div>
+    <div><h3>ADA Tech</h3><a href="/about">How ADA Tech Works</a><a href="/locations/rundu">Rundu IT Support</a><a href="/contact">Contact</a><a href="/support">Request Support</a><a href="/directory">Site Directory</a><span class="ada-footer-subhead">ADA Company</span><a href="https://www.andreasdigitalagency.com/">ADA Main</a><a href="https://web.andreasdigitalagency.com/">ADA Web Division</a></div>
   </div><div class="ada-footer-bottom"><span>© 2026 Andreas Digital Agency. Built in Namibia. Designed for Africa.</span><span><a href="/directory">All Tech Pages</a> · <a href="/contact">Contact</a> · <a href="/support">Support</a></span></div></div></footer>`;
   document.querySelectorAll('footer.footer,footer.site-footer,footer').forEach((f,i)=>{if(i===0)f.outerHTML=footerMarkup;else f.remove()});
 
