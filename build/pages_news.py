@@ -121,6 +121,12 @@ Private Service Record and ticket links that ADA Tech has already sent you conti
 ]
 
 
+# Items published once from the main ADA admin area (Website Content) are
+# added to these lists by assets/js/ada-updates.js. They link to the main site.
+SHARED_FEED = ('data-only-published data-time data-card-class="card card--link news-card" '
+               'data-tag-class="tag" data-title-class="h3" data-link-class="more" data-link-text="Read on ADA"')
+
+
 def news_card(item):
     return (f'<a class="card card--link news-card" href="/news/{item["slug"]}" data-date="{item["date"]}">'
             f'<span class="tag">{e(item["kind"])}</span><time datetime="{item["date"]}">{e(item["label"])}</time>'
@@ -130,7 +136,8 @@ def news_card(item):
 
 def latest(n=3):
     """Cards for the newest items, used on the home page."""
-    return '<div class="grid g3 swipe">' + "".join(news_card(i) for i in NEWS[:n]) + "</div>"
+    return (f'<div class="grid g3 swipe" data-ada-updates="{n}" data-mode="merge" {SHARED_FEED}>'
+            + "".join(news_card(i) for i in NEWS[:n]) + "</div>")
 
 
 def build():
@@ -139,7 +146,8 @@ def build():
         "Changes to our services and prices, and notices about things that affect your computer, such as "
         "the end of Windows 10 support.",
         [N], [("/guides", "Looking for guides?", "line")], code=("Bulletin", f"{len(NEWS)} items"))
-    body += sec('<h2 class="vh">All items</h2><div class="grid g2" id="newsGrid">'
+    body += sec('<h2 class="vh">All items</h2><div class="grid g2" id="newsGrid" '
+                f'data-ada-updates="9" data-mode="append" {SHARED_FEED}>'
                 + "".join(news_card(i) for i in NEWS) + "</div>")
     body += sec(head_block(
         "Company-wide news",
@@ -149,7 +157,7 @@ def build():
     page("news", "News, Updates and Notices | ADA Tech Division",
          "Service and price changes from ADA Tech Division in Rundu, Namibia, and notices about things that "
          "affect your computer.",
-         body, active="/news", crumbs=[N])
+         body, active="/news", crumbs=[N], scripts=["/assets/js/ada-updates.js"])
 
     for item in NEWS:
         path = "news/" + item["slug"]

@@ -187,4 +187,4 @@ price before the work starts.</p>
     page("", "Computer Repair and IT Support in Rundu, Namibia | ADA Tech",
          "ADA Tech repairs laptops and desktops, installs Windows, fixes Wi-Fi, sets up CCTV and supports office "
          f"IT in Rundu, with remote support across Namibia. Diagnostic {DIAG}, deducted from the repair.",
-         body, schema=[faq_schema(HOME_FAQ)], scripts=["/assets/js/work.js"])
+         body, schema=[faq_schema(HOME_FAQ)], scripts=["/assets/js/work.js", "/assets/js/ada-updates.js"])
