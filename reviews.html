@@ -1,2 +1,147 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>ADA Tech Reviews | Verified Computer Repair & IT Support Feedback</title><meta name="description" content="Read verified ADA Tech client reviews for computer repair, laptop support, Windows, networking and technical services in Rundu and remotely."><link rel="canonical" href="https://tech.andreasdigitalagency.com/reviews"><link rel="stylesheet" href="/styles.css"><style>.reviewHero{padding:66px 0 50px;background:linear-gradient(180deg,#fff,#f4f7fa)}.reviewHero h1{font-size:clamp(46px,6.5vw,82px);line-height:.94;letter-spacing:-.06em;margin:12px 0}.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reviewCard{background:#fff;border:1px solid #dde5ec;border-radius:22px;padding:22px}.stars{font-size:20px;letter-spacing:2px;color:#153f68}.verified{display:inline-flex;margin-top:12px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#14734d;background:#edf9f3;border-radius:999px;padding:7px 9px}.livePill{display:inline-flex;gap:7px;align-items:center;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#eaf1f7;color:#153f68;border-radius:999px;padding:7px 10px}.livePill:before{content:'';width:7px;height:7px;border-radius:50%;background:#22a06b}.reviewLayout{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px}.serviceVerified{display:none;background:#edf9f3;border:1px solid #bfe6d1;border-radius:14px;padding:14px;margin-bottom:16px;color:#126944}.serviceVerified.show{display:block}.hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important}@media(max-width:900px){.reviewGrid,.reviewLayout{grid-template-columns:1fr}}</style></head><body><div class="utility"><div class="wrap"></div></div><header class="header"><div class="wrap"><a class="identity" href="/"><img src="https://www.andreasdigitalagency.com/brand/logos/ada-primary-black.png" alt="ADA"><span class="division">Tech<br>Division</span></a><nav class="nav"></nav></div></header><main><section class="reviewHero"><div class="wrap"><span class="livePill">Live review feed</span><h1>Real clients.<br><span>Real technical work.</span></h1><p class="lede">Approved reviews are loaded directly from ADA Tech's service database. Reviews submitted through an official Service Record can be verified and published automatically.</p></div></section><section class="section"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">Published feedback</div><h2>Latest client reviews</h2></div><p id="refreshNote">The review list checks for new approved feedback automatically.</p></div><div id="reviewGrid" class="reviewGrid"><p>Loading reviews…</p></div></div></section><section class="section soft"><div class="wrap reviewLayout"><div><div class="eyebrow">Worked with ADA Tech?</div><h2>Leave a review.</h2><p>If you opened this page from your private ADA Service Record, the review can be verified against that record. General submissions are moderated first.</p><p>Your verification contact is kept private and is never returned by the public review feed.</p></div><form id="reviewForm" class="support-form" novalidate><div id="serviceVerified" class="serviceVerified">✓ Official ADA Service Record detected. The review can be verified automatically if the private token is valid.</div><div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><div class="form-grid"><div class="form-field"><label for="reviewName">Name</label><input id="reviewName" name="client_name" maxlength="120" autocomplete="name" required></div><div class="form-field"><label for="reviewCompany">Company / organisation (optional)</label><input id="reviewCompany" name="client_company" maxlength="160" autocomplete="organization"></div></div><div class="form-grid"><div class="form-field"><label for="reviewRating">Rating</label><select id="reviewRating" name="rating"><option value="5">5 — Excellent</option><option value="4">4 — Very good</option><option value="3">3 — Good</option><option value="2">2 — Fair</option><option value="1">1 — Poor</option></select></div><div class="form-field"><label for="jobReference">Job / Service Record reference</label><input name="job_reference" id="jobReference" maxlength="120" placeholder="Optional"></div></div><div class="form-field"><label for="reviewText">Your review</label><textarea id="reviewText" name="review" rows="5" maxlength="2000" required></textarea></div><div class="form-grid"><div class="form-field"><label for="contactMethod">Verification contact</label><select id="contactMethod" name="contact_method"><option>WhatsApp</option><option>Phone</option><option>Email</option></select></div><div class="form-field"><label for="contactValue">Number or email</label><input id="contactValue" name="contact_value" maxlength="180" autocomplete="email" required></div></div><label><input type="checkbox" name="consent" checked> I allow my name to appear with this review if published.</label><label class="privacy-consent"><input type="checkbox" required> <span>I understand that the information I send will be handled as described in ADA's <a href="https://www.andreasdigitalagency.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span></label><div id="reviewMsg" class="form-message" role="status" aria-live="polite"></div><button class="btn blue full" type="submit">Submit Review →</button></form></div></section></main><footer></footer><script>const API='https://vjbdosprwtelfbpqpdcc.supabase.co/functions/v1/tech-public-api';const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));const hash=new URLSearchParams(location.hash.replace(/^#/,''));const legacy=new URLSearchParams(location.search);const serviceRecord=hash.get('record')||legacy.get('record')||'';const reviewToken=hash.get('review_token')||legacy.get('review_token')||'';const job=hash.get('job')||legacy.get('job')||serviceRecord||'';if((legacy.get('review_token')||legacy.get('record'))&&(serviceRecord||reviewToken)){const h=new URLSearchParams();if(job)h.set('job',job);if(serviceRecord)h.set('record',serviceRecord);if(reviewToken)h.set('review_token',reviewToken);history.replaceState(null,'',location.pathname+'#'+h.toString())}if(job)document.getElementById('jobReference').value=job;if(serviceRecord&&reviewToken)document.getElementById('serviceVerified').classList.add('show');async function api(path,options){const r=await fetch(path,options);const d=await r.json().catch(()=>({ok:false,error:'Invalid server response.'}));if(!r.ok&&!d.error)d.error='Request failed.';return d}async function loadReviews(){const g=document.getElementById('reviewGrid');try{const d=await api(API+'?action=list_reviews',{cache:'no-store'});if(!d.ok)throw new Error(d.error||'Review feed unavailable');if(!d.reviews?.length){g.innerHTML='<article class="reviewCard"><h3>No published reviews yet.</h3><p>Verified client feedback will appear here.</p></article>';return}g.innerHTML=d.reviews.map(r=>'<article class="reviewCard"><div class="stars">'+'★'.repeat(Number(r.rating)||0)+'☆'.repeat(Math.max(0,5-(Number(r.rating)||0)))+'</div><h3>'+esc(r.client_name)+'</h3>'+(r.client_company?'<p><b>'+esc(r.client_company)+'</b></p>':'')+'<p>“'+esc(r.review)+'”</p>'+(r.verified?'<span class="verified">✓ Verified ADA Tech client</span>':'')+'</article>').join('');document.getElementById('refreshNote').textContent='Live from ADA Tech · last checked '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}catch(e){document.getElementById('refreshNote').textContent='Review feed temporarily unavailable.'}}loadReviews();setInterval(loadReviews,30000);document.getElementById('reviewForm').addEventListener('submit',async e=>{e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;const f=new FormData(form),msg=document.getElementById('reviewMsg');msg.style.display='block';msg.textContent='Submitting…';const body={action:'submit_review',website:f.get('website'),client_name:f.get('client_name'),client_company:f.get('client_company'),rating:Number(f.get('rating')),review:f.get('review'),job_reference:f.get('job_reference'),contact_method:f.get('contact_method'),contact_value:f.get('contact_value'),consent_to_publish_name:!!f.get('consent'),service_record_code:serviceRecord||null,review_token:reviewToken||null};try{const d=await api(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});msg.textContent=d.message||d.error||'Unable to submit review.';if(d.ok){form.reset();if(job)document.getElementById('jobReference').value=job;loadReviews()}}catch{msg.textContent='Unable to submit the review right now.'}});</script><script src="/script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Reviews of ADA Tech in Rundu | ADA Tech</title>
+<meta name="description" content="Approved reviews from ADA Tech clients in Rundu and across Namibia, loaded from the service database. Reviews sent through a Service Record are verified against the job.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tech.andreasdigitalagency.com/reviews">
+<meta name="theme-color" content="#081b33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ADA Tech Division">
+<meta property="og:title" content="Client Reviews of ADA Tech in Rundu | ADA Tech">
+<meta property="og:description" content="Approved reviews from ADA Tech clients in Rundu and across Namibia, loaded from the service database. Reviews sent through a Service Record are verified against the job.">
+<meta property="og:url" content="https://tech.andreasdigitalagency.com/reviews">
+<meta property="og:image" content="https://tech.andreasdigitalagency.com/assets/img/og-ada-tech.png">
+<meta property="og:locale" content="en_NA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/ada.css">
+<script src="/assets/js/ada.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://tech.andreasdigitalagency.com/#organization","name":"ADA Tech Division","legalName":"Andreas Digital Agency","alternateName":["ADA Tech","Andreas Digital Agency Tech Division"],"url":"https://tech.andreasdigitalagency.com/","logo":"https://tech.andreasdigitalagency.com/assets/brand/lettermark-blue.png","image":"https://tech.andreasdigitalagency.com/assets/img/og-ada-tech.png","description":"ADA Tech Division repairs laptops and desktop computers, sets up Windows, fixes Wi-Fi and office networks, installs CCTV and supports business IT. On site in Rundu, remote across Namibia.","telephone":"+264818032641","email":"hello.ada1@outlook.com","priceRange":"N$99+","currenciesAccepted":"NAD","address":{"@type":"PostalAddress","addressLocality":"Rundu","addressRegion":"Kavango East","addressCountry":"NA"},"areaServed":[{"@type":"City","name":"Rundu"},{"@type":"Country","name":"Namibia"}],"parentOrganization":{"@type":"Organization","name":"Andreas Digital Agency","url":"https://www.andreasdigitalagency.com/"},"knowsAbout":["Computer repair","Laptop repair","Windows installation","Wi-Fi and network setup","CCTV installation","Remote IT support","Managed IT services"]},{"@type":"WebSite","@id":"https://tech.andreasdigitalagency.com/#website","url":"https://tech.andreasdigitalagency.com/","name":"ADA Tech Division","publisher":{"@id":"https://tech.andreasdigitalagency.com/#organization"},"inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tech.andreasdigitalagency.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://tech.andreasdigitalagency.com/reviews#webpage","url":"https://tech.andreasdigitalagency.com/reviews","name":"Client Reviews of ADA Tech in Rundu | ADA Tech","description":"Approved reviews from ADA Tech clients in Rundu and across Namibia, loaded from the service database. Reviews sent through a Service Record are verified against the job.","isPartOf":{"@id":"https://tech.andreasdigitalagency.com/#website"},"dateModified":"2026-10-05","inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tech.andreasdigitalagency.com/"},{"@type":"ListItem","position":2,"name":"Client reviews","item":"https://tech.andreasdigitalagency.com/reviews"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="util"><div class="wrap">
+<span class="util-note">A division of <a href="https://www.andreasdigitalagency.com/">Andreas Digital Agency</a>, Rundu, Namibia</span>
+<span class="util-links"><a href="tel:+264818032641">+264 81 803 2641</a><a class="hide-s" href="https://wa.me/264818032641?text=Hello%20ADA%20Tech%2C%20I%20need%20help%20with%3A%20" target="_blank" rel="noopener">WhatsApp</a><a href="/client-desk">Existing clients</a><a class="hide-s" href="/contact">Contact</a></span>
+</div></div>
+<header class="head"><div class="wrap">
+<a class="brand" href="/" aria-label="ADA Tech Division home"><img src="/assets/img/ada-mark-blue.png" alt="" width="320" height="147"><span><strong>ADA Tech Division</strong><span>Andreas Digital Agency</span></span></a>
+<div class="head-tools">
+<a class="search-btn" id="searchBtn" href="/search" aria-controls="searchBar" aria-expanded="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg><span>Search</span></a>
+<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+</div>
+<nav class="nav" id="nav" aria-label="Main"><a href="/problems">Problems</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/first-aid">First Aid</a><a href="/managed-it">Managed IT</a><a href="/work" aria-current="page">Work</a><a href="/guides">Guides</a><a href="/news">News</a><a href="/about">How we work</a><a class="btn" href="/support">Get support</a></nav>
+</div>
+<form class="searchbar" id="searchBar" action="/search" method="get" role="search" hidden><div class="wrap">
+<label class="vh" for="q-head">Search this site</label>
+<input id="q-head" name="q" type="search" placeholder="Search: blue screen, prices, Wi-Fi, Windows 11…" autocomplete="off" required>
+<button class="btn btn--blue" type="submit">Search</button>
+</div></form>
+</header>
+<main id="main">
+<section class="hero hero-page on-dark"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Client reviews</span></nav><p class="code-line"><span>Review feed</span><span>Live</span></p><h1>Client reviews</h1>
+<p class="lead">Feedback from people and organisations ADA Tech has worked for. Reviews are loaded from the service database, and those sent through a Service Record are verified against the job.</p>
+<div class="btn-row"><a class="btn" href="#leave">Leave a review</a><a class="btn btn--line" href="/work">See case files</a></div></div></section><section class="sec"><div class="wrap">
+<div class="sec-head sec-head--split"><div><span class="label">Published feedback</span><h2 class="h2">Latest reviews</h2></div><p class="live-note" id="refreshNote">The list checks for newly approved feedback automatically.</p></div><div id="reviewGrid" class="grid g3" aria-live="polite"><p class="live-note">Loading reviews…</p></div><noscript><p class="note">Reviews are loaded with JavaScript. Please switch it on to read them.</p></noscript>
+</div></section><section class="sec sec--light"><div class="wrap">
+<div class="split" id="leave"><div><span class="label">Worked with ADA Tech?</span><h2 class="h2">Leave a review</h2><p class="mt2">If you opened this page from your private Service Record, the review is checked against that record. Other submissions are moderated before they are published.</p><p>The contact you give is used only to verify the review. It is never returned by the public review feed.</p></div><form id="reviewForm" class="form" novalidate>
+<div id="serviceVerified" class="verified-note">Official ADA Service Record detected. Your review can be verified automatically if the private token is valid.</div>
+<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="fields">
+<div class="field"><label for="reviewName">Name</label><input id="reviewName" name="client_name" maxlength="120" autocomplete="name" required></div>
+<div class="field"><label for="reviewCompany">Company or organisation <span class="opt">(optional)</span></label><input id="reviewCompany" name="client_company" maxlength="160" autocomplete="organization"></div>
+<div class="field"><label for="reviewRating">Rating</label><select id="reviewRating" name="rating"><option value="5">5 / Excellent</option><option value="4">4 / Very good</option><option value="3">3 / Good</option><option value="2">2 / Fair</option><option value="1">1 / Poor</option></select></div>
+<div class="field"><label for="jobReference">Job or Service Record reference <span class="opt">(optional)</span></label><input name="job_reference" id="jobReference" maxlength="120"></div>
+<div class="field full"><label for="reviewText">Your review</label><textarea id="reviewText" name="review" rows="5" maxlength="2000" required></textarea></div>
+<div class="field"><label for="contactMethod">Verification contact</label><select id="contactMethod" name="contact_method"><option>WhatsApp</option><option>Phone</option><option>Email</option></select></div>
+<div class="field"><label for="contactValue">Number or email</label><input id="contactValue" name="contact_value" maxlength="180" autocomplete="email" required><span class="hint">Kept private. Never shown with the review.</span></div>
+</div>
+<label class="consent"><input type="checkbox" name="consent" checked> <span>My name may appear with this review if it is published.</span></label>
+<label class="consent"><input type="checkbox" required> <span>I understand that the information I send will be handled as described in ADA's <a href="https://www.andreasdigitalagency.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+<div id="reviewMsg" class="form-msg" role="status" aria-live="polite"></div>
+<div class="btn-row"><button class="btn" type="submit">Submit review</button></div>
+</form></div>
+</div></section>
+<section class="cta" aria-labelledby="cta-h"><div class="wrap">
+<div><h2 class="h2" id="cta-h">Tell us what is going wrong.</h2><p>You do not need to know the cause. Say what the device is, what it is doing and when it started. A standard diagnostic costs N$99 and comes off the repair if you go ahead.</p></div>
+<ul class="ways">
+<li><a href="https://wa.me/264818032641?text=Hello%20ADA%20Tech%2C%20I%20need%20help%20with%3A%20" target="_blank" rel="noopener"><span>WhatsApp</span><strong>081 803 2641</strong></a></li>
+<li><a href="tel:+264818032641"><span>Call</span><strong>+264 81 803 2641</strong></a></li>
+<li><a href="/support"><span>Form</span><strong>Describe the problem</strong></a></li>
+<li><a href="mailto:hello.ada1@outlook.com"><span>Email</span><strong>hello.ada1@outlook.com</strong></a></li>
+</ul></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<div class="foot-grid">
+<div>
+<img class="foot-logo" src="/assets/img/ada-logo-white.png" alt="Andreas Digital Agency" width="440" height="106" loading="lazy">
+<p>ADA Tech Division is the computer repair and IT support division of Andreas Digital Agency.</p>
+<dl>
+<dt>Phone and WhatsApp</dt><dd><a href="tel:+264818032641">+264 81 803 2641</a></dd>
+<dt>Company line</dt><dd><a href="tel:+264836775783">+264 83 677 5783</a></dd>
+<dt>Email</dt><dd><a href="mailto:hello.ada1@outlook.com">hello.ada1@outlook.com</a></dd>
+<dt>Workshop</dt><dd>Rundu, Kavango East, Namibia</dd>
+<dt>Cover</dt><dd>On site in Rundu. Remote support across Namibia.</dd>
+</dl>
+</div>
+<div><h2>Services</h2><ul>
+<li><a href="/services/computer-repair">Computer and laptop repair</a></li>
+<li><a href="/services/windows-setup">Windows and software setup</a></li>
+<li><a href="/services/bios-firmware">BIOS and firmware</a></li>
+<li><a href="/services/networking">Wi-Fi and networking</a></li>
+<li><a href="/services/remote-support">Remote support</a></li>
+<li><a href="/services/security">Security and backups</a></li>
+<li><a href="/services/cctv">CCTV</a></li>
+<li><a href="/services/server-infrastructure">Servers and infrastructure</a></li>
+<li><a href="/services/business-it">Business IT setup</a></li>
+</ul></div>
+<div><h2>Common problems</h2><ul>
+<li><a href="/problems/laptop-not-turning-on">Laptop will not turn on</a></li>
+<li><a href="/problems/slow-laptop">Laptop is very slow</a></li>
+<li><a href="/problems/windows-blue-screen">Blue screen errors</a></li>
+<li><a href="/problems/windows-black-screen">Black screen</a></li>
+<li><a href="/problems/laptop-overheating">Overheating</a></li>
+<li><a href="/problems/wifi-keeps-disconnecting">Wi-Fi keeps dropping</a></li>
+<li><a href="/problems/windows-update-not-working">Windows Update fails</a></li>
+<li><a href="/problems/liquid-spilled-on-laptop">Liquid spilled on a laptop</a></li>
+<li><a href="/problems">All problems</a></li>
+</ul></div>
+<div><h2>Prices and plans</h2><ul>
+<li><a href="/pricing">Pricing</a></li>
+<li><a href="/first-aid">ADA First Aid (monthly care)</a></li>
+<li><a href="/managed-it">Managed IT for business</a></li>
+<li><a href="/solutions">Who we help</a></li>
+<li><a href="/locations/rundu">IT support in Rundu</a></li>
+<li><a href="/guides">Guides</a></li>
+<li><a href="/faq">Questions and answers</a></li>
+<li><a href="/news">News and updates</a></li>
+<li><a href="/search">Search this site</a></li>
+</ul></div>
+<div><h2>Clients</h2><ul>
+<li><a href="/support">Get support</a></li>
+<li><a href="/client-desk">Existing client desk</a></li>
+<li><a href="/service-record">Open a service record</a></li>
+<li><a href="/work">Case files</a></li>
+<li><a href="/reviews">Client reviews</a></li>
+<li><a href="/about">How we work</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a href="https://www.andreasdigitalagency.com/">Andreas Digital Agency</a></li>
+<li><a href="https://web.andreasdigitalagency.com/">ADA Web Division</a></li>
+</ul></div>
+</div>
+<div class="foot-base">
+<span>&copy; <span id="year">2026</span> Andreas Digital Agency. All rights reserved.</span>
+<span><a href="https://www.andreasdigitalagency.com/privacy">Privacy</a> &nbsp; <a href="https://www.andreasdigitalagency.com/cookies">Cookies</a> &nbsp; <a href="https://www.andreasdigitalagency.com/payment-refund-cancellation">Payments and refunds</a> &nbsp; <a href="/directory">All pages</a></span>
+<span>Built in Namibia. Designed for Africa.</span>
+</div>
+</div></footer>
+<div class="bar" aria-label="Quick contact"><a href="tel:+264818032641">Call</a><a href="https://wa.me/264818032641?text=Hello%20ADA%20Tech%2C%20I%20need%20help%20with%3A%20" target="_blank" rel="noopener">WhatsApp</a><a href="/support">Get support</a></div>
+<script type="module" src="/assets/js/reviews.js"></script>
+</body>
+</html>
