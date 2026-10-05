@@ -121,3 +121,5 @@ html.ada-navigating body::after{
   body::before{animation:adaIntroOut .01ms linear .2s forwards}
   body::after{animation:adaIntroOut .01ms linear .2s forwards}
 }
+
+.privacy-consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0;font-size:13px;line-height:1.5;font-weight:500;text-transform:none;letter-spacing:0}.support-form .privacy-consent input,.privacy-consent input{width:18px;height:18px;min-height:0;margin:2px 0 0;padding:0;flex:0 0 auto}.privacy-consent a{text-decoration:underline}

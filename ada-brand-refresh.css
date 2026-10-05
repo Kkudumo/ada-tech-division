@@ -290,3 +290,6 @@ body .ada-footer-subhead{color:#9bbbd4!important}
   .card{box-shadow:0 8px 24px rgba(21,63,104,.06)}
   .darkcopy{padding-top:50px!important;padding-bottom:50px!important}
 }
+
+/* Buttons: the .blue text-colour helper above must not turn button labels the same colour as the button. */
+.btn.blue,.btn.blue:hover,.btn.blue:focus{color:#fff!important}
