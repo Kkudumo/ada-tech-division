@@ -134,3 +134,77 @@ html .ada-footer-brand p,html .note{font-size:14.5px!important}
 html .ada-footer-bottom,html .ada-footer-bottom a,html .ada-footer-subhead,html .badge,html .breadcrumbs,html .btn,html .card .code,html .eyebrow,html .footerBottom,html .label,html .livePill,html .recordRow b,html .route span,html .trend,html th{font-size:12px!important}
 html .division{font-size:10px!important}
 }
+
+/* Phone reading layout. Generated from measurements at 360px width (vivo Y03 class phones).
+   Reading text runs the full width of the screen with 1.6 line spacing and a darker
+   colour; sections, gaps and picture blocks are shorter so pages scroll less. */
+@media (max-width: 640px) {
+  /* reading text colour: 8 rules */
+  html .callout p,
+  html .card p,
+  html .check,
+  html .content p,
+  html .lost p,
+  html .priceCard li,
+  html .problemCard p,
+  html .sectionHead p {
+    color: #3b4657 !important;
+  }
+  /* side padding (text uses the full width): 9 rules */
+  html .callout,
+  html .desk-card,
+  html .faqAside,
+  html .faqCta,
+  html .helpAside,
+  html .helpCard,
+  html .lostCard,
+  html .problemCard,
+  html .recordCard {
+    padding-left: 16px !important;
+  }
+  /* side padding (text uses the full width): 9 rules */
+  html .callout,
+  html .desk-card,
+  html .faqAside,
+  html .faqCta,
+  html .helpAside,
+  html .helpCard,
+  html .lostCard,
+  html .problemCard,
+  html .recordCard {
+    padding-right: 16px !important;
+  }
+  /* space above sections: 8 rules */
+  html .desk-hero,
+  html .faqHero,
+  html .helpHero,
+  html .problemHero,
+  html .proof-hero,
+  html .recordHero,
+  html .reviewHero,
+  html .section {
+    padding-top: 40px !important;
+  }
+  /* space below sections: 3 rules */
+  html .desk-hero,
+  html .proof-hero,
+  html .section {
+    padding-bottom: 40px !important;
+  }
+  /* space above blocks: 1 rules */
+  html .card h3 {
+    margin-top: 24px !important;
+  }
+  /* space below blocks: 1 rules */
+  html .sectionHead {
+    margin-bottom: 24px !important;
+  }
+  /* block heights: 1 rules */
+  html .imageSplit .media {
+    min-height: 230px !important;
+  }
+  /* block heights: 1 rules */
+  html .lost {
+    min-height: 400px !important;
+  }
+}
