@@ -160,7 +160,7 @@ if(!isAdmin){
   /* Problem pages always end with a conversion action */
   if(path.startsWith('/problems/')&&!document.querySelector('[data-problem-conversion]')){
     const f=document.querySelector('.ada-global-footer');
-    if(f){const s=document.createElement('section');s.className='whatsappBand';s.dataset.problemConversion='1';s.innerHTML='<div class="wrap waGrid"><div><div class="eyebrow" style="color:#dbe9ff">Still happening?</div><h3>Stop guessing at the cause.</h3><p>Standard device diagnosis starts at N$120 and can be waived when approved repair/service of N$350+ follows.</p></div><a class="btn" href="/support">Request diagnostic →</a></div>';f.before(s)}
+    if(f){const s=document.createElement('section');s.className='whatsappBand';s.dataset.problemConversion='1';s.innerHTML='<div class="wrap waGrid"><div><div class="eyebrow" style="color:#dbe9ff">Still happening?</div><h3>Stop guessing at the cause.</h3><p>Standard device diagnosis costs N$99 and is deducted from the repair cost if you go ahead.</p></div><a class="btn" href="/support">Request diagnostic →</a></div>';f.before(s)}
   }
 
   const closeAllGroups=()=>document.querySelectorAll('.ada-nav-group.open').forEach(g=>{g.classList.remove('open');g.querySelector('.ada-nav-trigger')?.setAttribute('aria-expanded','false')});
