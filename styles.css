@@ -208,3 +208,15 @@ html .division{font-size:10px!important}
     min-height: 400px !important;
   }
 }
+
+/* Phone type scale matched to ADA Web (phones up to 640px wide): page titles 26.5px (home title 30px), section headings 22.5px, card headings 18px, paragraphs 16px, card text 14.5px, links and buttons 14px or more, labels 12px or more. */
+@media (max-width:640px){
+html .desk-hero h1,html .directoryHero h1,html .faqHero h1,html .helpHero h1,html .lost h1,html .pageHero h1,html .problemHero h1,html .proof-hero h1,html .recordHero h1,html .reviewHero h1{font-size:26.5px!important}
+html .helpAside h2,html .helpCard h2,html .imageSplit .copy h2,html .problemCard h2,html .recordCard h2,html .section-heading h2,html .sectionHead h2,html .serviceIntro h2,html .support-intro h2,html h2[style*="font-size:34px"]{font-size:22.5px!important}
+html .card h3,html .priceCard h3,html .waGrid h3{font-size:18px!important}
+html .note,html body{font-size:16px!important}
+html .ada-footer-bottom,html .footerBottom,html .helpAside p[style*="font-size:12px"],html .privacy-consent{font-size:14.5px!important}
+html .ada-footer-bottom a,html .ada-global-footer a,html .breadcrumbs,html .footer a,html .lostActions a,html .route small{font-size:14px!important}
+html .btn,html .card .code,html .kicker,html .route span,html .trustline{font-size:13px!important}
+h2{font-size:22.5px}h3{font-size:18px}
+}
