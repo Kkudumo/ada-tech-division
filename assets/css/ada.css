@@ -1034,3 +1034,15 @@ table.stack tbody th code { display: inline-block; margin: 2px 0; }
   .cta .wrap { padding-block: 34px; }
   .photo img { aspect-ratio: 16 / 9; }
 }
+
+/* Phones: no label smaller than 12px, matching the ADA Web type scale. */
+@media (max-width: 760px) {
+  .label, .where, .code-line, .finder-head, .finder li a b, .facts i, .sheet-head, .sheet dt, .case-meta span,
+  .case-flow dt, .stop > strong, .review .verified, .timeline b, .timeline small, .util, .live-note,
+  .rows a em, .foot-id, table.stack td::before { font-size: .75rem; }
+  .where { letter-spacing: .05em; }
+  .facts i { letter-spacing: .06em; }
+  .sheet dl > div { grid-template-columns: 96px minmax(0, 1fr); }
+  .case-flow > div { grid-template-columns: 96px minmax(0, 1fr); }
+  .case-flow dt { letter-spacing: .03em; }
+}
