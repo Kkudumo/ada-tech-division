@@ -1029,7 +1029,8 @@ table.stack tbody th code { display: inline-block; margin: 2px 0; }
   .sec { padding-block: 36px; }
   .sec--tight { padding-block: 26px; }
   .sec-head { margin-bottom: 18px; }
-  .hero .wrap { padding-block: 28px 32px; }
+  .hero-page .wrap { padding-block: 28px 32px; }
+  .hero-home .wrap { padding-bottom: 32px; }
   .card h3 { margin-bottom: 6px; }
   .cta .wrap { padding-block: 34px; }
   .photo img { aspect-ratio: 16 / 9; }
