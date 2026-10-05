@@ -22,7 +22,7 @@ const boot=document.querySelector('.boot');if(boot)boot.remove();
 if(!document.querySelector('link[data-ada-brand-refresh]')){
   const theme=document.createElement('link');
   theme.rel='stylesheet';
-  theme.href='/ada-brand-refresh.css?v=20261005-1';
+  theme.href='/ada-brand-refresh.css?v=20261005-2';
   theme.dataset.adaBrandRefresh='1';
   document.head.appendChild(theme);
 }

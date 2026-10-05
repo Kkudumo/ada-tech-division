@@ -123,3 +123,14 @@ html.ada-navigating body::after{
 }
 
 .privacy-consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0;font-size:13px;line-height:1.5;font-weight:500;text-transform:none;letter-spacing:0}.support-form .privacy-consent input,.privacy-consent input{width:18px;height:18px;min-height:0;margin:2px 0 0;padding:0;flex:0 0 auto}.privacy-consent a{text-decoration:underline}
+/* Mobile type scale (phones up to 640px wide): page titles 30px, section headings 24px, card headings 20px, reading text at least 14.5px, labels at least 12px. */
+@media (max-width:640px){
+html .price{font-size:32px!important}
+html .desk-hero h1,html .directoryHero h1,html .faqHero h1,html .helpHero h1,html .hero h1,html .pageHero h1,html .problemHero h1,html .proof-hero h1,html .recordHero h1,html .reviewHero h1{font-size:30px!important}
+html .helpCard h2,html .imageSplit .copy h2,html .sectionHead h2,html .serviceIntro h2,html .support-intro h2,html h2[style*="font-size:34px"]{font-size:24px!important}
+html .waGrid h3{font-size:22px!important}
+html .card h3,html .priceCard h3{font-size:20px!important}
+html .ada-footer-brand p,html .note{font-size:14.5px!important}
+html .ada-footer-bottom,html .ada-footer-bottom a,html .ada-footer-subhead,html .badge,html .breadcrumbs,html .btn,html .card .code,html .eyebrow,html .footerBottom,html .label,html .livePill,html .recordRow b,html .route span,html .trend,html th{font-size:12px!important}
+html .division{font-size:10px!important}
+}

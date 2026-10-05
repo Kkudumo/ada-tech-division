@@ -284,8 +284,8 @@ body .ada-footer-subhead{color:#9bbbd4!important}
 @media(max-width:680px){
   .hero{background:linear-gradient(180deg,#fff,#f5f8fb)!important}
   .hero:before{opacity:.35}
-  .hero h1,.pageHero h1{font-size:clamp(40px,12vw,50px)!important}
-  .sectionHead h2,.imageSplit .copy h2{font-size:clamp(35px,10vw,43px)!important}
+  .hero h1,.pageHero h1{font-size:30px!important}
+  .sectionHead h2,.imageSplit .copy h2{font-size:24px!important}
   .route{box-shadow:none}
   .card{box-shadow:0 8px 24px rgba(21,63,104,.06)}
   .darkcopy{padding-top:50px!important;padding-bottom:50px!important}
