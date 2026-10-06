@@ -154,3 +154,12 @@
     }
   });
 })();
+
+/* 404 page: show the address that was asked for, so a typing mistake is easy to spot. */
+document.addEventListener('DOMContentLoaded', function () {
+  var line = document.getElementById('nfUrl');
+  var code = line && line.querySelector('code');
+  if (!code) return;
+  code.textContent = location.pathname.slice(0, 120);
+  line.hidden = false;
+});

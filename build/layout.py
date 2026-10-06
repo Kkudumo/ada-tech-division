@@ -374,6 +374,29 @@ def header(active):
 </header>"""
 
 
+# Every ADA division website shows the same list of ADA websites in its footer.
+ADA_SITES = [
+    ("www", "Andreas Digital Agency", "https://www.andreasdigitalagency.com/"),
+    ("web", "ADA Web Division", "https://web.andreasdigitalagency.com/"),
+    ("tech", "ADA Tech Division", "https://tech.andreasdigitalagency.com/"),
+    ("marketing", "ADA Marketing Division", "https://marketing.andreasdigitalagency.com/"),
+    ("consulting", "ADA Consulting", "https://consulting.andreasdigitalagency.com/"),
+    ("founder", "Founder profile", "https://founder.andreasdigitalagency.com/"),
+]
+THIS_SITE = "tech"
+
+
+def family():
+    items = []
+    for key, name, href in ADA_SITES:
+        if key == THIS_SITE:
+            items.append(f'<span aria-current="page">{name}</span>')
+        else:
+            items.append(f'<a href="{href}">{name}</a>')
+    return ('<nav class="foot-family" aria-label="ADA websites"><strong>ADA websites</strong>'
+            + "".join(items) + "</nav>")
+
+
 def footer():
     return f"""<footer class="foot"><div class="wrap">
 <div class="foot-grid">
@@ -429,10 +452,9 @@ def footer():
 <li><a href="/reviews">Client reviews</a></li>
 <li><a href="/about">How we work</a></li>
 <li><a href="/contact">Contact</a></li>
-<li><a href="{MAIN}/">Andreas Digital Agency</a></li>
-<li><a href="{WEB}/">ADA Web Division</a></li>
 </ul></div>
 </div>
+{family()}
 <div class="foot-base">
 <span>&copy; <span id="year">2026</span> Andreas Digital Agency. All rights reserved.</span>
 <span><a href="{MAIN}/privacy">Privacy</a> &nbsp; <a href="{MAIN}/cookies">Cookies</a> &nbsp; <a href="{MAIN}/cookies" data-cookie-settings>Cookie settings</a> &nbsp; <a href="{MAIN}/disclaimer">Disclaimer</a> &nbsp; <a href="{MAIN}/payment-refund-cancellation">Payments and refunds</a> &nbsp; <a href="{MAIN}/copyright">Copyright</a> &nbsp; <a href="/directory">All pages</a></span>
@@ -488,6 +510,7 @@ def page(path, title, desc, body, *, active="", crumbs=None, schema=None, og_typ
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/css/ada.css">
 <script src="/assets/js/ada.js"></script>
+<script src="/assets/js/ada-loading.js" defer></script>
 <script src="/assets/js/ada-consent.js" defer></script>
 <script type="application/ld+json">{ld}</script>
 </head>

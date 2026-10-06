@@ -21,6 +21,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/css/ada.css">
 <script src="/assets/js/ada.js"></script>
+<script src="/assets/js/ada-loading.js" defer></script>
 <script src="/assets/js/ada-consent.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://tech.andreasdigitalagency.com/#organization","name":"ADA Tech Division","legalName":"Andreas Digital Agency","alternateName":["ADA Tech","Andreas Digital Agency Tech Division"],"url":"https://tech.andreasdigitalagency.com/","logo":"https://tech.andreasdigitalagency.com/assets/brand/lettermark-blue.png","image":"https://tech.andreasdigitalagency.com/assets/img/og-ada-tech.png","description":"ADA Tech Division repairs laptops and desktop computers, sets up Windows, fixes Wi-Fi and office networks, installs CCTV and supports business IT. On site in Rundu, remote across Namibia.","telephone":"+264818032641","email":"hello.ada1@outlook.com","priceRange":"N$99+","currenciesAccepted":"NAD","address":{"@type":"PostalAddress","addressLocality":"Rundu","addressRegion":"Kavango East","addressCountry":"NA"},"areaServed":[{"@type":"City","name":"Rundu"},{"@type":"Country","name":"Namibia"}],"parentOrganization":{"@type":"Organization","name":"Andreas Digital Agency","url":"https://www.andreasdigitalagency.com/"},"knowsAbout":["Computer repair","Laptop repair","Windows installation","Wi-Fi and network setup","CCTV installation","Remote IT support","Managed IT services"]},{"@type":"WebSite","@id":"https://tech.andreasdigitalagency.com/#website","url":"https://tech.andreasdigitalagency.com/","name":"ADA Tech Division","publisher":{"@id":"https://tech.andreasdigitalagency.com/#organization"},"inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tech.andreasdigitalagency.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://tech.andreasdigitalagency.com/404#webpage","url":"https://tech.andreasdigitalagency.com/404","name":"Page Not Found | ADA Tech Division","description":"The page you were looking for does not exist.","isPartOf":{"@id":"https://tech.andreasdigitalagency.com/#website"},"dateModified":"2026-10-05","inLanguage":"en"}]}</script>
 </head>
@@ -45,11 +46,20 @@
 </div></form>
 </header>
 <main id="main">
-<section class="hero hero-page on-dark"><div class="wrap">
-<p class="code-line"><span>Error 404</span><span>Page not found</span></p><h1>That page does not exist</h1>
-<p class="lead">The address may be mistyped, or the page may have moved when the site was rebuilt. These are the places most people are looking for.</p>
-<div class="btn-row"><a class="btn" href="/">Go to the home page</a><a class="btn btn--line" href="/support">Get support</a></div></div></section><section class="sec"><div class="wrap">
-<h2 class="vh">Popular pages</h2><div class="grid g3"><a class="card card--link" href="/problems"><h3 class="h3">Problems</h3><p>Start from the symptom.</p><span class="more">Find the fault</span></a><a class="card card--link" href="/services"><h3 class="h3">Services</h3><p>What we repair and set up.</p><span class="more">See services</span></a><a class="card card--link" href="/pricing"><h3 class="h3">Pricing</h3><p>Every published price.</p><span class="more">See prices</span></a><a class="card card--link" href="/work"><h3 class="h3">Case files</h3><p>Real jobs, written up.</p><span class="more">See work</span></a><a class="card card--link" href="/guides"><h3 class="h3">Guides</h3><p>Plain answers before you spend.</p><span class="more">Read guides</span></a><a class="card card--link" href="/search"><h3 class="h3">Search</h3><p>Look for a topic, such as prices.</p><span class="more">Search the site</span></a></div>
+<section class="hero hero-page on-dark nf"><p class="nf-num" aria-hidden="true">4<b>0</b>4</p><div class="wrap">
+<p class="code-line"><span>Fault F-404</span><span>Page not found</span></p><h1>This page will not start.</h1>
+<p class="lead">Diagnosis: the address is mistyped, or the page moved when the site was rebuilt. Nothing is wrong with your device.</p>
+<form class="nf-search" action="/search" method="get" role="search">
+<label class="vh" for="nf-q">Search this site</label>
+<input id="nf-q" name="q" type="search" placeholder="Search: blue screen, prices, Wi-Fi…" autocomplete="off" required>
+<button class="btn" type="submit">Search</button>
+</form>
+<p class="nf-url" id="nfUrl" hidden>You asked for <code></code></p>
+<div class="btn-row"><a class="btn" href="/">Go to the home page</a><a class="btn btn--line" href="/problems">Open the fault list</a></div>
+</div></section><section class="sec"><div class="wrap">
+<div class="sec-head"><span class="label">What to do now</span><h2 class="h2">Three ways back</h2></div><ol class="nf-steps"><li><h3>Check the address</h3><p>One wrong letter is enough. Look at the end of the address at the top of your screen.</p></li><li><h3>Search the site</h3><p>Type the fault or the service, such as slow laptop or Windows 11.</p></li><li><h3>Start from the symptom</h3><p>The <a href="/problems">fault list</a> covers the most common faults, each with checks you can do yourself.</p></li></ol>
+</div></section><section class="sec sec--light"><div class="wrap">
+<div class="sec-head"><span class="label">Popular pages</span><h2 class="h2">Where most people were heading</h2></div><div class="grid g3 swipe"><a class="card card--link" href="/problems"><h3 class="h3">Problems</h3><p>Start from the symptom.</p><span class="more">Find the fault</span></a><a class="card card--link" href="/services"><h3 class="h3">Services</h3><p>What we repair and set up.</p><span class="more">See services</span></a><a class="card card--link" href="/pricing"><h3 class="h3">Pricing</h3><p>Every published price.</p><span class="more">See prices</span></a><a class="card card--link" href="/work"><h3 class="h3">Case files</h3><p>Real jobs, written up.</p><span class="more">See work</span></a><a class="card card--link" href="/guides"><h3 class="h3">Guides</h3><p>Plain answers before you spend.</p><span class="more">Read guides</span></a><a class="card card--link" href="/support"><h3 class="h3">Get support</h3><p>Describe what is going wrong.</p><span class="more">Start</span></a></div><p class="note mt2"><strong>Followed a link on this site that led here?</strong> <a href="https://wa.me/264818032641?text=Hello%20ADA%20Tech%2C%20a%20link%20on%20your%20website%20led%20to%20a%20page%20that%20does%20not%20exist%3A%20" target="_blank" rel="noopener">Tell us on WhatsApp</a> and we will fix it.</p>
 </div></section>
 
 </main>
@@ -107,10 +117,9 @@
 <li><a href="/reviews">Client reviews</a></li>
 <li><a href="/about">How we work</a></li>
 <li><a href="/contact">Contact</a></li>
-<li><a href="https://www.andreasdigitalagency.com/">Andreas Digital Agency</a></li>
-<li><a href="https://web.andreasdigitalagency.com/">ADA Web Division</a></li>
 </ul></div>
 </div>
+<nav class="foot-family" aria-label="ADA websites"><strong>ADA websites</strong><a href="https://www.andreasdigitalagency.com/">Andreas Digital Agency</a><a href="https://web.andreasdigitalagency.com/">ADA Web Division</a><span aria-current="page">ADA Tech Division</span><a href="https://marketing.andreasdigitalagency.com/">ADA Marketing Division</a><a href="https://consulting.andreasdigitalagency.com/">ADA Consulting</a><a href="https://founder.andreasdigitalagency.com/">Founder profile</a></nav>
 <div class="foot-base">
 <span>&copy; <span id="year">2026</span> Andreas Digital Agency. All rights reserved.</span>
 <span><a href="https://www.andreasdigitalagency.com/privacy">Privacy</a> &nbsp; <a href="https://www.andreasdigitalagency.com/cookies">Cookies</a> &nbsp; <a href="https://www.andreasdigitalagency.com/cookies" data-cookie-settings>Cookie settings</a> &nbsp; <a href="https://www.andreasdigitalagency.com/disclaimer">Disclaimer</a> &nbsp; <a href="https://www.andreasdigitalagency.com/payment-refund-cancellation">Payments and refunds</a> &nbsp; <a href="https://www.andreasdigitalagency.com/copyright">Copyright</a> &nbsp; <a href="/directory">All pages</a></span>
