@@ -435,7 +435,7 @@ def footer():
 </div>
 <div class="foot-base">
 <span>&copy; <span id="year">2026</span> Andreas Digital Agency. All rights reserved.</span>
-<span><a href="{MAIN}/privacy">Privacy</a> &nbsp; <a href="{MAIN}/cookies">Cookies</a> &nbsp; <a href="{MAIN}/payment-refund-cancellation">Payments and refunds</a> &nbsp; <a href="/directory">All pages</a></span>
+<span><a href="{MAIN}/privacy">Privacy</a> &nbsp; <a href="{MAIN}/cookies">Cookies</a> &nbsp; <a href="{MAIN}/cookies" data-cookie-settings>Cookie settings</a> &nbsp; <a href="{MAIN}/disclaimer">Disclaimer</a> &nbsp; <a href="{MAIN}/payment-refund-cancellation">Payments and refunds</a> &nbsp; <a href="{MAIN}/copyright">Copyright</a> &nbsp; <a href="/directory">All pages</a></span>
 <span>Built in Namibia. Designed for Africa.</span>
 </div>
 </div></footer>
@@ -488,6 +488,7 @@ def page(path, title, desc, body, *, active="", crumbs=None, schema=None, og_typ
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/css/ada.css">
 <script src="/assets/js/ada.js"></script>
+<script src="/assets/js/ada-consent.js" defer></script>
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
