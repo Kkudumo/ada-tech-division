@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    {"source":"/:path*","has":[{"type":"host","value":"ada-tech-division.vercel.app"}],"destination":"https://tech.andreasdigitalagency.com/:path*","permanent":true},
     {"source":"/services/computer-support","destination":"/services/computer-repair","permanent":true},
     {"source":"/services/hardware-diagnostics","destination":"/services/computer-repair","permanent":true},
     {"source":"/services/it-infrastructure","destination":"/services/server-infrastructure","permanent":true},
