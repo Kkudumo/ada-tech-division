@@ -232,8 +232,9 @@ def first_aid():
 def managed_it():
     ask = wa("Hello ADA Tech, we would like a Managed IT assessment. Users: , devices: , main problems: ")
     body = hero(
-        "Managed IT: ongoing support for an organisation",
-        "For teams where several people depend on the same technology, and where waiting for something to "
+        "Managed IT: IT support for small businesses",
+        "ADA Tech is an IT company in Rundu. This is ongoing IT support for small businesses and other "
+        "organisations where several people depend on the same technology, and waiting for something to "
         "break has started to cost working time.",
         [MI], [(ask, "Book an IT assessment"), ("#plans", "See monthly plans", "line")],
         code=("Care plan", "Organisations"))
@@ -289,9 +290,9 @@ def managed_it():
                      ("/first-aid", "ADA First Aid", "The same idea, for personal devices.")])
     schema = [faq_schema(qa)] + [service_schema(n, w, "managed-it", p.replace("From ", "").replace("N$", "").replace(",", ""), "month")
                                  for _t, n, p, w, _i, _m in MANAGED]
-    page("managed-it", "Managed IT Support for Small Businesses in Namibia | ADA Tech",
-         "Monthly IT support for organisations without their own IT staff: remote helpdesk, scheduled updates, "
-         "device register and staff onboarding. From N$1,249 a month for up to 5 devices.",
+    page("managed-it", "IT Support for Small Businesses: Managed IT Plans | ADA Tech",
+         "IT support for small businesses from an IT company in Rundu: remote helpdesk, scheduled updates and "
+         "staff onboarding. From N$1,249 a month.",
          body, active="/managed-it", crumbs=[MI], schema=schema)
 
 

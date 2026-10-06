@@ -19,7 +19,9 @@ HOME_FAQ = [
     ("Will my files be safe?",
      "<p>Tell us which files matter before work begins. Where a repair could affect stored files, backup is "
      "agreed first. No technician can guarantee recovery from a drive that is failing or damaged, which is why "
-     "we say so before starting. See <a href=\"/guides/back-up-your-files\">how to back up your files</a>.</p>"),
+     "we say so before starting. See <a href=\"/guides/back-up-your-files\">how to back up your files</a>, "
+     "or <a href=\"/guides/data-recovery-deleted-files-dead-drive\">data recovery in Rundu and Namibia</a> if "
+     "files are already missing.</p>"),
     ("Do you install Windows with a licence?",
      "<p>Windows and Office are activated only with a valid licence you already own, or a legitimate one that "
      "is quoted separately. Most computers that came with Windows already carry a digital licence. ADA Tech "
@@ -57,10 +59,10 @@ def build():
     hero = f"""<section class="hero hero-home on-dark"><div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span></div><div class="wrap">
 <div>
 <span class="where"><span>ADA Tech Division</span><span>Workshop: Rundu</span><span>Remote: all Namibia</span></span>
-<h1 class="display">Computer and IT faults, diagnosed before anything is replaced.</h1>
-<p class="lead">We repair laptops and desktops, install Windows, fix Wi-Fi and networks, set up CCTV and
-look after office IT. A diagnostic costs {DIAG} and comes off the repair if you go ahead. You hear the
-price before the work starts.</p>
+<h1 class="display">Computer repair and IT support in Rundu, diagnosed before anything is replaced.</h1>
+<p class="lead">ADA Tech is an IT company in Rundu, Namibia. We repair laptops and desktops, install Windows,
+fix Wi-Fi and networks, set up CCTV and look after office IT. A diagnostic costs {DIAG} and comes off the
+repair if you go ahead. You hear the price before the work starts.</p>
 {buttons(('/support', 'Tell us what is wrong'), ('/pricing', 'See prices', 'line'))}
 </div>
 {finder()}
@@ -174,6 +176,11 @@ price before the work starts.</p>
         ("/guides/back-up-your-files", "How to back up your files",
          "A simple routine that survives a dead drive, a theft and a spilled drink, and how to test it.",
          "Read the guide", "Data", "disk"),
+        ("/guides/data-recovery-deleted-files-dead-drive", "Deleted files or a dead hard drive?",
+         "What to do first, what can usually be recovered, and what cannot.", "Read the guide", "Data", "disk"),
+        ("/guides/cctv-installation-cost-namibia", "CCTV installation cost in Namibia",
+         "What you are paying for, what changes the price, and what to ask an installer.", "Read the guide",
+         "CCTV", "camera"),
     ], swipe=True))
 
     news = sec('<div class="sec-head sec-head--split"><div><span class="label">ADA Tech today</span>'
@@ -184,7 +191,7 @@ price before the work starts.</p>
                     + '<p class="mt2"><a class="more" href="/faq">All questions and answers</a></p>')
 
     body = hero + facts + services + how + packages + proof + care + trust + start + guides + news + questions
-    page("", "Computer Repair and IT Support in Rundu, Namibia | ADA Tech",
-         "ADA Tech repairs laptops and desktops, installs Windows, fixes Wi-Fi, sets up CCTV and supports office "
-         f"IT in Rundu, with remote support across Namibia. Diagnostic {DIAG}, deducted from the repair.",
+    page("", "IT Company in Rundu: Computer Repair and IT Support | ADA Tech",
+         "ADA Tech is an IT company in Rundu, Namibia: computer and laptop repair, Windows, Wi-Fi, CCTV and office "
+         f"IT, with remote support in Namibia. Diagnostic {DIAG}.",
          body, schema=[faq_schema(HOME_FAQ)], scripts=["/assets/js/work.js", "/assets/js/ada-updates.js"])

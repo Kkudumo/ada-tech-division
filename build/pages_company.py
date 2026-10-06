@@ -29,8 +29,8 @@ def about():
     c = [("about", "How we work")]
     body = hero(
         "Diagnose first. Fix the right fault.",
-        "Every job at ADA Tech follows the same seven steps, whether it is one laptop or a whole office. This "
-        "page sets out what happens after you contact us.",
+        "ADA Tech is an IT company in Rundu, Namibia. Every job follows the same seven steps, whether it is "
+        "one laptop or a whole office. This page sets out what happens after you contact us.",
         c, [("/support", "Get support"), ("/work", "See case files", "line")],
         code=("ADA Tech standard", "7 steps"))
     body += sec('<div class="intro">' + answer(
@@ -73,9 +73,9 @@ def about():
         ("/reviews", "Client reviews", "Approved feedback, loaded from the service database.", "Read reviews", "Clients", "chat"),
         (MAIN + "/about", "Andreas Digital Agency", "The company ADA Tech is a division of.", "Visit the main site", "Company", "office"),
     ], swipe=True))
-    page("about", "How ADA Tech Works: Diagnose First, Then Fix | ADA Tech",
-         "The seven steps ADA Tech follows on every job: assess, diagnose, recommend, approve, implement, test "
-         "and document. No parts replaced on a guess, legitimate licences only.",
+    page("about", "How an IT Company in Rundu Works: Diagnose First | ADA Tech",
+         "How ADA Tech, an IT company in Rundu, Namibia, works: seven steps from assessment to handover. No parts "
+         "replaced on a guess, legitimate licences only.",
          body, active="/about", crumbs=c)
 
 
@@ -348,9 +348,9 @@ def rundu():
     path = "locations/rundu"
     c = [(path, "IT support in Rundu")]
     body = hero(
-        "Computer repair and IT support in Rundu",
-        "ADA Tech is based in Rundu, Kavango East. Work that needs hands on the equipment is done here: "
-        "laptop and desktop repair, Wi-Fi and networks, CCTV and office setups.",
+        "Laptop repair and computer repair in Rundu",
+        "ADA Tech is an IT company based in Rundu, Kavango East. Work that needs hands on the equipment is "
+        "done here: laptop and desktop repair, Wi-Fi installation, CCTV installation and office setups.",
         c, [("/support", "Tell us what is wrong"), (wa("Hello ADA Tech, I am in Rundu and need help with: "), "WhatsApp from Rundu", "line")],
         code=("Workshop", "Rundu, Kavango East"))
     body += sec('<div class="intro">' + answer(
@@ -374,6 +374,16 @@ def rundu():
         ("/services/cctv", "camera", "S-07", "CCTV", "Camera planning, recorder setup and viewing on your phone.", "Quoted by site"),
         ("/services/business-it", "office", "S-09", "Business IT setup", "Devices, accounts, printers and Wi-Fi for an office.", "Quoted"),
     ]), "sec--light")
+    body += sec(head_block("Wi-Fi installation and CCTV installation in Rundu",
+                           "Two jobs that are best done on site, with the building in front of us.",
+                           label="On site") + ticks([
+        '<a href="/services/networking">Wi-Fi installation in Rundu</a>: router setup, coverage across rooms and '
+        'small office networks, from N$349 for router and Wi-Fi setup.',
+        '<a href="/services/cctv">CCTV installation in Rundu</a>: cameras, recorder, storage and viewing on your '
+        'phone, quoted after a site visit.',
+        '<a href="/services/windows-setup">Windows installation in Rundu</a>: three packages from N$649.',
+        '<a href="/guides/data-recovery-deleted-files-dead-drive">Data recovery</a>: what can be recovered from '
+        'a drive, and what we do.']))
     body += sec('<div class="split"><div><span class="label">Before you visit</span>'
                 '<h2 class="h2">Start with the symptom</h2>'
                 '<p class="mt2">Send a message first with the device and what it is doing. Often we can tell you '
@@ -384,6 +394,10 @@ def rundu():
                          'Bring the charger with a laptop. It is part of the diagnosis.'])
                 + "</div>" + photo("photo-laptop", "") + "</div>")
     qa = [
+        ("Is ADA Tech an IT company in Rundu?",
+         "<p>Yes. ADA Tech is the computer repair and IT support division of Andreas Digital Agency, based in "
+         "Rundu. It repairs laptops and computers, installs Windows, Wi-Fi and CCTV, and looks after office IT "
+         "for small businesses.</p>"),
         ("Where is ADA Tech in Rundu?",
          f"<p>ADA Tech works from Rundu, Kavango East. Message or call {PHONE} before coming, so we can tell you "
          "where to bring the device and when.</p>"),
@@ -401,9 +415,9 @@ def rundu():
     body += related([("/problems", "Find your problem", "Twelve common faults and what to check."),
                      ("/first-aid", "ADA First Aid", "Monthly care for a personal device."),
                      ("/managed-it", "Managed IT", "Monthly support for an organisation.")], cls="")
-    page(path, "Computer Repair and IT Support in Rundu, Namibia | ADA Tech",
-         f"Laptop and computer repair, Windows installation, Wi-Fi, CCTV and office IT in Rundu, Kavango East. "
-         f"Diagnostic {DIAG}, deducted from the repair. Call or WhatsApp {PHONE}.",
+    page(path, "Laptop Repair and Computer Repair in Rundu, Namibia | ADA Tech",
+         f"Laptop repair and computer repair in Rundu, Kavango East, plus Windows, Wi-Fi and CCTV installation. "
+         f"Diagnostic {DIAG}. Call or WhatsApp {PHONE}.",
          body, active="", crumbs=c, schema=[faq_schema(qa)])
 
 

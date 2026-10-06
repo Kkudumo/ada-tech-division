@@ -16,19 +16,23 @@ import pages_services
 import pages_guides
 
 KEYWORDS = {
-    "": "home ada tech division computer repair it support rundu namibia technician laptop fix",
+    "": "home ada tech division computer repair it support rundu namibia technician laptop fix it company it companies in namibia "
+        "it companies in rundu computer repair rundu laptop repair rundu computer shop rundu",
     "pricing": "price prices pricing cost costs fee fees charge charges rate rates how much money budget cheap "
                "affordable package packages quote quotation payment pay diagnostic n$",
     "support": "support help request book booking fix repair problem fault whatsapp start get help",
     "contact": "contact phone number telephone call whatsapp email address location where office reach message",
-    "about": "about how we work process steps standard method diagnose approve test document seven",
+    "about": "about how we work process steps standard method diagnose approve test document seven it company in rundu",
     "work": "work case files portfolio jobs examples proof repairs done previous",
     "reviews": "reviews testimonials feedback rating ratings clients customers stars",
     "faq": "faq questions answers help licence data files warranty complaint",
     "first-aid": "first aid monthly plan subscription care personal device home family student",
-    "managed-it": "managed it monthly business plan support contract helpdesk help desk organisation office outsourced",
+    "managed-it": "managed it monthly business plan support contract helpdesk help desk organisation office outsourced "
+                  "it support for small businesses it company it companies in namibia",
     "solutions": "who we help individuals students households remote workers small business lodges schools",
-    "locations/rundu": "rundu kavango east west local near me nkurenkuru divundu town",
+    "locations/rundu": "rundu kavango east west local near me nkurenkuru divundu town computer repair rundu laptop repair rundu "
+                       "it companies in rundu it company in rundu cctv installation rundu wifi installation rundu "
+                       "computer shop rundu laptop repair near me",
     "services": "services what we do offer list",
     "problems": "problems issues faults trouble not working broken help symptom",
     "client-desk": "client desk existing client ticket track tracking follow up warranty rework complaint priority",

@@ -16,6 +16,11 @@ GUIDES = [
      "A simple routine that survives a dead drive, a theft and a spilled drink.", "Data", "disk"),
     ("guides/genuine-windows-and-office-licences", "Genuine Windows and Office: how to check your licence",
      "How to see what you have, what survives a reinstall, and the free legal alternatives.", "Licences", "key"),
+    ("guides/data-recovery-deleted-files-dead-drive", "Deleted files or a dead hard drive: can the data be recovered?",
+     "What to do first, what can usually be recovered, what cannot, and what ADA Tech does.", "Data", "disk"),
+    ("guides/cctv-installation-cost-namibia", "CCTV installation cost in Namibia: what you are paying for",
+     "The parts of a system, what changes the price, wired against wireless and solar, and questions for an installer.",
+     "CCTV", "camera"),
 ]
 
 KEYWORDS = {
@@ -27,6 +32,11 @@ KEYWORDS = {
                                  "file history restore lost files",
     "guides/genuine-windows-and-office-licences": "genuine licence license key activation activate windows office "
                                                   "microsoft 365 pirated crack kms free libreoffice product key",
+    "guides/data-recovery-deleted-files-dead-drive": "data recovery namibia data recovery rundu recover deleted files dead hard drive "
+                                                     "hard disk failing clicking formatted drive ssd dead usb flash drive lost files undelete",
+    "guides/cctv-installation-cost-namibia": "cctv installation cost cctv installation cost for home cctv camera price in namibia "
+                                             "security cameras namibia surveillance cameras namibia cctv camera namibia solar cctv camera price "
+                                             "solar cctv camera with sim card solar cctv camera wifi dvr nvr storage",
 }
 
 
@@ -291,12 +301,14 @@ def build():
         "stored in your Microsoft account.</li></ul>"
         "<h2>If the drive has already failed</h2>"
         "<p>Stop using the computer. Every attempt to start it can make recovery harder. Recovery from a "
-        "failed drive is uncertain and nobody can guarantee it, which is the whole case for backing up first.</p>",
+        "failed drive is uncertain and nobody can guarantee it, which is the whole case for backing up first. "
+        "Read <a href=\"/guides/data-recovery-deleted-files-dead-drive\">deleted files or a dead hard drive: "
+        "can the data be recovered?</a> for what to do next.</p>",
         [("https://support.microsoft.com/en-us/windows/back-up-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc", "Microsoft Support: Back up and restore with File History"),
          ("https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web", "Microsoft: free Microsoft 365 on the web, including 5GB of cloud storage")],
         [("/services/security", "Security and backups", "Backups set up and tested for an office."),
          ("/problems/liquid-spilled-on-laptop", "Liquid spilled on a laptop", "One of the reasons to back up."),
-         ("/problems/computer-virus-or-pop-ups", "Virus warnings and pop-ups", "Ransomware and what to do.")])
+         ("/guides/data-recovery-deleted-files-dead-drive", "Data recovery in Rundu and Namibia", "When the files are already gone.")])
 
     # ------------------------------------------------------------ licences
     article(
@@ -362,3 +374,141 @@ def build():
         [("/services/windows-setup", "Windows and software setup", "Installation with legitimate licences only."),
          ("/guides/windows-10-end-of-support", "Windows 10 support has ended", "What your licence means for Windows 11."),
          ("/problems/computer-virus-or-pop-ups", "Virus warnings and pop-ups", "What cracked software brings with it.")])
+
+    # ------------------------------------------------------- data recovery
+    article(
+        "guides/data-recovery-deleted-files-dead-drive",
+        "Data Recovery in Rundu and Namibia: Deleted Files | ADA Tech",
+        "Deleted files or a dead hard drive? What to do first, what can usually be recovered, what cannot, and "
+        "what ADA Tech does in Rundu.",
+        "Deleted files or a dead hard drive: can the data be recovered?",
+        "Sometimes. What decides it is what happened to the drive and what has been written to it since. The "
+        "first hour matters more than the repair.",
+        "Stop using the drive now. Files you deleted, or a drive you formatted, can often be recovered if "
+        "nothing has been written over them. A hard drive that clicks or has failed is uncertain, and a dead "
+        "SSD is the hardest case. Nobody can promise recovery, and ADA Tech does not. A standard diagnostic "
+        f"costs {DIAG}, and complex data recovery is quoted separately.",
+        "<h2>What to do in the first hour</h2>"
+        "<ol><li><strong>Stop using the drive.</strong> Every file saved, program installed or update that "
+        "runs can overwrite the space where your old files still sit.</li>"
+        "<li><strong>Do not install recovery software on the same drive.</strong> It writes to the drive you "
+        "are trying to save.</li>"
+        "<li><strong>Do not keep restarting a drive that clicks or grinds.</strong> Each attempt can make "
+        "damage worse.</li>"
+        "<li><strong>Do not reinstall Windows or format the drive to see if it helps.</strong> That writes "
+        "over what you want back.</li>"
+        "<li><strong>Write down what happened.</strong> A drop, a power cut, a deleted folder, a Windows "
+        "update. It tells us where to look.</li></ol>"
+        "<h2>What can usually be recovered, and what cannot</h2>"
+        + table(["What happened", "Usually recoverable?", "Why"], [
+            ["Deleted files", "Often, if you stop at once", "Deleting removes the entry in the list, not always the data. The data stays until something is written over it. On an SSD it can be cleared sooner."],
+            ["Formatted drive", "Often, after a quick format", "A quick format clears the list. A full format, or a Windows reinstall on top, writes over the data."],
+            ["Failing hard disk (clicking, freezing, slow)", "Uncertain", "Parts are wearing out. Some files copy, some do not, and every start-up can make it worse."],
+            ["Dead SSD", "Rarely, and not guaranteed", "There is no spinning part to repair. When the controller fails, the data can be out of reach."],
+            ["Drive that was in a laptop with liquid or a drop", "Uncertain", "Depends on whether the drive itself was damaged. See <a href=\"/problems/liquid-spilled-on-laptop\">liquid spills</a>."],
+            ["Phone", "Not something ADA Tech handles", "We do not repair or recover phones. Check whether the photos or contacts were synced to your account, and ask the phone maker or a phone repairer."],
+        ], caption="General guidance. The real answer depends on the drive in front of us.")
+        + "<h2>A dead laptop is not always a dead drive</h2>"
+        "<p>When a laptop will not start, the drive that holds your files is often a separate part that is "
+        "still healthy. It can be taken out and copied to another drive. That is a transfer, not a recovery, "
+        "and it is much more likely to work. See <a href=\"/problems/laptop-not-turning-on\">laptop or computer "
+        "will not turn on</a>. If the drive is encrypted with BitLocker, you need the recovery key from your "
+        "Microsoft account before any files can be read.</p>"
+        "<h2>What ADA Tech does</h2>"
+        f"<p>We start with a standard diagnostic, {DIAG}, which comes off the repair if you go ahead. It "
+        "tells us whether the drive is healthy, failing or dead, and whether the laptop is the problem and "
+        "not the drive.</p>"
+        "<ul><li><strong>The drive reads normally.</strong> We copy your files to another drive. Basic backup "
+        "or transfer of up to 50GB starts from N$249.</li>"
+        "<li><strong>The drive is failing or the files were deleted.</strong> We tell you what we find and "
+        "what is realistic. Complex data recovery is quoted separately, and you decide before it starts.</li>"
+        "<li><strong>The drive has failed physically.</strong> We say so, and say whether it is something we "
+        "can attempt or whether it needs a specialist. We do not promise a result and we do not quote a "
+        "success rate.</li></ul>"
+        "<p>Tell us before any work starts which files matter. Message us from anywhere in Namibia for "
+        "advice, but a drive that has to be examined has to come to the workshop in Rundu.</p>"
+        "<h2>Common questions</h2>"
+        "<h3>Can deleted files be recovered?</h3>"
+        "<p>Often, if you stop using the drive straight away. The longer you keep working on it, the more "
+        "likely the old data is overwritten.</p>"
+        "<h3>Is the Recycle Bin the answer?</h3>"
+        "<p>Check it first. Files deleted normally go there and can be restored in one click. If you emptied "
+        "it, or held Shift while deleting, they are gone from it and the steps above apply.</p>"
+        "<h3>Can you guarantee my files will come back?</h3>"
+        "<p>No. No technician honestly can, from a drive that is failing or damaged. That is why the "
+        "<a href=\"/guides/back-up-your-files\">backup guide</a> exists: a copy beats any recovery.</p>"
+        "<h2>Once you have the files back</h2>"
+        "<p>Set up a backup so you are never here again. Three copies, one of them somewhere else, and a "
+        "monthly test. It takes about twenty minutes. See <a href=\"/guides/back-up-your-files\">how to back up "
+        "your files</a>.</p>",
+        [],
+        [("/guides/back-up-your-files", "How to back up your files", "So the next failure costs a drive, not your work."),
+         ("/services/computer-repair", "Laptop and computer repair in Rundu", "The diagnostic and what it covers."),
+         ("/problems/laptop-not-turning-on", "Laptop or computer will not turn on", "When the drive may be fine.")])
+
+    # ----------------------------------------------------------- CCTV cost
+    article(
+        "guides/cctv-installation-cost-namibia",
+        "CCTV Installation Cost in Namibia: What You Pay For | ADA Tech",
+        "What a CCTV system is made of, what changes the price, wired against wireless and solar cameras, and "
+        "questions to ask before you accept a quote.",
+        "CCTV installation cost in Namibia: what you are paying for",
+        "Two quotes for four cameras can differ a great deal and both be honest. The difference is in what each "
+        "one includes. Here is how to read them.",
+        "A CCTV system costs what its parts and its installation cost: cameras, a recorder, a storage drive, "
+        "cables or power, a router connection for viewing on your phone, and labour. The price moves with the "
+        "number of cameras, the distance the cable has to run, how many days of recording you want, and "
+        "whether mains power is available. ADA Tech does not publish a CCTV price. It quotes after a site "
+        "visit, with every part listed separately, so you can compare like with like.",
+        "<h2>The parts of a CCTV system</h2>"
+        "<ul><li><strong>Cameras.</strong> The more of them, and the better their picture and night view, the "
+        "higher the cost.</li>"
+        "<li><strong>A recorder</strong> (DVR or NVR). It records what the cameras see. The number of camera "
+        "channels it supports sets how many cameras you can add later.</li>"
+        "<li><strong>Storage.</strong> A hard drive in the recorder holds the footage. A bigger drive keeps "
+        "more days.</li>"
+        "<li><strong>Cabling and power.</strong> Cable from each camera to the recorder, and power for both. "
+        "Long runs, roofs and walls add labour and material.</li>"
+        "<li><strong>Network and remote viewing.</strong> Watching from your phone needs the recorder on an "
+        "internet connection, and mobile data on the phone.</li>"
+        "<li><strong>Backup power.</strong> Without it, a power cut stops the recording.</li>"
+        "<li><strong>Labour.</strong> Mounting, cabling, set-up, and showing you how to use it.</li></ul>"
+        "<h2>What changes the price</h2>"
+        "<ul><li><strong>Number of cameras.</strong> Each one adds a camera, a cable run and fitting time.</li>"
+        "<li><strong>Distance and building.</strong> A short run inside one room is cheap. A long run across a "
+        "yard or between buildings is not.</li>"
+        "<li><strong>Days of recording.</strong> Recording around the clock for thirty days needs far more "
+        "storage than recording on movement for a week.</li>"
+        "<li><strong>Picture quality.</strong> A camera for reading number plates is a different camera from "
+        "one that shows a person at a door.</li>"
+        "<li><strong>Power.</strong> Whether there is a plug where each camera sits, and whether a power cut "
+        "must not stop recording.</li></ul>"
+        "<p>The same factors apply to the cost of CCTV installation for a home and for a business. A house "
+        "with a few cameras and short runs is a smaller job. It is not a different kind of job.</p>"
+        "<h2>Wired, wireless or solar with a SIM card</h2>"
+        + table(["Type", "Suits", "Watch out for"], [
+            ["Wired, with a recorder", "Houses, shops and offices with mains power. The most dependable.", "The cabling takes the most labour. Plan the cable runs first."],
+            ["Wireless (Wi-Fi) cameras", "Places where running cable is hard.", "\"Wireless\" usually refers to the picture only. Each camera still needs power, and a weak Wi-Fi signal drops the picture."],
+            ["Solar camera with a SIM card", "Places with no mains power and no cable: a farm gate, a shed, a building site.", "It needs sun on the panel and mobile signal with data on the SIM card, which you pay for. Shade or no signal and it will not work."],
+        ])
+        + "<h2>Questions to ask any installer</h2>"
+        "<ol><li>How many cameras does this price cover, and what does each camera show?</li>"
+        "<li>Which recorder is it, and how many more cameras can it take later?</li>"
+        "<li>How many days of footage will the drive keep, with this many cameras?</li>"
+        "<li>What is included in the cabling, and what happens if the run is longer than planned?</li>"
+        "<li>Can I watch on my phone, and what does that need from my internet line?</li>"
+        "<li>What happens during a power cut?</li>"
+        "<li>Who is the equipment guaranteed by, and who do I call when a camera stops working?</li>"
+        "<li>Is the quote written, with every part listed separately?</li></ol>"
+        "<h2>What ADA Tech does</h2>"
+        "<p>We assess the site, write a quote that lists cameras, recorder, storage, cabling and labour "
+        "separately, install and configure the system, set up phone viewing, and show you how to search and "
+        "export footage. There is no published CCTV price, because it depends on the site. "
+        "See <a href=\"/services/cctv\">CCTV installation in Rundu</a>.</p>"
+        "<p>Point cameras at your own premises. Avoid places where people expect privacy, and tell staff and "
+        "visitors that cameras are in use. If recordings include the public or employees, take advice on your "
+        "legal duties.</p>",
+        [],
+        [("/services/cctv", "CCTV installation in Rundu", "What ADA Tech covers, and how a quote works."),
+         ("/services/networking", "Wi-Fi and networking", "The network the cameras run on."),
+         ("/pricing", "Pricing", "Every published price in one place.")])

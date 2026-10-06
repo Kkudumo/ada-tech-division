@@ -18,7 +18,9 @@ FILES_FAQ = ("Can my files be saved?",
              "that has failed, so it can be removed and the files copied to another drive. Basic backup or "
              "transfer of up to 50GB starts from N$249. Two limits apply: if the drive itself has failed, "
              "recovery is not guaranteed, and if the drive is encrypted with BitLocker you will need the "
-             "recovery key from your Microsoft account. Tell us before any work starts which files matter.</p>")
+             "recovery key from your Microsoft account. Tell us before any work starts which files matter. See "
+             "<a href=\"/guides/data-recovery-deleted-files-dead-drive\">data recovery in Rundu and Namibia</a> "
+             "for what can and cannot be recovered.</p>")
 
 TIME_FAQ = ("How long will the repair take?",
             "<p>It depends on the fault and on whether a part has to be ordered. We do not promise a time before "
@@ -31,17 +33,49 @@ PROBLEMS = [
         "slug": "laptop-not-turning-on", "code": "F-01", "icon": "power", "area": "Power and startup",
         "short": "My laptop will not turn on",
         "blurb": "No lights, lights but no picture, or it starts and then stops.",
-        "title": "Laptop Won't Turn On? What to Check First | ADA Tech",
-        "desc": "Laptop not turning on or not starting Windows? What the lights and sounds mean, five checks you "
-                "can do yourself, when to stop, and what a diagnosis costs in Rundu, Namibia.",
-        "h1": "Why will my laptop not turn on?",
+        "title": "Laptop or Computer Won't Turn On? What to Check | ADA Tech",
+        "desc": "Laptop not turning on, or a computer that won't start? Plugged in, power light on, after a power "
+                "outage or Windows update: checks and diagnosis cost.",
+        "h1": "Why will my laptop or computer not turn on?",
+        "extra": [
+            ("Laptop not turning on when plugged in",
+             "<p>If the laptop is plugged in and still shows no sign of life, the fault is usually the charger, "
+             "the charging port or a dead battery. Try another wall socket, look at the charger's own light, "
+             "and do the power reset in the checks above. If the charger's light is on but the laptop shows nothing, "
+             "or its charging light flickers, the charging port or the battery is the likely cause. A laptop "
+             "that is plugged in and charging but still will not start has power and a different fault, such "
+             "as the screen, the memory or the drive.</p>"),
+            ("Laptop not turning on but the power light is on",
+             "<p>A power light means power is reaching the laptop. If the fan spins and the screen stays black, "
+             "go to <a href=\"/problems/windows-black-screen\">laptop screen black but the power is on</a>. "
+             "Connect a TV or monitor first: a picture there means the laptop is working and the fault is in "
+             "its own screen. If the light is on but nothing happens at all, repeat the power reset and "
+             "disconnect everything plugged into the USB ports.</p>"),
+            ("Computer won't start after a power outage",
+             "<p>A power cut can end with a surge when the power comes back. On a desktop, check the switch "
+             "on the back of the power supply and the power cable, try another socket, and take the computer "
+             "off any surge protector that has tripped. On a laptop, test the charger on a different socket. "
+             "If the charger or the power supply lights up and the computer still does nothing, stop trying: "
+             "repeated attempts on a damaged power supply can do more harm. A surge can damage the charger, "
+             "the power supply or the motherboard, and a diagnostic finds which. If the computer starts but "
+             "complains about the drive or says there is nothing to boot from, the power cut may have "
+             "interrupted Windows while it was writing, and the files on the drive matter more than the "
+             "computer.</p>"),
+            ("Computer won't start after a Windows update",
+             "<p>If it was updating when it stopped, leave it alone for an hour before forcing it off: the "
+             "screen can sit for a long time on \"Working on updates\" with the drive light busy. If it is "
+             "stuck for much longer, or restarts in a loop, read "
+             "<a href=\"/problems/windows-update-not-working\">Windows Update fails or gets stuck</a>. A "
+             "computer that goes to a black screen after the update has its own checks on the "
+             "<a href=\"/problems/windows-black-screen\">black screen</a> page.</p>"),
+        ],
         "lead": "“Will not turn on” covers three different faults: no power at all, power but no picture, and "
                 "power but no Windows. The lights and sounds tell you which one you have.",
         "answer": "A laptop that will not turn on usually has one of three faults. No power is reaching it "
                   "(charger, charging port or battery). It powers up but shows nothing (screen, memory or "
                   "firmware). Or it starts but cannot load Windows (the drive or the startup files). Check the "
                   "lights first, because each fault has a different fix and a different cost.",
-        "causes": "Charger, charging port, battery, memory, drive, motherboard",
+        "causes": "Charger, charging port, battery, power cut or surge, memory, drive, motherboard",
         "where": "Workshop in Rundu",
         "clues": [
             ("No lights, no fan, no sound at all", "No power is reaching the laptop: the charger, the charging port, a flat or failed battery, or the power circuit on the motherboard."),
@@ -224,12 +258,26 @@ PROBLEMS = [
         "slug": "slow-laptop", "code": "F-04", "icon": "gauge", "area": "Performance",
         "short": "My laptop is very slow",
         "blurb": "Slow to start, slow to open programs, freezes when busy.",
-        "title": "Why Is My Laptop So Slow? Find the Cause in 2 Minutes | ADA Tech",
-        "desc": "Slow laptop on Windows 10 or 11? How to use Task Manager to find the real cause: an old hard "
-                "drive, too little memory, startup programs or a full drive. Tune-up from N$249 in Rundu.",
-        "h1": "Why is my laptop so slow?",
-        "lead": "Slow is a symptom with four common causes. Task Manager shows which one you have in about two "
-                "minutes, and that decides whether the fix is free, cheap or a part.",
+        "title": "Laptop Is Slow or Slow to Start Up? Find the Cause | ADA Tech",
+        "desc": "Laptop is slow, slow to start up or hanging on Windows 10 or 11? Use Task Manager to find the real "
+                "cause and what to do. Tune-up from N$249 in Rundu.",
+        "h1": "Why is my laptop slow?",
+        "lead": "A laptop that is slow, slow to start up or hanging has four common causes. Task Manager shows "
+                "which one you have in about two minutes, and that decides whether the fix is free, cheap or a part.",
+        "extra": [
+            ("Laptop is slow to start up",
+             "<p>If the laptop is slow to start up but fine once it is running, the usual causes are a "
+             "mechanical hard drive and too many programs starting with Windows. Restart rather than shut "
+             "down, switch off startup programs in Task Manager, and check whether the drive is an HDD or an "
+             "SSD. A change from an HDD to an SSD is the biggest single improvement on an older laptop.</p>"),
+            ("Laptop is slow and hanging: what to do",
+             "<p>If the laptop is slow and hanging, with the cursor frozen or windows stuck, see whether the "
+             "disk sits at 100% in Task Manager and whether the fan is loud. A drive that is failing also "
+             "freezes the laptop, usually with clicking or files that will not open. If that is the case, "
+             "copy your files off before trying anything else, and read "
+             "<a href=\"/guides/data-recovery-deleted-files-dead-drive\">what can be recovered from a failing "
+             "drive</a>.</p>"),
+        ],
         "answer": "Most slow laptops have one of four causes: a mechanical hard drive instead of an SSD, too "
                   "little memory (RAM) for what is open, too many programs starting with Windows, or a drive "
                   "that is nearly full. Open Task Manager with Ctrl + Shift + Esc and look at the Performance "
@@ -237,7 +285,7 @@ PROBLEMS = [
         "causes": "Hard drive, memory, startup programs, full drive, heat, malware",
         "where": "Remote or workshop",
         "clues": [
-            ("Disk shows 100% in Task Manager, mostly after starting up", "A mechanical hard drive (HDD), or a drive that is failing."),
+            ("Laptop is slow to start up: disk shows 100% in Task Manager, mostly after starting up", "A mechanical hard drive (HDD), or a drive that is failing."),
             ("Memory is above about 85% with only a few programs open", "Not enough RAM for how you use it."),
             ("Slow for the first few minutes, then fine", "Too many programs starting with Windows."),
             ("It slows down when it gets hot and the fan is loud", "Heat. The processor slows itself to cool down. See <a href=\"/problems/laptop-overheating\">overheating</a>."),
@@ -406,17 +454,32 @@ PROBLEMS = [
         "slug": "wifi-keeps-disconnecting", "code": "F-07", "icon": "wifi", "area": "Network",
         "short": "The Wi-Fi keeps disconnecting",
         "blurb": "Drops out, reconnects, or says connected with no internet.",
-        "title": "Wi-Fi Keeps Disconnecting on Your Laptop? How to Fix It | ADA Tech",
-        "desc": "Wi-Fi keeps dropping on a laptop or across the whole office? How to tell a router fault from a "
-                "laptop fault, eight fixes to try, and router and Wi-Fi setup from N$349 in Rundu.",
-        "h1": "Why does my Wi-Fi keep disconnecting?",
+        "title": "Wi-Fi Not Working or Keeps Disconnecting? Fixes | ADA Tech",
+        "desc": "Wi-Fi not working on a laptop or PC, or keeps dropping? Tell a router fault from a laptop fault, "
+                "check after a power outage. Setup from N$349 in Rundu.",
+        "h1": "Why is my Wi-Fi not working or disconnecting?",
+        "extra": [
+            ("Wi-Fi not working after a power outage",
+             "<p>When the power comes back, the router and the modem start in the wrong order or not at all. "
+             "Switch the router off at the wall, wait 30 seconds and switch it on, then give it three "
+             "minutes. If you have a separate modem or fibre box, start that first. Look at the lights: if none "
+             "come on at all, check the power adapter and try another socket, because a surge can kill the "
+             "adapter or the router. If the lights are normal and every device says no internet, the fault is "
+             "on the provider's side, and it is worth calling them before changing any settings.</p>"),
+            ("Wi-Fi not working on one laptop or on a PC",
+             "<p>If phones connect and one laptop does not, follow the laptop checks above: forget the network, "
+             "turn off the power saving on the adapter, update the driver and reset the network settings. A "
+             "desktop PC that has no Wi-Fi adapter cannot join Wi-Fi at all. It needs a network cable to the "
+             "router or a plug-in Wi-Fi adapter, and a desktop with an adapter can lose it after a Windows "
+             "update.</p>"),
+        ],
         "lead": "One question splits this problem in half: does every device drop at the same moment, or only "
                 "one laptop?",
         "answer": "If every device loses the connection together, the fault is in the router, its position or "
                   "the internet line. If only one laptop drops while phones stay connected, the fault is in "
                   "that laptop: its Wi-Fi driver, its power-saving setting or its saved network profile. "
                   "Compare two devices side by side first, then follow the checks for whichever half applies.",
-        "causes": "Router, signal, internet line, Wi-Fi driver, power saving",
+        "causes": "Router, signal, internet line, power cut, Wi-Fi driver, power saving",
         "where": "On site in Rundu, or remote",
         "clues": [
             ("Every device drops at the same time", "The router, the internet line or the power to the router."),
@@ -585,10 +648,19 @@ PROBLEMS = [
         "slug": "computer-virus-or-pop-ups", "code": "F-10", "icon": "threat", "area": "Security",
         "short": "Pop-ups, virus warnings or strange behaviour",
         "blurb": "Warnings that will not close, new toolbars, programs you did not install.",
-        "title": "Virus Warning or Pop-Ups on Your Computer? What to Do | ADA Tech",
-        "desc": "Pop-ups, a virus warning with a phone number, or programs you did not install? How to tell a fake "
-                "warning from a real infection, and the steps to clean a Windows PC safely.",
-        "h1": "Does my computer have a virus?",
+        "title": "Virus Removal: Warnings, Pop-Ups and Real Infections | ADA Tech",
+        "desc": "Virus removal for a Windows PC: tell a fake warning from a real infection, clean it yourself, "
+                "or get virus removal in Rundu or remotely.",
+        "h1": "Virus removal: does my computer have a virus?",
+        "extra": [
+            ("Virus removal near me: in Rundu or remotely",
+             "<p>If you searched for a virus removal service near you and you are in Rundu, bring the "
+             "computer to the workshop. We check what is on it, remove it, and make sure Windows Security and "
+             "the updates are working again. If the computer still starts and you are elsewhere in Namibia, "
+             "software-related faults can often be handled by "
+             "<a href=\"/services/remote-support\">remote support</a>, with your permission and after we "
+             "confirm the scope. Do not let anyone who phones you unasked do it.</p>"),
+        ],
         "lead": "Most “virus warnings” that fill the screen and give a phone number are not viruses. They are web "
                 "pages built to frighten you into calling. Real infections are quieter.",
         "answer": "A full-screen warning that tells you to call a number is a scam web page, not a virus. Close "
@@ -767,16 +839,22 @@ HOME_FAULTS = ["laptop-not-turning-on", "slow-laptop", "windows-blue-screen", "w
                "liquid-spilled-on-laptop"]
 
 KEYWORDS = {
-    "laptop-not-turning-on": "dead no power wont start not starting not booting boot charger charging light no bootable device beep",
+    "laptop-not-turning-on": "dead no power wont start not starting not booting boot charger charging light no bootable device beep "
+                             "laptop not turning on when plugged in laptop not turning on black screen laptop not turning on but power light is on "
+                             "laptop not turning on but charging computer wont start computer wont start after power outage "
+                             "computer wont start after windows update computer wont start black screen",
     "windows-black-screen": "black screen blank no display no picture dark screen cursor",
     "windows-blue-screen": "blue screen bsod stop code crash restarting error memory management critical process died",
-    "slow-laptop": "slow lagging lag hanging freezing freeze speed up faster 100% disk",
+    "slow-laptop": "slow lagging lag hanging freezing freeze speed up faster 100% disk laptop is slow laptop is slow what to do "
+                   "laptop is slow to start up laptop is slow and hanging",
     "laptop-overheating": "hot heat overheating fan loud noisy shutting down shuts off temperature dust",
     "windows-update-not-working": "update stuck failing failed error 0x undoing changes windows 11 upgrade",
-    "wifi-keeps-disconnecting": "wifi wi-fi internet network disconnecting dropping no internet router signal",
+    "wifi-keeps-disconnecting": "wifi wi-fi internet network disconnecting dropping no internet router signal wifi not working "
+                                "wifi not working on laptop wifi not working after power outage wifi not working on pc",
     "laptop-battery-draining-fast": "battery draining drain not charging plugged in charger dies swollen",
     "printer-not-printing": "printer offline not printing print queue spooler stuck hp canon epson",
-    "computer-virus-or-pop-ups": "virus malware pop-up popup scam warning hacked ransomware antivirus adware",
+    "computer-virus-or-pop-ups": "virus malware pop-up popup scam warning hacked ransomware antivirus adware virus removal "
+                                 "virus removal near me virus removal service near me",
     "liquid-spilled-on-laptop": "water spill spilled liquid wet coffee tea drink rice keyboard",
     "ssd-ram-upgrade": "ssd ram memory upgrade hdd hard drive storage faster nvme",
 }
@@ -857,6 +935,8 @@ def build():
         body += sec(head_block(p.get("checks_title", "What you can check yourself"),
                                "These are safe to try, cost nothing and do not need tools.", label="Self-checks")
                     + checks(p["checks"]))
+        for h2, inner in p.get("extra", []):
+            body += sec(head_block(h2) + '<div class="prose">' + inner + "</div>", "sec--light")
         body += sec('<div class="split"><div>'
                     + stop(p["stop"], p.get("stop_title", "Stop and get it looked at if"), p.get("stop_after", ""))
                     + '</div><div><span class="label">On the bench</span><h2 class="h2">What ADA Tech does</h2>'

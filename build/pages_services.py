@@ -12,13 +12,26 @@ SERVICES = [
         "slug": "computer-repair", "code": "S-01", "icon": "wrench", "group": "Devices",
         "name": "Computer and laptop repair", "row": "Slow, hot, crashing or not starting",
         "from": f"Diagnostic {DIAG}", "price": "99",
-        "title": "Computer and Laptop Repair in Rundu | ADA Tech",
-        "desc": "Laptop and desktop repair in Rundu, Namibia: diagnosis for slow, overheating, crashing or dead "
-                f"computers, RAM and SSD upgrades, data transfer. Diagnostic {DIAG}, deducted from the repair.",
-        "h1": "Computer and laptop repair",
-        "lead": "For laptops and desktops that are slow, hot, crashing or will not start. The fault is found "
-                "and explained before any part is replaced.",
-        "answer": f"ADA Tech diagnoses and repairs laptops and desktop computers in Rundu. A standard diagnostic "
+        "title": "Laptop and Computer Repair in Rundu, Namibia | ADA Tech",
+        "desc": "Laptop repair and PC repair in Rundu, Namibia: slow, overheating, crashing or dead computers, "
+                f"RAM and SSD upgrades. Diagnostic {DIAG}, deducted from the repair.",
+        "h1": "Laptop and computer repair in Rundu",
+        "lead": "PC repair for laptops and desktops that are slow, hot, crashing or will not start. The fault is "
+                "found and explained before any part is replaced.",
+        "extra": [
+            ("Laptop repair near me: how it works from Rundu",
+             "<p>If you searched for laptop repair near me and you are in Rundu or the Kavango regions, the "
+             "workshop is in Rundu. Send a message or call before you come, with the make of the laptop and what "
+             "it is doing, so we can tell you when to bring it and what to bring. Bring the charger. It is part "
+             "of the diagnosis.</p>"
+             "<p>If you are somewhere else in Namibia and the laptop still starts, many software faults can be "
+             "fixed by <a href=\"/services/remote-support\">remote support</a> instead.</p>"),
+            ("Deleted files or a drive that has stopped working",
+             "<p>Stop using the drive first. Every write to it can overwrite what you are trying to get back. "
+             "Our guide to <a href=\"/guides/data-recovery-deleted-files-dead-drive\">data recovery in Rundu "
+             "and Namibia</a> explains what can usually be recovered, what cannot, and what we do.</p>"),
+        ],
+        "answer": f"ADA Tech does laptop repair and PC repair in Rundu, for laptops and desktop computers. A standard diagnostic "
                   f"costs {DIAG} and is deducted from the repair if you go ahead. You are told what failed and "
                   "what the repair costs before any work or part is charged. Fitting RAM or an SSD starts from "
                   "N$179 for labour, and a tune-up costs N$249.",
@@ -41,7 +54,15 @@ SERVICES = [
                   ("Diagnosis", "We test the parts that could cause that symptom and find which one it is."),
                   ("Finding and price", "You are told what failed, the options and what each costs. You decide."),
                   ("Repair, test, hand over", "The agreed work is done and tested against the original symptom.")],
-        "faq": [("Do I pay before you look at it?",
+        "faq": [("Do you do computer repair in Rundu for desktops as well as laptops?",
+                 "<p>Yes. The workshop in Rundu repairs both. PC repair, laptop repair, memory and drive "
+                 "upgrades, Windows faults and overheating all start with the same diagnostic.</p>"),
+                ("Can you recover deleted files or data from a dead drive?",
+                 "<p>Sometimes. It depends on what happened to the drive and what has been written to it since. "
+                 "Read <a href=\"/guides/data-recovery-deleted-files-dead-drive\">deleted files or a dead hard "
+                 "drive: can the data be recovered?</a> Complex recovery is quoted separately and nobody can "
+                 "guarantee it.</p>"),
+                ("Do I pay before you look at it?",
                  f"<p>The standard diagnostic costs {DIAG}. If you go ahead with the repair, that amount is "
                  "deducted from the repair cost. If you decide not to repair, the fee is not refunded. A complex "
                  "fault may need a separate quote, and you are told before that work starts.</p>"),
@@ -57,19 +78,33 @@ SERVICES = [
                  "before the diagnosis. After it, you know what was found and what happens next.</p>")],
         "rel": [("/problems", "Find your problem", "Twelve common faults, with checks you can do yourself."),
                 ("/problems/ssd-ram-upgrade", "RAM or SSD: which upgrade first?", "Choose the right part."),
+                ("/guides/data-recovery-deleted-files-dead-drive", "Data recovery in Rundu and Namibia", "Deleted files and dead drives."),
                 ("/pricing", "Pricing", "Every published price in one place.")],
     },
     {
         "slug": "windows-setup", "code": "S-02", "icon": "windows", "group": "Devices",
         "name": "Windows and software setup", "row": "Install, reinstall, drivers, updates and Office",
         "from": "From N$649", "price": "649",
-        "title": "Windows 10 and 11 Installation in Rundu from N$649 | ADA Tech",
-        "desc": "Windows installation and reinstallation in Rundu: correct drivers, updates, Microsoft Office "
-                "setup, backup and restore. Three packages from N$649. Legitimate licences only.",
-        "h1": "Windows and software setup",
-        "lead": "A clean installation should leave the computer ready to use: correct drivers, updates done, "
-                "your programs in place, and tested.",
-        "answer": "ADA Tech installs and reinstalls Windows 10 and Windows 11 in three packages. Windows Ready "
+        "title": "Windows Installation in Rundu from N$649 | ADA Tech",
+        "desc": "Windows installation in Rundu, Namibia: Windows 10 or 11 with drivers, updates and Office setup. "
+                "Three packages from N$649. Legitimate licences only.",
+        "h1": "Windows installation in Rundu",
+        "lead": "Windows installation and software setup that leaves the computer ready to use: correct drivers, "
+                "updates done, your programs in place, and tested.",
+        "extra": [
+            ("Windows installation near me: what to bring",
+             "<p>If you are in Rundu, bring the computer, its charger and a note of the files you cannot lose. "
+             "Tell us whether you have an Office licence or a Microsoft account to sign in with. We check the "
+             "licence the computer already carries before anything is erased. Message first and we will tell "
+             "you when to bring it.</p>"),
+            ("Windows installation from a USB drive",
+             "<p>Most installations are done from a USB drive: the installer is put on the drive, the computer is "
+             "started from it, and Windows is written to the drive you choose. That step erases whatever is on "
+             "the chosen drive, which is why the licence and the files are checked first and a backup is made "
+             "when it has been agreed. If you would rather do it yourself, back up first and read "
+             "<a href=\"/guides/back-up-your-files\">how to back up your files</a>.</p>"),
+        ],
+        "answer": "ADA Tech does Windows installation in Rundu: Windows 10 and Windows 11, installed or reinstalled in three packages. Windows Ready "
                   "(N$649) covers Windows, drivers, updates and testing. Windows + Office Complete (N$849) adds "
                   "Microsoft Office and common programs. Complete Device Refresh (N$1,049) adds backup and "
                   "restore of up to 50GB and a malware clean-up. Windows and Office are activated only with a "
@@ -163,12 +198,25 @@ SERVICES = [
         "slug": "networking", "code": "S-04", "icon": "wifi", "group": "Connectivity",
         "name": "Wi-Fi and networking", "row": "Routers, coverage, cabling and office networks",
         "from": "From N$349", "price": "349",
-        "title": "Wi-Fi and Network Setup in Rundu from N$349 | ADA Tech",
-        "desc": "Router setup, Wi-Fi troubleshooting, coverage for homes, offices and lodges, cabling and small "
-                "office networks in Rundu, Namibia. Router and Wi-Fi setup from N$349.",
-        "h1": "Wi-Fi and networking",
+        "title": "Wi-Fi Installation and Office Network Setup in Rundu | ADA Tech",
+        "desc": "Wi-Fi installation, router setup and small office network setup in Rundu, Namibia: coverage, "
+                "cabling and fault finding. Router and Wi-Fi setup from N$349.",
+        "h1": "Wi-Fi installation and office network setup in Rundu",
         "lead": "For homes, offices and lodges where the internet drops, does not reach every room, or has "
                 "grown one device at a time with nobody planning it.",
+        "extra": [
+            ("Small office network setup",
+             "<p>A small office network setup covers the router, the Wi-Fi, cabling to the desks that need "
+             "it, shared printers and a separate guest network. It also covers basic security settings, such as "
+             "a changed router password and an office network that visitors cannot reach. Router-only setup "
+             "starts from N$349. Cabling, equipment and coverage across several rooms are assessed on site and "
+             "quoted.</p>"),
+            ("Office network installation and business network setup",
+             "<p>If you are opening an office, or the one you have has grown one device at a time, we plan "
+             "the office network installation around how people work: where the computers, printers and cameras "
+             "sit, which ones need a cable and which can use Wi-Fi. When the network is only one part of the "
+             "move, it is set up with the rest in <a href=\"/services/business-it\">business IT setup</a>.</p>"),
+        ],
         "answer": "ADA Tech sets up routers and Wi-Fi, finds why connections drop, extends coverage to rooms "
                   "the signal does not reach, and builds small office networks with cabling, shared printers "
                   "and basic security. Router and Wi-Fi setup starts from N$349. Larger jobs with cabling, "
@@ -209,12 +257,20 @@ SERVICES = [
         "slug": "remote-support", "code": "S-05", "icon": "remote", "group": "Connectivity",
         "name": "Remote support", "row": "Software and account help anywhere in Namibia",
         "from": "From N$149", "price": "149",
-        "title": "Remote IT Support Across Namibia from N$149 | ADA Tech",
-        "desc": "Remote computer support anywhere in Namibia: Windows, drivers, updates, Microsoft 365, email "
-                "and software problems fixed over the internet, with your permission. From N$149.",
-        "h1": "Remote support",
-        "lead": "Many software and account problems do not need a technician beside the computer. With your "
-                "permission, we connect over the internet and fix it while you watch.",
+        "title": "Remote IT Support Anywhere in Namibia from N$149 | ADA Tech",
+        "desc": "Remote computer support anywhere in Namibia, including Windhoek: Windows, drivers, updates and "
+                "email fixed over the internet. From N$149.",
+        "h1": "Remote IT support anywhere in Namibia",
+        "lead": "ADA Tech is based in Rundu, but software and account problems do not need a technician beside "
+                "the computer. With your permission, we connect over the internet and fix it while you watch.",
+        "extra": [
+            ("Remote computer support for Windhoek and the rest of Namibia",
+             "<p>ADA Tech works from Rundu and has no office in Windhoek or anywhere else. Remote support "
+             "reaches any town or farm that has an internet connection, so where you are makes no difference "
+             "to a software fault, a Windows update problem or an email account. It does make a difference "
+             "to a computer that will not start, a failed drive or a router that needs moving. Those need "
+             "hands on the equipment, and we can only do that in Rundu.</p>"),
+        ],
         "answer": "ADA Tech provides remote support across Namibia for problems that can be handled safely over "
                   "an internet connection: Windows and software faults, drivers, updates, Microsoft 365, email "
                   "and account setup. Remote quick support starts from N$149, and the scope is confirmed before "
@@ -300,13 +356,36 @@ SERVICES = [
         "slug": "cctv", "code": "S-07", "icon": "camera", "group": "Business",
         "name": "CCTV", "row": "Camera planning, recorders and remote viewing",
         "from": "Quoted by site", "price": None,
-        "title": "CCTV Installation and Setup in Rundu | ADA Tech",
-        "desc": "CCTV in Rundu, Namibia: camera placement, recorder (DVR and NVR) setup, storage planning, "
-                "viewing on your phone and fault finding. Quoted after a site assessment.",
-        "h1": "CCTV",
-        "lead": "Cameras planned around the site: what has to be seen, from where, in what light, and for how "
-                "many days the recording must be kept.",
-        "answer": "ADA Tech plans and sets up CCTV systems in Rundu: where cameras should go, recorder setup, "
+        "title": "CCTV Installation in Rundu: Security Cameras | ADA Tech",
+        "desc": "CCTV installation in Rundu, Namibia: security cameras, DVR and NVR recorders, storage and phone "
+                "viewing. Quoted after a site assessment.",
+        "h1": "CCTV installation in Rundu",
+        "lead": "Security cameras planned around the site: what has to be seen, from where, in what light, and "
+                "for how many days the recording must be kept.",
+        "extra": [
+            ("What does CCTV installation cost?",
+             "<p>ADA Tech does not publish a CCTV price, because one number would be wrong for most sites. The "
+             "price depends on how many cameras you need, how long the cable runs are, which recorder and how "
+             "much storage you choose, what power is available, and whether you want to watch from your phone. "
+             "The same factors apply to CCTV installation cost for a home and for a business. A house with "
+             "four cameras and a short cable run is a very different job from a shop with a long yard.</p>"
+             "<p>We quote after a site visit, with the cameras, recorder, storage, cabling and labour listed "
+             "separately, so you can see what each part costs. Read "
+             "<a href=\"/guides/cctv-installation-cost-namibia\">CCTV installation cost in Namibia: what you "
+             "are paying for</a> before you ask anyone for a quote.</p>"),
+            ("Do solar CCTV cameras with a SIM card work?",
+             "<p>Yes, in the right place. A solar camera with a SIM card is meant for a spot with no mains "
+             "power and no cable: a farm gate, a building site, a remote shed. The solar panel keeps the battery "
+             "charged and the SIM card sends the picture over the mobile network. It needs two things to "
+             "work well: enough sun on the panel, and mobile signal with data on the SIM card, which you pay "
+             "for. Without signal, or in a shaded spot, it will not.</p>"
+             "<p>Where you have power and can run a cable, a wired system with a recorder is usually more "
+             "dependable, and it records without using mobile data. Tell us about the site and we will say which "
+             "kind suits it. Whether a solar camera suits you is part of the same site assessment. The "
+             "<a href=\"/guides/cctv-installation-cost-namibia\">cost guide</a> compares wired, wireless "
+             "and solar cameras.</p>"),
+        ],
+        "answer": "ADA Tech plans and sets up CCTV systems and security cameras in Rundu: where cameras should go, recorder setup, "
                   "storage sized for the number of days you need, viewing on a phone, and fault finding on "
                   "existing systems. CCTV is quoted after a site assessment, because the price depends on the "
                   "number of cameras, the recorder and storage, the cable runs and the power available.",
@@ -340,7 +419,7 @@ SERVICES = [
                  "changing areas, and tell staff and visitors that cameras are in use. If recordings include "
                  "the public or employees, take advice on your legal duties.</p>")],
         "rel": [("/services/networking", "Wi-Fi and networking", "The network the cameras run on."),
-                ("/services/business-it", "Business IT setup", "Cameras as part of an office setup."),
+                ("/guides/cctv-installation-cost-namibia", "CCTV installation cost in Namibia", "What you are paying for."),
                 ("/locations/rundu", "IT support in Rundu", "What we do on site.")],
     },
     {
@@ -388,13 +467,20 @@ SERVICES = [
         "slug": "business-it", "code": "S-09", "icon": "office", "group": "Business",
         "name": "Business IT setup", "row": "Devices, accounts, printers and Wi-Fi for an office",
         "from": "Quoted", "price": None,
-        "title": "Office IT Setup for Small Businesses in Rundu | ADA Tech",
-        "desc": "Opening an office, branch or remote team in Namibia? Computers, Windows, business email, Wi-Fi, "
-                "printers, user accounts and a basic security baseline, set up together and documented.",
-        "h1": "Business IT setup",
+        "title": "IT Setup for Small Businesses in Rundu, Namibia | ADA Tech",
+        "desc": "Business IT setup from an IT company in Rundu: computers, email, Wi-Fi, business network setup, "
+                "printers and accounts for small businesses.",
+        "h1": "IT setup for small businesses",
+        "extra": [
+            ("Business network setup and office network installation",
+             "<p>The network is usually the part a small business notices last and misses first. We set it up "
+             "with the computers and accounts, so the Wi-Fi, the cabling, the printers and the guest network "
+             "are planned together. See <a href=\"/services/networking\">Wi-Fi installation and office "
+             "network setup</a> for what that covers and what it costs.</p>"),
+        ],
         "lead": "Opening an office, adding a branch or putting a team to work from home. The technology is set "
                 "up around how people will actually work, in one job.",
-        "answer": "ADA Tech sets up the technology for a new or growing office in one job: computers and "
+        "answer": "ADA Tech is an IT company in Rundu that sets up the technology for a new or growing small business in one job: computers and "
                   "Windows, business email or Microsoft 365, Wi-Fi and network, printers, user accounts and a "
                   "basic security baseline. It is quoted by the number of users and devices, the location and "
                   "the equipment needed. After setup, ongoing care is available as a monthly Managed IT plan.",
@@ -432,15 +518,23 @@ SERVICES = [
 ]
 
 KEYWORDS = {
-    "computer-repair": "repair fix laptop desktop pc computer hardware diagnostic diagnosis technician workshop screen keyboard",
-    "windows-setup": "windows install installation reinstall format windows 10 windows 11 office microsoft drivers activation licence",
+    "computer-repair": "repair fix laptop desktop pc computer hardware diagnostic diagnosis technician workshop screen keyboard "
+                       "computer repair rundu laptop repair rundu pc repair laptop repair near me computer repair windhoek pc repair windhoek "
+                       "computer shop rundu data recovery",
+    "windows-setup": "windows install installation reinstall format windows 10 windows 11 office microsoft drivers activation licence "
+                     "windows installation near me windows installation usb windows installation rundu",
     "bios-firmware": "bios uefi firmware boot secure boot tpm password recovery flash",
-    "networking": "wifi wi-fi network router internet cabling ethernet access point coverage lan",
-    "remote-support": "remote support online anydesk teamviewer help desk helpdesk anywhere namibia windhoek",
+    "networking": "wifi wi-fi network router internet cabling ethernet access point coverage lan wifi installation rundu "
+                  "office network setup small office network setup office network installation business network setup",
+    "remote-support": "remote support online anydesk teamviewer help desk helpdesk anywhere namibia windhoek "
+                      "computer repair windhoek pc repair windhoek remote computer support",
     "security": "security cyber mfa two-step password backup antivirus protection data hacked",
-    "cctv": "cctv camera cameras surveillance dvr nvr security camera install",
+    "cctv": "cctv camera cameras surveillance dvr nvr security camera install cctv installation rundu cctv camera namibia "
+             "security cameras namibia surveillance cameras namibia cctv installation cost cctv camera price in namibia "
+             "solar cctv camera price solar cctv camera with sim card solar cctv camera wifi",
     "server-infrastructure": "server servers infrastructure file sharing nas backup active directory",
-    "business-it": "business office it setup company email microsoft 365 printers new office branch",
+    "business-it": "business office it setup company email microsoft 365 printers new office branch it company small business "
+                   "it support for small businesses business network setup it companies in rundu",
 }
 
 
@@ -506,6 +600,8 @@ def build():
         body += sec('<div class="split"><div><span class="label">Scope</span><h2 class="h2">What is covered</h2>'
                     + ticks(s["covers"]) + '</div><div><span class="label">Signs</span>'
                     '<h2 class="h2">When you need this</h2>' + signs(s["signs"]) + "</div></div>", "sec--light")
+        for h2, inner in s.get("extra", []):
+            body += sec(head_block(h2) + '<div class="prose">' + inner + "</div>")
         body += sec(head_block("Prices", SEPARATE, label="Cost")
                     + table(["Work", "Price", "What it covers"], s["prices"])
                     + '<p class="mt2"><a class="more" href="/pricing">See all prices</a></p>')
