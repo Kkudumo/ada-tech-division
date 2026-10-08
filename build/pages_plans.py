@@ -13,7 +13,7 @@ PRICES = [
     ("Driver or software fault", "From N$179", "Install, repair or correct drivers and common software."),
     ("Windows Update repair", "From N$249", "Find why updates fail and repair the update components."),
     ("BIOS or UEFI update", "From N$249", "Compatibility check, firmware update and verification of boot settings."),
-    ("BIOS recovery or boot fault", "From N$449", "Advanced diagnosis where firmware or boot recovery is needed."),
+    ("BIOS recovery or boot fault", "From N$449", "Recovery of a failed BIOS or a PC that will not boot."),
     ("Microsoft Office setup", "From N$249", "Install and configure Office or Microsoft 365 and activate it with a valid licence."),
     ("Printer setup", "From N$179", "Installation on a computer or a network, and basic troubleshooting."),
     ("RAM or SSD fitting (labour)", "From N$179", "Fitting and testing. The part is quoted separately."),
@@ -110,7 +110,11 @@ def pricing():
     body += sec(head_block("One-time work",
                            "Diagnosis comes first. If the scope changes after inspection, the new scope is "
                            "confirmed with you before major work.", label="Price list")
-                + table(["Work", "Price", "What it covers"], PRICES))
+                + table(["Work", "Price", "What it covers"], PRICES)
+                + '<p class="note mt2">If the same fault returns within 30 days, we repair it again at no labour '
+                  'charge under our warranty, unless it was caused by new damage, misuse, water, power surges or '
+                  f'viruses. See the <a href="{MAIN}/payment-refund-cancellation">payment, refund and cancellation '
+                  'policy</a>.</p>')
     body += sec(head_block("Quoted after an assessment",
                            "These depend too much on the site, the equipment and the distance for one number to "
                            "be honest.", label="Projects") + cards([

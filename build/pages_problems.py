@@ -260,7 +260,7 @@ PROBLEMS = [
         "blurb": "Slow to start, slow to open programs, freezes when busy.",
         "title": "Laptop Is Slow or Slow to Start Up? Find the Cause | ADA Tech",
         "desc": "Laptop is slow, slow to start up or hanging on Windows 10 or 11? Use Task Manager to find the real "
-                "cause and what to do. Tune-up from N$249 in Rundu.",
+                "cause and what to do. Tune-up N$249 in Rundu.",
         "h1": "Why is my laptop slow?",
         "lead": "A laptop that is slow, slow to start up or hanging has four common causes. Task Manager shows "
                 "which one you have in about two minutes, and that decides whether the fix is free, cheap or a part.",
