@@ -23,7 +23,7 @@ PHONE = "+264 81 803 2641"
 PHONE_TEL = "+264818032641"
 COMPANY_LINE = "+264 83 677 5783"
 COMPANY_TEL = "+264836775783"
-EMAIL = "hello.ada1@outlook.com"
+EMAIL = "tech@andreasdigitalagency.com"
 PLACE = "Rundu, Kavango East, Namibia"
 DIAG = "N$99"
 
