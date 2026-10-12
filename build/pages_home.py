@@ -1,4 +1,5 @@
 """Home page."""
+from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, sec, head_block, steps, faq, faq_schema, ticks, buttons, cards, info_cards, icon,
                     e, wa, DIAG, PHONE)
 from pages_problems import PROBLEMS, HOME_FAULTS, KEYWORDS as FAULT_WORDS
@@ -105,9 +106,9 @@ repair if you go ahead. You hear the price before the work starts.</p>
         "Do not start from nothing every time something fails",
         "Two monthly plans: one for personal devices, one for organisations.", label="Ongoing care") + cards([
             ("/first-aid", "ADA First Aid", "Monthly care for one to three personal laptops or desktops: remote "
-             "sessions, health checks and 10% or 15% off other labour.", "From N$249 a month", "Personal", "kit"),
+             "sessions, health checks and 10% or 15% off other labour.", sfrom(*FIRST_AID_PLANS) + " a month", "Personal", "kit"),
             ("/managed-it", "Managed IT", "Monthly support for an organisation's devices, users and accounts, "
-             "sized by the number of devices.", "From N$1,249 a month", "Business", "office"),
+             "sized by the number of devices.", sfrom(*BUSINESS_PLANS) + " a month", "Business", "office"),
         ], cols=2), "sec--light")
 
     trust = sec(f"""<div class="split">

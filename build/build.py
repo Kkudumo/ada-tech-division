@@ -22,9 +22,21 @@ def main():
             continue
         mod.build()
     write_sitemap()
+    write_script()
     import pages_search
     count, size = pages_search.build_index()
     print(f"built {len(layout.PAGES)} pages; search index: {count} pages, {size // 1024} KB")
+
+
+def write_script():
+    """assets/js/ada.js comes from build/ada.js.in so its prices (the home-page starting-point helper) follow ADA Core too.
+    Tokens: {{m:Name}} -> N$249, {{lc:Name}} -> from N$249, {{sfl:A|B|C}} -> from <cheapest of A, B, C>."""
+    import re
+    fns = {"m": lambda *n: layout.m(n[0]), "lc": lambda *n: layout.lc(n[0]), "sfl": layout.sfl}
+    src = open(os.path.join(layout.ROOT, "build", "ada.js.in"), encoding="utf-8").read()
+    out = re.sub(r"\{\{(\w+):([^}]+)\}\}", lambda mo: fns[mo.group(1)](*mo.group(2).split("|")), src)
+    with open(os.path.join(layout.ROOT, "assets", "js", "ada.js"), "w", encoding="utf-8", newline="") as f:
+        f.write(out)
 
 
 def write_sitemap():

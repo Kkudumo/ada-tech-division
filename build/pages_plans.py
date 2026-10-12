@@ -3,64 +3,65 @@
 Every amount on the site comes from PRICES, PACKAGES, FIRST_AID and MANAGED
 below. Change a price here and rebuild.
 """
+from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, hero, sec, head_block, answer, sheet, table, steps, ticks, faq, faq_schema,
                     service_schema, related, cards, info_cards, plan, stop, e, wa, DIAG, MAIN, REVIEWED)
 
 PRICES = [
     ("Standard device diagnostic", DIAG, "Inspection and diagnosis. Deducted from the repair cost if you go ahead."),
-    ("Remote quick support", "From N$149", "Basic software, account or configuration support, scoped before work."),
-    ("PC tune-up and optimisation", "N$249", "Start-up clean-up, performance checks, updates and a basic system health review."),
-    ("Driver or software fault", "From N$179", "Install, repair or correct drivers and common software."),
-    ("Windows Update repair", "From N$249", "Find why updates fail and repair the update components."),
-    ("BIOS or UEFI update", "From N$249", "Compatibility check, firmware update and verification of boot settings."),
-    ("BIOS recovery or boot fault", "From N$449", "Recovery of a failed BIOS or a PC that will not boot."),
-    ("Microsoft Office setup", "From N$249", "Install and configure Office or Microsoft 365 and activate it with a valid licence."),
-    ("Printer setup", "From N$179", "Installation on a computer or a network, and basic troubleshooting."),
-    ("RAM or SSD fitting (labour)", "From N$179", "Fitting and testing. The part is quoted separately."),
-    ("Data backup or transfer", "From N$249", "Basic transfer of up to 50GB. Complex recovery is quoted separately."),
-    ("Router and Wi-Fi setup", "From N$349", "Router configuration, Wi-Fi setup and connectivity checks."),
+    ("Remote quick support", fm("Remote quick support"), "Basic software, account or configuration support, scoped before work."),
+    ("PC tune-up and optimisation", m("PC tune-up and optimisation"), "Start-up clean-up, performance checks, updates and a basic system health review."),
+    ("Driver or software fault", fm("Driver or software fault"), "Install, repair or correct drivers and common software."),
+    ("Windows Update repair", fm("Windows Update repair"), "Find why updates fail and repair the update components."),
+    ("BIOS or UEFI update", fm("BIOS or UEFI update"), "Compatibility check, firmware update and verification of boot settings."),
+    ("BIOS recovery or boot fault", fm("BIOS recovery or boot fault"), "Recovery of a failed BIOS or a PC that will not boot."),
+    ("Microsoft Office setup", fm("Microsoft Office setup"), "Install and configure Office or Microsoft 365 and activate it with a valid licence."),
+    ("Printer setup", fm("Printer setup"), "Installation on a computer or a network, and basic troubleshooting."),
+    ("RAM or SSD fitting (labour)", fm("RAM or SSD fitting (labour)"), "Fitting and testing. The part is quoted separately."),
+    ("Data backup or transfer", fm("Data backup or transfer"), "Basic transfer of up to 50GB. Complex recovery is quoted separately."),
+    ("Router and Wi-Fi setup", fm("Router and Wi-Fi setup"), "Router configuration, Wi-Fi setup and connectivity checks."),
 ]
 
 PACKAGES = [
-    ("Most chosen", "Windows Ready", "N$649", "Windows installed properly on a computer that is otherwise healthy.",
+    ("Most chosen", "Windows Ready", m("Windows Ready"), "Windows installed properly on a computer that is otherwise healthy.",
      ["Windows 10 or 11 installation or reinstallation", "Correct drivers for your model", "Windows updates",
       "BIOS and firmware version check", "Essential utilities", "Activation with your existing valid licence",
       "Basic performance settings", "Restore point and final test"], False),
-    ("Best value", "Windows + Office Complete", "N$849", "Windows and Office, ready for work or study.",
+    ("Best value", "Windows + Office Complete", m("Windows + Office Complete"), "Windows and Office, ready for work or study.",
      ["Everything in Windows Ready", "Microsoft Office or Microsoft 365 installed",
       "Office activated with a valid licence", "Browser, PDF reader and common utilities",
       "Basic printer check or setup", "Windows and Office updates verified", "Final system health check"], True),
-    ("Full refresh", "Complete Device Refresh", "N$1,049", "A clean start that keeps your files.",
+    ("Full refresh", "Complete Device Refresh", m("Complete Device Refresh"), "A clean start that keeps your files.",
      ["Everything in Windows + Office Complete", "Backup and restore of up to 50GB",
       "Malware scan and clean-up", "Start-up optimisation", "Your user profile and common programs set up",
       "Device health review after installation", "7-day workmanship follow-up"], False),
 ]
 
 FIRST_AID = [
-    ("1 device", "First Aid Essential", "N$249", "One laptop or desktop that needs occasional help.",
+    ("1 device", "First Aid Essential", m("First Aid Essential"), "One laptop or desktop that needs occasional help.",
      ["1 registered laptop or desktop", "Up to 3 remote support sessions a month",
       "Monthly software and update health check", "Driver and common software troubleshooting",
       "Help with Windows settings", "Priority WhatsApp support queue", "10% off other ADA Tech labour"], False),
-    ("Recommended", "First Aid Plus", "N$399", "One device you depend on for work or study.",
+    ("Recommended", "First Aid Plus", m("First Aid Plus"), "One device you depend on for work or study.",
      ["1 registered laptop or desktop", "Reasonable-use remote support during business hours",
       "Monthly maintenance session", "Windows, updates, drivers and common programs",
       "Basic malware clean-up", "Backup guidance and restore-point checks",
       "15% off other ADA Tech labour", "One in-depth health review each quarter"], True),
-    ("Up to 3 devices", "First Aid Family", "N$699", "A household or a very small office.",
+    ("Up to 3 devices", "First Aid Family", m("First Aid Family"), "A household or a very small office.",
      ["Up to 3 registered devices", "6 remote support sessions a month", "Monthly health checks",
       "Windows, software and update support", "Basic malware clean-up", "Priority WhatsApp support",
       "15% off other ADA Tech labour"], False),
 ]
 
 MANAGED = [
-    ("Up to 5 devices", "Micro Business Care", "N$1,249", "A small office that needs someone to call.",
+    ("Up to 5 devices", "Micro Business Care", m("Micro Business Care"), "A small office that needs someone to call.",
      ["Remote helpdesk for covered devices", "Monthly update and health schedule", "Basic device register",
       "Common Windows and software support", "Priority support handling", "10% off approved on-site labour"], False),
-    ("Up to 10 devices", "Business Care", "N$2,449", "A growing team with staff joining and leaving.",
+    ("Up to 10 devices", "Business Care", m("Business Care"), "A growing team with staff joining and leaving.",
      ["Everything in Micro Business Care", "Support when staff join or leave",
       "Basic account and two-step verification review", "Backup status guidance",
       "Technology review each quarter", "Priority support handling", "15% off approved on-site labour"], True),
-    ("11 or more devices", "Managed IT", "From N$3,949", "An organisation where technology runs the work.",
+    ("11 or more devices", "Managed IT", fm("Managed IT"), "An organisation where technology runs the work.",
      ["Assessment of the environment first", "Device and user cover agreed to fit",
       "Support workflow and service records", "Maintenance and security baseline",
       "Network and Microsoft 365 coordination", "Regular operational review", "Response priorities agreed with you"], False),
@@ -93,9 +94,9 @@ def pricing():
         code=("Price list", f"Reviewed {REVIEWED}"))
     body += sec('<div class="intro">' + answer(
         f"A standard diagnostic costs {DIAG} and is deducted from the repair cost if you go ahead. Windows "
-        "installation packages cost N$649, N$849 and N$1,049. Remote support starts from N$149, a PC tune-up "
-        "is N$249, and fitting RAM or an SSD starts from N$179 for labour. Monthly care starts from N$249 for "
-        "one personal device and N$1,249 for an office of up to five devices. Prices are in Namibian dollars.")
+        "installation packages cost " + m("Windows Ready") + ", " + m("Windows + Office Complete") + " and " + m("Complete Device Refresh") + ". Remote support " + st("Remote quick support") + ", a PC tune-up "
+        "is " + m("PC tune-up and optimisation") + ", and fitting RAM or an SSD " + st("RAM or SSD fitting (labour)") + " for labour. Monthly care starts from " + mlow(*FIRST_AID_PLANS) + " for "
+        "one personal device and " + m("Micro Business Care") + " for an office of up to five devices. Prices are in Namibian dollars.")
         + sheet("How pricing works", "NAD", [
             ("Diagnostic", f"<strong>{DIAG}</strong>, deducted from the repair if you go ahead"),
             ("“From”", "The price when nothing unusual is found"),
@@ -118,7 +119,7 @@ def pricing():
     body += sec(head_block("Quoted after an assessment",
                            "These depend too much on the site, the equipment and the distance for one number to "
                            "be honest.", label="Projects") + cards([
-        ("/services/networking", "Office networks and Wi-Fi", "Router-only setup starts from N$349. Cabling, "
+        ("/services/networking", "Office networks and Wi-Fi", "Router-only setup " + st("Router and Wi-Fi setup") + ". Cabling, "
          "equipment and coverage across several rooms are quoted.", "Wi-Fi and networking", "S-04", "wifi"),
         ("/services/cctv", "CCTV", "Camera count, recorder, storage, cabling, power and phone viewing decide the "
          "price.", "CCTV", "S-07", "camera"),
@@ -159,8 +160,8 @@ def pricing():
         service_schema(name, who, "pricing", price.replace("N$", "").replace(",", ""))
         for _t, name, price, who, _i, _m in PACKAGES]
     page("pricing", "Computer Repair and IT Support Prices in Rundu | ADA Tech",
-         f"ADA Tech price list: diagnostic {DIAG}, Windows installation from N$649, remote support from N$149, "
-         "tune-up N$249, upgrades from N$179, monthly care from N$249. Rundu, Namibia.",
+         f"ADA Tech price list: diagnostic {DIAG}, Windows installation " + sfl(*PKGS) + ", remote support " + lc("Remote quick support") + ", "
+         "tune-up " + m("PC tune-up and optimisation") + ", upgrades " + lc("RAM or SSD fitting (labour)") + ", monthly care " + sfl(*FIRST_AID_PLANS) + ". Rundu, Namibia.",
          body, active="/pricing", crumbs=[PR], schema=schema)
 
 
@@ -175,11 +176,11 @@ def first_aid():
     body += sec('<div class="intro">' + answer(
         "ADA First Aid is a monthly care plan for personal laptops and desktops. It covers remote support, "
         "monthly health checks and help with Windows, updates, drivers and everyday software, with 10% or 15% "
-        "off other ADA Tech labour. Plans cost N$249, N$399 and N$699 a month. It is not insurance: parts, paid "
+        "off other ADA Tech labour. Plans cost " + m("First Aid Essential") + ", " + m("First Aid Plus") + " and " + m("First Aid Family") + " a month. It is not insurance: parts, paid "
         "licences and major physical repairs are separate.")
         + sheet("Plan sheet", "First Aid", [
             ("For", "Individuals, students and households"),
-            ("Price", "<strong>N$249 to N$699</strong> a month"),
+            ("Price", "<strong>" + mrange(*FIRST_AID_PLANS) + "</strong> a month"),
             ("Devices", "1 to 3 registered devices"),
             ("Delivered", "Remotely, anywhere in Namibia"),
             ("Not covered", "Parts, paid licences, major physical repairs"),
@@ -227,9 +228,9 @@ def first_aid():
                      ("/services/remote-support", "Remote support", "How a remote session works.")])
     schema = [faq_schema(qa)] + [service_schema("ADA " + n, w, "first-aid", p.replace("N$", ""), "month")
                                  for _t, n, p, w, _i, _m in FIRST_AID]
-    page("first-aid", "ADA First Aid: Monthly Laptop and PC Care from N$249 | ADA Tech",
+    page("first-aid", "ADA First Aid: Monthly Laptop and PC Care " + sfl(*FIRST_AID_PLANS) + " | ADA Tech",
          "Monthly care for personal laptops and desktops in Namibia: remote support, health checks, help with "
-         "Windows, updates and drivers, and a discount on repairs. From N$249 a month.",
+         "Windows, updates and drivers, and a discount on repairs. " + sfrom(*FIRST_AID_PLANS) + " a month.",
          body, active="/first-aid", crumbs=[FA], schema=schema)
 
 
@@ -245,11 +246,11 @@ def managed_it():
     body += sec('<div class="intro">' + answer(
         "Managed IT is a monthly support plan for organisations that do not have their own IT staff. It covers "
         "a remote helpdesk for the registered devices, scheduled updates and health checks, and help when staff "
-        "join or leave. Plans cost N$1,249 a month for up to 5 devices, N$2,449 for up to 10, and from N$3,949 "
+        "join or leave. Plans cost " + m("Micro Business Care") + " a month for up to 5 devices, " + m("Business Care") + " for up to 10, and " + lc("Managed IT") + " "
         "for 11 or more. Hardware, licences and large projects are scoped separately.")
         + sheet("Plan sheet", "Managed IT", [
             ("For", "Organisations without their own IT staff"),
-            ("Price", "<strong>From N$1,249</strong> a month"),
+            ("Price", "<strong>" + sfrom(*BUSINESS_PLANS) + "</strong> a month"),
             ("Sized by", "Number of devices and users"),
             ("Starts with", "An assessment of what you have"),
             ("Not covered", "Hardware, licences, large projects"),
@@ -296,7 +297,7 @@ def managed_it():
                                  for _t, n, p, w, _i, _m in MANAGED]
     page("managed-it", "IT Support for Small Businesses: Managed IT Plans | ADA Tech",
          "IT support for small businesses from an IT company in Rundu: remote helpdesk, scheduled updates and "
-         "staff onboarding. From N$1,249 a month.",
+         "staff onboarding. " + sfrom(*BUSINESS_PLANS) + " a month.",
          body, active="/managed-it", crumbs=[MI], schema=schema)
 
 

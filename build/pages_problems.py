@@ -4,6 +4,7 @@ Each page answers one thing people type into a search engine when a device
 goes wrong: what the symptom usually means, what they can safely check
 themselves, when to stop, and what ADA Tech would do and charge.
 """
+from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, hero, sec, head_block, answer, sheet, table, checks, stop, faq, faq_schema,
                     howto_schema, related, cards, icon, e, wa, DIAG)
 
@@ -16,7 +17,7 @@ DIAG_LINE = (f"A standard diagnostic costs {DIAG}. If you go ahead with the repa
 FILES_FAQ = ("Can my files be saved?",
              "<p>Often, yes. In most laptops the drive that holds your files is a separate part from the one "
              "that has failed, so it can be removed and the files copied to another drive. Basic backup or "
-             "transfer of up to 50GB starts from N$249. Two limits apply: if the drive itself has failed, "
+             "transfer of up to 50GB " + st("Data backup or transfer") + ". Two limits apply: if the drive itself has failed, "
              "recovery is not guaranteed, and if the drive is encrypted with BitLocker you will need the "
              "recovery key from your Microsoft account. Tell us before any work starts which files matter. See "
              "<a href=\"/guides/data-recovery-deleted-files-dead-drive\">data recovery in Rundu and Namibia</a> "
@@ -109,8 +110,7 @@ PROBLEMS = [
         ],
         "ada": "<p>We test the charger and the charging port, then the battery, the power path, the memory and "
                "the health of the drive. That tells us which part has failed, and you get the finding and the "
-               "repair price before anything is replaced.</p><p>" + DIAG_LINE + " BIOS or firmware recovery "
-               "starts from N$449.</p>",
+               "repair price before anything is replaced.</p><p>" + DIAG_LINE + " BIOS or firmware recovery " + st("BIOS recovery or boot fault") + ".</p>",
         "faq": [FILES_FAQ,
                 ("Is an old laptop worth repairing?",
                  "<p>It depends on the fault and the age of the machine. A charger or a battery is usually worth "
@@ -177,8 +177,7 @@ PROBLEMS = [
         ],
         "ada": "<p>We work out which of the four it is: the display, Windows, the drive or the hardware. A driver "
                "or software fault can often be fixed the same day, and sometimes remotely. A failed screen or "
-               "cable is quoted with the part.</p><p>" + DIAG_LINE + " Driver and software faults start from "
-               "N$179.</p>",
+               "cable is quoted with the part.</p><p>" + DIAG_LINE + " Driver and software faults " + st("Driver or software fault", plural=True) + ".</p>",
         "faq": [("Is a black screen the same as a blue screen?",
                  "<p>No. A <a href=\"/problems/windows-blue-screen\">blue screen</a> shows an error message and a "
                  "stop code. A black screen shows nothing, and the computer may still be running behind it.</p>"),
@@ -260,7 +259,7 @@ PROBLEMS = [
         "blurb": "Slow to start, slow to open programs, freezes when busy.",
         "title": "Laptop Is Slow or Slow to Start Up? Find the Cause | ADA Tech",
         "desc": "Laptop is slow, slow to start up or hanging on Windows 10 or 11? Use Task Manager to find the real "
-                "cause and what to do. Tune-up N$249 in Rundu.",
+                "cause and what to do. Tune-up " + m("PC tune-up and optimisation") + " in Rundu.",
         "h1": "Why is my laptop slow?",
         "lead": "A laptop that is slow, slow to start up or hanging has four common causes. Task Manager shows "
                 "which one you have in about two minutes, and that decides whether the fix is free, cheap or a part.",
@@ -313,8 +312,8 @@ PROBLEMS = [
         "ada": "<p>We find the bottleneck before recommending anything. If it is software, a tune-up clears "
                "startup programs, checks updates and reviews the health of the system. If it is the drive or the "
                "memory, we check what your model supports and quote the part.</p>"
-               "<p>PC tune-up and optimisation costs N$249. Fitting RAM or an SSD starts from N$179 for labour, "
-               "with the part quoted separately. Moving your files to a new drive starts from N$249 for up to "
+               "<p>PC tune-up and optimisation costs " + m("PC tune-up and optimisation") + ". Fitting RAM or an SSD " + st("RAM or SSD fitting (labour)") + " for labour, "
+               "with the part quoted separately. Moving your files to a new drive " + st("Data backup or transfer") + " for up to "
                "50GB.</p>",
         "faq": [("Will an SSD or more RAM make it faster?",
                  "<p>Usually one of them will, but which one depends on the bottleneck. See "
@@ -390,7 +389,7 @@ PROBLEMS = [
         "blurb": "Stuck on a percentage, fails with a code, or keeps undoing changes.",
         "title": "Windows Update Stuck or Failing? How to Fix It | ADA Tech",
         "desc": "Windows Update stuck, failing with an error code or undoing changes? The usual causes, eight "
-                "checks including the built-in repair commands, and repair from N$249.",
+                "checks including the built-in repair commands, and repair " + lc("Windows Update repair") + ".",
         "h1": "Why is Windows Update failing or stuck?",
         "lead": "An update that fails again and again is usually telling you about something else: not enough "
                 "free space, damaged update files or an unstable connection.",
@@ -433,7 +432,7 @@ PROBLEMS = [
         "ada": "<p>We find out why the update fails, repair the update components and the system files, and "
                "install the update. A reinstall of Windows is recommended only when repair is not possible, "
                "and you are told before it is done.</p>"
-               "<p>Windows Update repair starts from N$249. Much of this work can be done by "
+               "<p>Windows Update repair " + st("Windows Update repair") + ". Much of this work can be done by "
                "<a href=\"/services/remote-support\">remote support</a> if the computer still starts.</p>",
         "faq": [("Can I just turn Windows updates off?",
                  "<p>You can pause them for a few weeks, but leaving them off leaves known security holes open. "
@@ -447,7 +446,7 @@ PROBLEMS = [
                  "up comes first and is agreed with you before anything is erased.</p>")],
         "rel": [("/guides/windows-10-end-of-support", "Windows 10 support has ended", "Your options, with dates."),
                 ("/problems/windows-black-screen", "Black screen but the power is on", "Sometimes follows a failed update."),
-                ("/services/windows-setup", "Windows and software setup", "Clean installation packages from N$649.")],
+                ("/services/windows-setup", "Windows and software setup", "Clean installation packages " + sfl(*PKGS) + ".")],
     },
     # ------------------------------------------------------------------ F-07
     {
@@ -456,7 +455,7 @@ PROBLEMS = [
         "blurb": "Drops out, reconnects, or says connected with no internet.",
         "title": "Wi-Fi Not Working or Keeps Disconnecting? Fixes | ADA Tech",
         "desc": "Wi-Fi not working on a laptop or PC, or keeps dropping? Tell a router fault from a laptop fault, "
-                "check after a power outage. Setup from N$349 in Rundu.",
+                "check after a power outage. Setup " + lc("Router and Wi-Fi setup") + " in Rundu.",
         "h1": "Why is my Wi-Fi not working or disconnecting?",
         "extra": [
             ("Wi-Fi not working after a power outage",
@@ -510,7 +509,7 @@ PROBLEMS = [
         "ada": "<p>For one laptop, we test the adapter and the driver. For a home or an office, we check the "
                "router's settings and position, measure where the signal falls away and recommend the smallest "
                "change that fixes it, which is sometimes moving the router and sometimes an extra access "
-               "point.</p><p>Router and Wi-Fi setup starts from N$349. Cabling, extra equipment and coverage "
+               "point.</p><p>Router and Wi-Fi setup " + st("Router and Wi-Fi setup") + ". Cabling, extra equipment and coverage "
                "across several rooms are assessed and quoted.</p>",
         "faq": [("Is it my internet provider or my router?",
                  "<p>If the router's internet light goes out or changes colour when the connection drops, the "
@@ -591,7 +590,7 @@ PROBLEMS = [
         "blurb": "Shows offline, jobs stuck in the queue, or prints nothing.",
         "title": "Printer Offline or Not Printing? How to Fix It | ADA Tech",
         "desc": "Printer says offline, jobs stuck in the queue or nothing prints? Seven checks for Windows, "
-                "including how to clear a stuck print queue. Printer setup from N$179 in Rundu.",
+                "including how to clear a stuck print queue. Printer setup " + lc("Printer setup") + " in Rundu.",
         "h1": "Why will my printer not print?",
         "lead": "Most printing faults are connection or software faults, not a broken printer. The printer and "
                 "the computer have stopped talking to each other.",
@@ -627,7 +626,7 @@ PROBLEMS = [
         "ada": "<p>We set up printers and fix connection, driver and sharing problems, including printers shared "
                "by a whole office. If the fault is mechanical, inside the printer itself, we tell you so "
                "rather than charge for setup work that will not fix it.</p>"
-               "<p>Printer setup starts from N$179 and covers installation on a computer or a network and "
+               "<p>Printer setup " + st("Printer setup") + " and covers installation on a computer or a network and "
                "basic troubleshooting.</p>",
         "faq": [("Why does my printer keep going offline?",
                  "<p>Usually because the router gives it a different address each time it reconnects, or because "
@@ -695,7 +694,7 @@ PROBLEMS = [
         "ada": "<p>We check what is actually on the machine, remove it, and check that security updates and "
                "Windows Security are working again. Where an infection has gone deep, a clean installation of "
                "Windows is the only result that can be trusted, and we say so.</p><p>" + DIAG_LINE +
-               " If a clean installation is the right answer, the Complete Device Refresh (N$1,049) includes "
+               " If a clean installation is the right answer, the Complete Device Refresh (" + m("Complete Device Refresh") + ") includes "
                "backup and restore of up to 50GB, a malware scan and clean-up, and a fresh Windows setup.</p>",
         "faq": [("Do I need to buy antivirus software?",
                  "<p>Windows Security is built into Windows 10 and 11 and is enough for most people when it is "
@@ -779,7 +778,7 @@ PROBLEMS = [
         "blurb": "Which upgrade makes an older laptop faster, and which is wasted money.",
         "title": "RAM or SSD: Which Upgrade First for a Slow Laptop? | ADA Tech",
         "desc": "Should you upgrade RAM or SSD first? What each one fixes, how to check which your laptop needs "
-                "in Task Manager, and what your model can take. Fitting from N$179 in Rundu.",
+                "in Task Manager, and what your model can take. Fitting " + lc("RAM or SSD fitting (labour)") + " in Rundu.",
         "h1": "Should I upgrade the RAM or the SSD first?",
         "lead": "The right upgrade is the one that removes the bottleneck. Buying both without checking can "
                 "waste money, and some laptops cannot take one of them at all.",
@@ -816,8 +815,8 @@ PROBLEMS = [
         "ada": "<p>We check the bottleneck, the model's limits and the health of the existing drive, then "
                "recommend one part. If you want your files and programs moved to the new drive, that is done "
                "and tested before the laptop is handed back.</p>"
-               "<p>Fitting RAM or an SSD starts from N$179 for labour. The part is quoted separately. Moving "
-               "your data starts from N$249 for up to 50GB.</p>",
+               "<p>Fitting RAM or an SSD " + st("RAM or SSD fitting (labour)") + " for labour. The part is quoted separately. Moving "
+               "your data " + st("Data backup or transfer") + " for up to 50GB.</p>",
         "faq": [("How much RAM do I need?",
                  "<p>Windows 11 needs at least 4GB to run at all. For everyday work with a browser and Office, "
                  "8GB is comfortable. Heavy use, such as large spreadsheets, design work or many programs at "

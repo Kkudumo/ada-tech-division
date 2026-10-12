@@ -8,7 +8,10 @@ import html
 import json
 import os
 import re
+from pathlib import Path
 from urllib.parse import quote
+
+from ada_prices import Prices
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +28,76 @@ COMPANY_LINE = "+264 83 677 5783"
 COMPANY_TEL = "+264836775783"
 EMAIL = "tech@andreasdigitalagency.com"
 PLACE = "Rundu, Kavango East, Namibia"
-DIAG = "N$99"
+
+# ---- Prices come from ADA Core (API at build time when ADA_API_URL and ADA_API_KEY are set, else build/prices.json).
+# Look-ups are by the service NAME in ADA Core; see docs/PRICES.md.
+P = Prices("tech", Path(__file__).with_name("prices.json"))
+
+PKGS = ("Windows Ready", "Windows + Office Complete", "Complete Device Refresh")
+FIRST_AID_PLANS = ("First Aid Essential", "First Aid Plus", "First Aid Family")
+BUSINESS_PLANS = ("Micro Business Care", "Business Care", "Managed IT")
+BIOS_WORK = ("BIOS or UEFI update", "BIOS recovery or boot fault")
+ONCE_OFF = ("Standard device diagnostic", "Remote quick support", "PC tune-up and optimisation",
+            "Driver or software fault", "Windows Update repair", "BIOS or UEFI update", "BIOS recovery or boot fault",
+            "Microsoft Office setup", "Printer setup", "RAM or SSD fitting (labour)", "Data backup or transfer",
+            "Router and Wi-Fi setup")
+PRICED = PKGS + FIRST_AID_PLANS + BUSINESS_PLANS + ONCE_OFF
+
+
+def m(name):
+    """'N$249': a service's price."""
+    return P.money(name)
+
+
+def fm(name):
+    """'From N$249', or 'N$249' when ADA Core says it is a fixed price."""
+    return P.from_money(name)
+
+
+def lc(name):
+    """'from N$249' / 'at N$249' for use inside a sentence."""
+    return ("from " if P.is_starting(name) else "at ") + P.money(name)
+
+
+def st(name, plural=False):
+    """'starts from N$249' / 'costs N$249' for use inside a sentence (plural=True: 'start from' / 'cost')."""
+    verb = ("start from " if P.is_starting(name) else "cost ") if plural else ("starts from " if P.is_starting(name) else "costs ")
+    return verb + P.money(name)
+
+
+def raw(name):
+    """'249' / '1049': the bare amount for schema.org prices."""
+    return P.number(name).replace(",", "")
+
+
+def low(*names):
+    """The cheapest of several services (a section-level 'from' price is its cheapest item)."""
+    return min(names, key=P.amount)
+
+
+def high(*names):
+    return max(names, key=P.amount)
+
+
+def mlow(*names):
+    return m(low(*names))
+
+
+def sfrom(*names):
+    """'From N$649': a range's starting price. Always 'From', because it is the cheapest of several."""
+    return "From " + mlow(*names)
+
+
+def sfl(*names):
+    return "from " + mlow(*names)
+
+
+def mrange(*names):
+    """'N$249 to N$699'"""
+    return f"{mlow(*names)} to {m(high(*names))}"
+
+
+DIAG = m("Standard device diagnostic")
 
 NAV = [
     ("/problems", "Problems"),
@@ -111,7 +183,7 @@ ORG = {
                    "office networks, installs CCTV and supports business IT. On site in Rundu, remote across Namibia.",
     "telephone": PHONE_TEL,
     "email": EMAIL,
-    "priceRange": "N$99+",
+    "priceRange": mlow(*PRICED) + "+",
     "currenciesAccepted": "NAD",
     "address": {
         "@type": "PostalAddress",

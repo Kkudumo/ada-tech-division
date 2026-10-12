@@ -1,6 +1,7 @@
 """Guides: longer answers to questions people ask before they spend money
 on a computer. Each one gives the answer first, links its sources and
 carries a review date."""
+from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, hero, sec, answer, table, related, cards, head_block, e, url, wa, SITE, REVIEWED,
                     REVIEWED_ISO, WA, PHONE, PHONE_TEL, DIAG)
 
@@ -174,13 +175,13 @@ def build():
         "<p>We check whether your PC qualifies and name the requirement that fails if it does not. Where TPM "
         "or Secure Boot only needs switching on, that is <a href=\"/services/bios-firmware\">BIOS work</a>. The "
         "upgrade itself, or a clean installation of Windows 11, is part of our "
-        "<a href=\"/services/windows-setup\">Windows packages from N$649</a>. Your existing Windows 10 licence "
+        "<a href=\"/services/windows-setup\">Windows packages " + sfl(*PKGS) + "</a>. Your existing Windows 10 licence "
         "normally activates Windows 11 of the same edition.</p>",
         [("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro", "Microsoft: Windows 10 Home and Pro lifecycle (end of support 14 October 2025)"),
          ("https://www.microsoft.com/en-us/windows/extended-security-updates", "Microsoft: Windows 10 Extended Security Updates (programme ends 12 October 2027)"),
          ("https://www.microsoft.com/en-us/windows/windows-11-specifications", "Microsoft: Windows 11 specifications and system requirements"),
          ("https://www.helpnetsecurity.com/2026/06/26/microsoft-windows-10-free-security-updates-esu-program/", "Help Net Security, 26 June 2026: Microsoft extends Windows 10 consumer ESU by a year")],
-        [("/services/windows-setup", "Windows and software setup", "Upgrade or clean installation, from N$649."),
+        [("/services/windows-setup", "Windows and software setup", "Upgrade or clean installation, " + sfl(*PKGS) + "."),
          ("/problems/windows-update-not-working", "Windows Update fails or gets stuck", "If the upgrade will not install."),
          ("/guides/genuine-windows-and-office-licences", "Genuine Windows and Office", "Check your licence before upgrading.")])
 
@@ -419,7 +420,7 @@ def build():
         "tells us whether the drive is healthy, failing or dead, and whether the laptop is the problem and "
         "not the drive.</p>"
         "<ul><li><strong>The drive reads normally.</strong> We copy your files to another drive. Basic backup "
-        "or transfer of up to 50GB starts from N$249.</li>"
+        "or transfer of up to 50GB " + st("Data backup or transfer") + ".</li>"
         "<li><strong>The drive is failing or the files were deleted.</strong> We tell you what we find and "
         "what is realistic. Complex data recovery is quoted separately, and you decide before it starts.</li>"
         "<li><strong>The drive has failed physically.</strong> We say so, and say whether it is something we "

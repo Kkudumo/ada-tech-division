@@ -1,4 +1,5 @@
 """Services hub and the nine service pages."""
+from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, hero, sec, head_block, answer, sheet, table, steps, ticks, signs, faq, faq_schema,
                     service_schema, related, code_rows, cards, e, wa, DIAG)
 
@@ -11,7 +12,7 @@ SERVICES = [
     {
         "slug": "computer-repair", "code": "S-01", "icon": "wrench", "group": "Devices",
         "name": "Computer and laptop repair", "row": "Slow, hot, crashing or not starting",
-        "from": f"Diagnostic {DIAG}", "price": "99",
+        "from": f"Diagnostic {DIAG}", "price": raw("Standard device diagnostic"),
         "title": "Laptop and Computer Repair in Rundu, Namibia | ADA Tech",
         "desc": "Laptop repair and PC repair in Rundu, Namibia: slow, overheating, crashing or dead computers, "
                 f"RAM and SSD upgrades. Diagnostic {DIAG}, deducted from the repair.",
@@ -33,8 +34,7 @@ SERVICES = [
         ],
         "answer": f"ADA Tech does laptop repair and PC repair in Rundu, for laptops and desktop computers. A standard diagnostic "
                   f"costs {DIAG} and is deducted from the repair if you go ahead. You are told what failed and "
-                  "what the repair costs before any work or part is charged. Fitting RAM or an SSD starts from "
-                  "N$179 for labour, and a tune-up costs N$249.",
+                  "what the repair costs before any work or part is charged. Fitting RAM or an SSD " + st("RAM or SSD fitting (labour)") + " for labour, and a tune-up costs " + m("PC tune-up and optimisation") + ".",
         "where": "Workshop in Rundu",
         "covers": ["Slow performance diagnosis", "Start-up and boot faults", "Drive and memory testing",
                    "Overheating and cooling", "Isolating a hardware fault to one part",
@@ -46,10 +46,10 @@ SERVICES = [
                   "Windows crashes with a blue screen.",
                   "You want more memory or a faster drive, and need to know what fits."],
         "prices": [("Standard device diagnostic", DIAG, "Inspection and diagnosis. Deducted from the repair cost if you go ahead."),
-                   ("PC tune-up and optimisation", "N$249", "Start-up clean-up, performance checks, updates and a basic system health review."),
-                   ("Driver or software fault", "From N$179", "Install, repair or correct drivers and common software."),
-                   ("RAM or SSD fitting (labour)", "From N$179", "Fitting and testing. The part is quoted separately."),
-                   ("Data backup or transfer", "From N$249", "Basic transfer of up to 50GB. Complex recovery is quoted separately.")],
+                   ("PC tune-up and optimisation", m("PC tune-up and optimisation"), "Start-up clean-up, performance checks, updates and a basic system health review."),
+                   ("Driver or software fault", fm("Driver or software fault"), "Install, repair or correct drivers and common software."),
+                   ("RAM or SSD fitting (labour)", fm("RAM or SSD fitting (labour)"), "Fitting and testing. The part is quoted separately."),
+                   ("Data backup or transfer", fm("Data backup or transfer"), "Basic transfer of up to 50GB. Complex recovery is quoted separately.")],
         "steps": [("Describe the symptom", "Tell us the device, what it does and when it started. You do not need to know the cause."),
                   ("Diagnosis", "We test the parts that could cause that symptom and find which one it is."),
                   ("Finding and price", "You are told what failed, the options and what each costs. You decide."),
@@ -84,10 +84,10 @@ SERVICES = [
     {
         "slug": "windows-setup", "code": "S-02", "icon": "windows", "group": "Devices",
         "name": "Windows and software setup", "row": "Install, reinstall, drivers, updates and Office",
-        "from": "From N$649", "price": "649",
-        "title": "Windows Installation in Rundu from N$649 | ADA Tech",
+        "from": sfrom(*PKGS), "price": raw(low(*PKGS)),
+        "title": "Windows Installation in Rundu " + sfl(*PKGS) + " | ADA Tech",
         "desc": "Windows installation in Rundu, Namibia: Windows 10 or 11 with drivers, updates and Office setup. "
-                "Three packages from N$649. Legitimate licences only.",
+                "Three packages " + sfl(*PKGS) + ". Legitimate licences only.",
         "h1": "Windows installation in Rundu",
         "lead": "Windows installation and software setup that leaves the computer ready to use: correct drivers, "
                 "updates done, your programs in place, and tested.",
@@ -105,8 +105,8 @@ SERVICES = [
              "<a href=\"/guides/back-up-your-files\">how to back up your files</a>.</p>"),
         ],
         "answer": "ADA Tech does Windows installation in Rundu: Windows 10 and Windows 11, installed or reinstalled in three packages. Windows Ready "
-                  "(N$649) covers Windows, drivers, updates and testing. Windows + Office Complete (N$849) adds "
-                  "Microsoft Office and common programs. Complete Device Refresh (N$1,049) adds backup and "
+                  "(" + m("Windows Ready") + ") covers Windows, drivers, updates and testing. Windows + Office Complete (" + m("Windows + Office Complete") + ") adds "
+                  "Microsoft Office and common programs. Complete Device Refresh (" + m("Complete Device Refresh") + ") adds backup and "
                   "restore of up to 50GB and a malware clean-up. Windows and Office are activated only with a "
                   "legitimate licence.",
         "where": "Workshop in Rundu. Some work by remote support",
@@ -119,12 +119,12 @@ SERVICES = [
                   "A second-hand computer needs a clean start.",
                   "Drivers are missing: no sound, no Wi-Fi, a blurry screen.",
                   "You need Office installed and activated with your licence."],
-        "prices": [("Windows Ready", "N$649", "Windows, drivers, updates, BIOS version check, essential utilities, activation with your valid licence, restore point and final test."),
-                   ("Windows + Office Complete", "N$849", "Everything in Windows Ready, plus Office or Microsoft 365 with your valid licence, browser, PDF and common programs, a printer check and a final health check."),
-                   ("Complete Device Refresh", "N$1,049", "Everything in Windows + Office Complete, plus backup and restore of up to 50GB, malware scan and clean-up, start-up optimisation and a 7-day workmanship follow-up."),
-                   ("Microsoft Office setup only", "From N$249", "Install and configure Office or Microsoft 365 and activate it with a valid licence."),
-                   ("Windows Update repair", "From N$249", "Find why updates fail and repair the update components."),
-                   ("Driver or software fault", "From N$179", "Install, repair or correct drivers and common software.")],
+        "prices": [("Windows Ready", m("Windows Ready"), "Windows, drivers, updates, BIOS version check, essential utilities, activation with your valid licence, restore point and final test."),
+                   ("Windows + Office Complete", m("Windows + Office Complete"), "Everything in Windows Ready, plus Office or Microsoft 365 with your valid licence, browser, PDF and common programs, a printer check and a final health check."),
+                   ("Complete Device Refresh", m("Complete Device Refresh"), "Everything in Windows + Office Complete, plus backup and restore of up to 50GB, malware scan and clean-up, start-up optimisation and a 7-day workmanship follow-up."),
+                   ("Microsoft Office setup only", fm("Microsoft Office setup"), "Install and configure Office or Microsoft 365 and activate it with a valid licence."),
+                   ("Windows Update repair", fm("Windows Update repair"), "Find why updates fail and repair the update components."),
+                   ("Driver or software fault", fm("Driver or software fault"), "Install, repair or correct drivers and common software.")],
         "steps": [("Licence and files", "We check what licence the computer has and which files must be kept."),
                   ("Backup, if agreed", "Files are copied off before anything is erased."),
                   ("Install and configure", "Windows, the correct drivers, updates and your programs."),
@@ -152,16 +152,16 @@ SERVICES = [
     {
         "slug": "bios-firmware", "code": "S-03", "icon": "chip", "group": "Devices",
         "name": "BIOS and firmware", "row": "Updates, settings and start-up recovery",
-        "from": "From N$249", "price": "249",
+        "from": sfrom(*BIOS_WORK), "price": raw(low(*BIOS_WORK)),
         "title": "BIOS and UEFI Update and Recovery in Rundu | ADA Tech",
         "desc": "BIOS and UEFI updates, boot settings, Secure Boot and TPM setup, and recovery after a failed "
-                "firmware update. Updates from N$249, recovery from N$449. Rundu, Namibia.",
+                "firmware update. Updates " + lc("BIOS or UEFI update") + ", recovery " + lc("BIOS recovery or boot fault") + ". Rundu, Namibia.",
         "h1": "BIOS and firmware",
         "lead": "Firmware is the software a computer runs before Windows starts. A wrong setting or a failed "
                 "update can stop a healthy computer from starting at all.",
         "answer": "ADA Tech updates BIOS and UEFI firmware, corrects boot settings, turns on Secure Boot and TPM "
                   "for Windows 11, and assesses computers that will not start after a failed firmware update. "
-                  "Updates start from N$249. Recovery work starts from N$449 and depends on the model and on "
+                  "Updates " + st("BIOS or UEFI update", plural=True) + ". Recovery work " + st("BIOS recovery or boot fault") + " and depends on the model and on "
                   "how the update failed.",
         "where": "Workshop in Rundu",
         "covers": ["Checking the current BIOS or UEFI version", "Compatibility checks before an update",
@@ -173,8 +173,8 @@ SERVICES = [
                   "A new drive or memory is not being detected.",
                   "It asks for a BIOS password nobody remembers.",
                   "The maker recommends a firmware update for a fault you have."],
-        "prices": [("BIOS or UEFI update", "From N$249", "Compatibility check, firmware update and verification of boot settings."),
-                   ("BIOS recovery or boot fault", "From N$449", "Recovery of a failed BIOS or a PC that will not boot."),
+        "prices": [("BIOS or UEFI update", fm("BIOS or UEFI update"), "Compatibility check, firmware update and verification of boot settings."),
+                   ("BIOS recovery or boot fault", fm("BIOS recovery or boot fault"), "Recovery of a failed BIOS or a PC that will not boot."),
                    ("Standard device diagnostic", DIAG, "Deducted from the repair cost if you go ahead.")],
         "steps": [("Identify the model", "Firmware is specific to the exact model and revision."),
                   ("Check before changing", "Current version, the maker's notes, battery and power."),
@@ -197,10 +197,10 @@ SERVICES = [
     {
         "slug": "networking", "code": "S-04", "icon": "wifi", "group": "Connectivity",
         "name": "Wi-Fi and networking", "row": "Routers, coverage, cabling and office networks",
-        "from": "From N$349", "price": "349",
+        "from": fm("Router and Wi-Fi setup"), "price": raw("Router and Wi-Fi setup"),
         "title": "Wi-Fi Installation and Office Network Setup in Rundu | ADA Tech",
         "desc": "Wi-Fi installation, router setup and small office network setup in Rundu, Namibia: coverage, "
-                "cabling and fault finding. Router and Wi-Fi setup from N$349.",
+                "cabling and fault finding. Router and Wi-Fi setup " + lc("Router and Wi-Fi setup") + ".",
         "h1": "Wi-Fi installation and office network setup in Rundu",
         "lead": "For homes, offices and lodges where the internet drops, does not reach every room, or has "
                 "grown one device at a time with nobody planning it.",
@@ -208,8 +208,7 @@ SERVICES = [
             ("Small office network setup",
              "<p>A small office network setup covers the router, the Wi-Fi, cabling to the desks that need "
              "it, shared printers and a separate guest network. It also covers basic security settings, such as "
-             "a changed router password and an office network that visitors cannot reach. Router-only setup "
-             "starts from N$349. Cabling, equipment and coverage across several rooms are assessed on site and "
+             "a changed router password and an office network that visitors cannot reach. Router-only setup " + st("Router and Wi-Fi setup") + ". Cabling, equipment and coverage across several rooms are assessed on site and "
              "quoted.</p>"),
             ("Office network installation and business network setup",
              "<p>If you are opening an office, or the one you have has grown one device at a time, we plan "
@@ -219,7 +218,7 @@ SERVICES = [
         ],
         "answer": "ADA Tech sets up routers and Wi-Fi, finds why connections drop, extends coverage to rooms "
                   "the signal does not reach, and builds small office networks with cabling, shared printers "
-                  "and basic security. Router and Wi-Fi setup starts from N$349. Larger jobs with cabling, "
+                  "and basic security. Router and Wi-Fi setup " + st("Router and Wi-Fi setup") + ". Larger jobs with cabling, "
                   "extra equipment or several rooms are assessed on site and quoted.",
         "where": "On site in Rundu",
         "covers": ["Router installation and configuration", "Wi-Fi troubleshooting",
@@ -232,8 +231,8 @@ SERVICES = [
                   "A new router needs setting up properly.",
                   "Card machines, cameras or a booking system depend on the connection.",
                   "Guests or visitors need Wi-Fi that is separate from the office network."],
-        "prices": [("Router and Wi-Fi setup", "From N$349", "Router configuration, Wi-Fi setup and connectivity checks."),
-                   ("Printer setup on the network", "From N$179", "Installation and basic troubleshooting."),
+        "prices": [("Router and Wi-Fi setup", fm("Router and Wi-Fi setup"), "Router configuration, Wi-Fi setup and connectivity checks."),
+                   ("Printer setup on the network", fm("Printer setup"), "Installation and basic troubleshooting."),
                    ("Office network, cabling, coverage across rooms", "Quoted", "Assessed on site. Depends on the building, the distance and the equipment.")],
         "steps": [("Assess", "What is connected, where the signal falls away, and what the connection is used for."),
                   ("Recommend", "The smallest change that fixes it, with the equipment listed and priced."),
@@ -256,10 +255,10 @@ SERVICES = [
     {
         "slug": "remote-support", "code": "S-05", "icon": "remote", "group": "Connectivity",
         "name": "Remote support", "row": "Software and account help anywhere in Namibia",
-        "from": "From N$149", "price": "149",
-        "title": "Remote IT Support Anywhere in Namibia from N$149 | ADA Tech",
+        "from": fm("Remote quick support"), "price": raw("Remote quick support"),
+        "title": "Remote IT Support Anywhere in Namibia " + lc("Remote quick support") + " | ADA Tech",
         "desc": "Remote computer support anywhere in Namibia, including Windhoek: Windows, drivers, updates and "
-                "email fixed over the internet. From N$149.",
+                "email fixed over the internet. " + fm("Remote quick support") + ".",
         "h1": "Remote IT support anywhere in Namibia",
         "lead": "ADA Tech is based in Rundu, but software and account problems do not need a technician beside "
                 "the computer. With your permission, we connect over the internet and fix it while you watch.",
@@ -273,7 +272,7 @@ SERVICES = [
         ],
         "answer": "ADA Tech provides remote support across Namibia for problems that can be handled safely over "
                   "an internet connection: Windows and software faults, drivers, updates, Microsoft 365, email "
-                  "and account setup. Remote quick support starts from N$149, and the scope is confirmed before "
+                  "and account setup. Remote quick support " + st("Remote quick support") + ", and the scope is confirmed before "
                   "work starts. Remote access always needs your permission before it begins.",
         "where": "Anywhere in Namibia with internet",
         "covers": ["Windows software faults", "Driver and update troubleshooting",
@@ -285,9 +284,9 @@ SERVICES = [
                   "You are outside Rundu.",
                   "A staff member working from home needs help.",
                   "Email, Office or an account needs setting up."],
-        "prices": [("Remote quick support", "From N$149", "Basic software, account or configuration support. Scope confirmed before work."),
-                   ("Driver or software fault", "From N$179", "Install, repair or correct drivers and common software."),
-                   ("Windows Update repair", "From N$249", "Find why updates fail and repair the update components."),
+        "prices": [("Remote quick support", fm("Remote quick support"), "Basic software, account or configuration support. Scope confirmed before work."),
+                   ("Driver or software fault", fm("Driver or software fault"), "Install, repair or correct drivers and common software."),
+                   ("Windows Update repair", fm("Windows Update repair"), "Find why updates fail and repair the update components."),
                    ("ADA First Aid subscribers", "Included", "Covered remote sessions under your plan. <a href=\"/first-aid\">See the plans</a>.")],
         "steps": [("Describe the problem", "By WhatsApp, phone or the support form."),
                   ("Scope and price", "We confirm it can be done remotely and what it costs."),
@@ -333,8 +332,8 @@ SERVICES = [
                   "An email account has already been broken into.",
                   "A funder, bank or client has asked how your data is protected."],
         "prices": [("Security health check and setup", "Quoted", "By number of users, devices and accounts."),
-                   ("Remote quick support", "From N$149", "For a single account or device."),
-                   ("Ongoing account and backup checks", "N$2,449 a month", "Included in the Business Care <a href=\"/managed-it\">Managed IT plan</a>.")],
+                   ("Remote quick support", fm("Remote quick support"), "For a single account or device."),
+                   ("Ongoing account and backup checks", m("Business Care") + " a month", "Included in the Business Care <a href=\"/managed-it\">Managed IT plan</a>.")],
         "steps": [("Review", "Accounts, devices, who has access, and where the data lives."),
                   ("Prioritise", "The few changes that remove the most risk, in order."),
                   ("Set up", "Two-step verification, access changes, device protection and backups."),
@@ -495,8 +494,8 @@ SERVICES = [
                   "Staff use personal email addresses for business.",
                   "You need to know what to buy before you buy it."],
         "prices": [("Office setup", "Quoted", "By number of users, devices, location and required infrastructure."),
-                   ("Router and Wi-Fi setup", "From N$349", "Where only the network is needed."),
-                   ("Ongoing support", "From N$1,249 a month", "Monthly <a href=\"/managed-it\">Managed IT plans</a> for up to 5 devices and upwards.")],
+                   ("Router and Wi-Fi setup", fm("Router and Wi-Fi setup"), "Where only the network is needed."),
+                   ("Ongoing support", sfrom(*BUSINESS_PLANS) + " a month", "Monthly <a href=\"/managed-it\">Managed IT plans</a> for up to 5 devices and upwards.")],
         "steps": [("Understand the work", "Who does what, on which devices, from where."),
                   ("Plan and quote", "A list of what is needed, what you already have and what to buy."),
                   ("Set up", "Devices, accounts, email, network and printers, tested together."),
@@ -511,7 +510,7 @@ SERVICES = [
                  "<p>You can call us when something goes wrong, or take a monthly "
                  "<a href=\"/managed-it\">Managed IT plan</a> so that updates, checks and support happen on a "
                  "schedule.</p>")],
-        "rel": [("/managed-it", "Managed IT", "Monthly plans from N$1,249."),
+        "rel": [("/managed-it", "Managed IT", "Monthly plans " + sfl(*BUSINESS_PLANS) + "."),
                 ("/services/networking", "Wi-Fi and networking", "The office network."),
                 ("/services/security", "Security and backups", "Accounts and data kept safe.")],
     },
@@ -568,9 +567,9 @@ def hub():
     body += sec(head_block("Ongoing care", "Monthly plans, for people and for organisations.", label="Plans")
                 + cards([
                     ("/first-aid", "ADA First Aid", "Monthly care for one to three personal devices: remote "
-                     "sessions, health checks and a discount on other labour.", "From N$249 a month", "Personal", "kit"),
+                     "sessions, health checks and a discount on other labour.", sfrom(*FIRST_AID_PLANS) + " a month", "Personal", "kit"),
                     ("/managed-it", "Managed IT", "Monthly support for an organisation's devices, users and "
-                     "accounts, sized by the number of devices.", "From N$1,249 a month", "Business", "office"),
+                     "accounts, sized by the number of devices.", sfrom(*BUSINESS_PLANS) + " a month", "Business", "office"),
                     ("/support", "Not sure which fits?", "Describe what is going wrong and we will point you to "
                      "the right service.", "Describe the problem", "Help", "chat"),
                 ], swipe=True), "sec--light")
