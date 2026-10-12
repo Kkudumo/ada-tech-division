@@ -1,8 +1,8 @@
 """Shared layout and components for the ADA Tech Division site.
 
 The site is plain HTML. `python3 build/build.py` regenerates every public
-page from the content files in this folder. There is no build step on
-Vercel: the generated HTML is committed.
+page from the content files in this folder. The generated HTML is committed
+and Vercel also runs the build on deploy (prices come from ADA Core).
 """
 import html
 import json

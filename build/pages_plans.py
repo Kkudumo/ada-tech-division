@@ -1,7 +1,7 @@
 """Pricing, ADA First Aid and Managed IT.
 
-Every amount on the site comes from PRICES, PACKAGES, FIRST_AID and MANAGED
-below. Change a price here and rebuild.
+Amounts are not typed here: each row looks its price up in ADA Core by service
+name (see docs/PRICES.md). Change a price in ADA Hub and rebuild.
 """
 from layout import m, fm, lc, st, raw, low, mlow, sfrom, sfl, mrange, PKGS, FIRST_AID_PLANS, BUSINESS_PLANS, BIOS_WORK
 from layout import (page, hero, sec, head_block, answer, sheet, table, steps, ticks, faq, faq_schema,

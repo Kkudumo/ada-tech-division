@@ -1,7 +1,7 @@
 # ADA Tech Division website
 
 Public site for tech.andreasdigitalagency.com. Plain HTML, one stylesheet,
-small scripts, no build step on Vercel.
+small scripts. Vercel runs `python3 build/build.py` on each deploy (see `vercel.json`).
 
 ## How the pages are made
 
@@ -22,24 +22,27 @@ Do not edit the generated `.html` files by hand: the next build overwrites them.
 | `build/pages_home.py` | Home page, including the fault finder |
 | `build/pages_problems.py` | Problems hub and the twelve problem pages (`PROBLEMS`) |
 | `build/pages_services.py` | Services hub and the nine service pages (`SERVICES`) |
-| `build/pages_plans.py` | Pricing, ADA First Aid and Managed IT. **All prices live here** |
+| `build/pages_plans.py` | Pricing, ADA First Aid and Managed IT (amounts come from ADA Core) |
 | `build/pages_company.py` | How we work, case files, reviews, support, contact, FAQ, Rundu, who we help, client desk, service record |
 | `build/pages_guides.py` | Guides hub and articles |
 | `build/pages_news.py` | News, updates and notices. Add an item to `NEWS` and rebuild |
 | `build/pages_search.py` | Search page, search keywords and the search index |
 | `build/pages_system.py` | List of all pages and the 404 page |
 | `assets/css/ada.css` | All public styles. Brand colours match the main ADA site; the last section is the Tech workshop look |
-| `assets/js/ada.js` | Menu, search bar, scroll reveal, fault finder filter, home-page starting-point helper |
+| `assets/js/ada.js` (generated from `build/ada.js.in`) | Menu, search bar, scroll reveal, fault finder filter, home-page starting-point helper |
 | `assets/js/search.js` | Site search, reading `assets/search-index.json` |
 
 ## Prices
 
-Prices are written in `build/pages_plans.py` (`PRICES`, `PACKAGES`,
-`FIRST_AID`, `MANAGED`), with the diagnostic fee as `DIAG` in
-`build/layout.py`. Service and problem pages quote some of them in their own
-text, so after changing a price search the `build/` folder for the old amount,
-then rebuild. Also check the amounts quoted in the home-page helper in
-`assets/js/ada.js`.
+Prices come from ADA Core (the company database), not from the page files.
+`build/ada_prices.py` reads them by service name from the API when
+`ADA_API_URL` and `ADA_API_KEY` are set at build time, and from the committed
+snapshot `build/prices.json` otherwise (or if the API is down). To change a
+price, change it in ADA Hub and rebuild; do not type amounts into `build/`.
+Refresh the snapshot with
+`python3 build/ada_prices.py tech build/prices.json --refresh`, and run
+`python3 build/test_prices.py` after editing. If a service is renamed in ADA
+Hub, update the name used in the build. Details: [docs/PRICES.md](docs/PRICES.md).
 
 ## Pages that talk to the service database
 
