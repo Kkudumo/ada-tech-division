@@ -467,6 +467,9 @@ def footer():
 def page(path, title, desc, body, *, active="", crumbs=None, schema=None, og_type="website",
          noindex=False, scripts=(), cta=True, lastmod=REVIEWED_ISO):
     """Write one page. `path` is the clean URL path ('' for the home page)."""
+    from seo_meta import META
+    if path in META:
+        title, desc = META[path]
     canonical = url(path)
     graph = [ORG, {
         "@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/",
