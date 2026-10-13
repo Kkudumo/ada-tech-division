@@ -60,7 +60,7 @@ def build():
 <div>
 <span class="where"><span>ADA Tech Division</span><span>Workshop: Rundu</span><span>Remote: all Namibia</span></span>
 <h1 class="display">Computer repair and IT support in Rundu, diagnosed before anything is replaced.</h1>
-<p class="lead">ADA Tech is an IT company in Rundu, Namibia. We repair laptops and desktops, install Windows,
+<p class="lead">ADA Tech is an IT company in Rundu, in the north of Namibia, offering computer repair and IT support. We repair laptops and desktops, install Windows,
 fix Wi-Fi and networks, set up CCTV and look after office IT. A diagnostic costs {DIAG} and comes off the
 repair if you go ahead. You hear the price before the work starts.</p>
 {buttons(('/support', 'Tell us what is wrong'), ('/pricing', 'See prices', 'line'))}

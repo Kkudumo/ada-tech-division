@@ -5,8 +5,8 @@ Applied by layout.page() for the listed paths; other pages keep what their build
 """
 
 META = {
-"": ("IT Company in Rundu: Computer Repair | ADA Tech",
-     "ADA Tech is an IT company in Rundu, Namibia: computer and laptop repair, Windows, Wi-Fi, CCTV and office IT, with remote support. Diagnostic N$99."),
+"": ("Computer Repair and IT Support in Rundu | ADA Tech",
+     "IT company in Rundu, northern Namibia: computer and laptop repair, IT support, Windows, Wi-Fi, CCTV and office IT, with remote support. Diagnostic N$99."),
 "problems": ("Computer and Laptop Problems: Causes and Fixes | ADA Tech",
      "Computer and laptop problems: laptop not turning on, blue or black screen, slow, overheating, Wi-Fi dropping, printer offline. Causes and safe checks."),
 "problems/laptop-not-turning-on": ("Laptop or Computer Won't Turn On? What to Check | ADA Tech",
