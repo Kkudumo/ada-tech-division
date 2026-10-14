@@ -60,7 +60,7 @@ MANAGED = [
      ["Everything in Micro Business Care", "Support when staff join or leave",
       "Basic account and two-step verification review", "Backup status guidance",
       "Technology review each quarter", "Priority support handling", "15% off approved on-site labour"], True),
-    ("11 or more devices", "Managed IT", "From N$3,949", "An organisation where technology runs the work.",
+    ("11 or more devices", "Managed IT", "From N$3,999", "An organisation where technology runs the work.",
      ["Assessment of the environment first", "Device and user cover agreed to fit",
       "Support workflow and service records", "Maintenance and security baseline",
       "Network and Microsoft 365 coordination", "Regular operational review", "Response priorities agreed with you"], False),
@@ -245,7 +245,7 @@ def managed_it():
     body += sec('<div class="intro">' + answer(
         "Managed IT is a monthly support plan for organisations that do not have their own IT staff. It covers "
         "a remote helpdesk for the registered devices, scheduled updates and health checks, and help when staff "
-        "join or leave. Plans cost N$1,249 a month for up to 5 devices, N$2,449 for up to 10, and from N$3,949 "
+        "join or leave. Plans cost N$1,249 a month for up to 5 devices, N$2,449 for up to 10, and from N$3,999 "
         "for 11 or more. Hardware, licences and large projects are scoped separately.")
         + sheet("Plan sheet", "Managed IT", [
             ("For", "Organisations without their own IT staff"),
