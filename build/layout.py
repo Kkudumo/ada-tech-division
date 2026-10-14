@@ -25,7 +25,7 @@ COMPANY_LINE = "+264 83 677 5783"
 COMPANY_TEL = "+264836775783"
 EMAIL = "tech@andreasdigitalagency.com"
 PLACE = "Rundu, Kavango East, Namibia"
-DIAG = "N$99"
+DIAG = "[[price:diag]]"
 
 NAV = [
     ("/problems", "Problems"),
@@ -111,7 +111,7 @@ ORG = {
                    "office networks, installs CCTV and supports business IT. On site in Rundu, remote across Namibia.",
     "telephone": PHONE_TEL,
     "email": EMAIL,
-    "priceRange": "N$99+",
+    "priceRange": "[[price:diag]]+",
     "currenciesAccepted": "NAD",
     "address": {
         "@type": "PostalAddress",
@@ -152,6 +152,8 @@ def service_schema(name, desc, path, price=None, unit=None):
          "provider": {"@id": SITE + "/#organization"},
          "areaServed": [{"@type": "Country", "name": "Namibia"}]}
     if price:
+        from prices import number
+        price = number(price)  # a price name or placeholder -> the ADA Core amount
         spec = {"@type": "PriceSpecification", "price": price, "priceCurrency": "NAD", "minPrice": price}
         if unit:
             spec["unitText"] = unit
@@ -534,6 +536,8 @@ def page(path, title, desc, body, *, active="", crumbs=None, schema=None, og_typ
     rel = (clean + "/index.html") if clean in HUB_FOLDERS else ((clean or "index") + ".html")
     out = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    from prices import fill
+    doc = fill(doc)  # [[price:...]] placeholders -> prices from ADA Core
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
     PAGES.append((path.strip("/"), lastmod, not noindex))

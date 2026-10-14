@@ -105,9 +105,9 @@ repair if you go ahead. You hear the price before the work starts.</p>
         "Do not start from nothing every time something fails",
         "Two monthly plans: one for personal devices, one for organisations.", label="Ongoing care") + cards([
             ("/first-aid", "ADA First Aid", "Monthly care for one to three personal laptops or desktops: remote "
-             "sessions, health checks and 10% or 15% off other labour.", "From N$249 a month", "Personal", "kit"),
+             "sessions, health checks and 10% or 15% off other labour.", "From [[price:fa_essential]] a month", "Personal", "kit"),
             ("/managed-it", "Managed IT", "Monthly support for an organisation's devices, users and accounts, "
-             "sized by the number of devices.", "From N$1,249 a month", "Business", "office"),
+             "sized by the number of devices.", "From [[price:micro_care]] a month", "Business", "office"),
         ], cols=2), "sec--light")
 
     trust = sec(f"""<div class="split">

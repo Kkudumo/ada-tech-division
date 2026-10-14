@@ -256,7 +256,7 @@ FAQ_GROUPS = [
          "<p>Yes. Both, including diagnostics, Windows and software faults, drive and memory upgrades, drivers, "
          "BIOS and UEFI, performance problems and selected hardware faults.</p>"),
         ("Can you replace or upgrade RAM and SSDs?",
-         "<p>Yes, where the device supports it. Fitting starts from N$179 for labour. Hardware and parts are "
+         "<p>Yes, where the device supports it. Fitting starts from [[price:ram]] for labour. Hardware and parts are "
          "quoted separately unless the written quotation says otherwise. See "
          "<a href=\"/problems/ssd-ram-upgrade\">RAM or SSD: which first?</a></p>"),
         ("Can you fix Wi-Fi, routers, printers and small office technology?",
@@ -356,8 +356,8 @@ def rundu():
     body += sec('<div class="intro">' + answer(
         "ADA Tech repairs laptops and desktop computers, installs Windows, fixes Wi-Fi and networks, installs "
         f"CCTV and sets up office IT in Rundu, Namibia. A standard diagnostic costs {DIAG} and comes off the "
-        "repair if you go ahead. Windows installation packages start at N$649, and router and Wi-Fi setup "
-        "starts from N$349. Software faults can also be fixed remotely anywhere in Namibia.")
+        "repair if you go ahead. Windows installation packages start at [[price:win_ready]], and router and Wi-Fi setup "
+        "starts from [[price:router]]. Software faults can also be fixed remotely anywhere in Namibia.")
         + sheet("Local sheet", "Rundu", [
             ("Base", e(PLACE)),
             ("On site", "Repair, networks, CCTV, office setup"),
@@ -369,8 +369,8 @@ def rundu():
                            "Hardware, networks and cameras are best assessed with the equipment in front of us.",
                            label="On site") + code_rows([
         ("/services/computer-repair", "wrench", "S-01", "Computer and laptop repair", "Slow, not starting, overheating, drive, memory and upgrades.", f"Diagnostic {DIAG}"),
-        ("/services/windows-setup", "windows", "S-02", "Windows and software setup", "Clean installation, drivers, updates and Office.", "From N$649"),
-        ("/services/networking", "wifi", "S-04", "Wi-Fi and networking", "Routers, coverage, small-office networks and cabling.", "From N$349"),
+        ("/services/windows-setup", "windows", "S-02", "Windows and software setup", "Clean installation, drivers, updates and Office.", "From [[price:win_ready]]"),
+        ("/services/networking", "wifi", "S-04", "Wi-Fi and networking", "Routers, coverage, small-office networks and cabling.", "From [[price:router]]"),
         ("/services/cctv", "camera", "S-07", "CCTV", "Camera planning, recorder setup and viewing on your phone.", "Quoted by site"),
         ("/services/business-it", "office", "S-09", "Business IT setup", "Devices, accounts, printers and Wi-Fi for an office.", "Quoted"),
     ]), "sec--light")
@@ -378,10 +378,10 @@ def rundu():
                            "Two jobs that are best done on site, with the building in front of us.",
                            label="On site") + ticks([
         '<a href="/services/networking">Wi-Fi installation in Rundu</a>: router setup, coverage across rooms and '
-        'small office networks, from N$349 for router and Wi-Fi setup.',
+        'small office networks, from [[price:router]] for router and Wi-Fi setup.',
         '<a href="/services/cctv">CCTV installation in Rundu</a>: cameras, recorder, storage and viewing on your '
         'phone, quoted after a site visit.',
-        '<a href="/services/windows-setup">Windows installation in Rundu</a>: three packages from N$649.',
+        '<a href="/services/windows-setup">Windows installation in Rundu</a>: three packages from [[price:win_ready]].',
         '<a href="/guides/data-recovery-deleted-files-dead-drive">Data recovery</a>: what can be recovered from '
         'a drive, and what we do.']))
     body += sec('<div class="split"><div><span class="label">Before you visit</span>'
